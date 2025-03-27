@@ -25,3 +25,43 @@
     )
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
+
+.clip-shape-second {
+  background-color: #191919; /* Qoramtir fon */
+  padding: 40px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  border-radius: 25px; /* Yumshoq burchaklar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Kesilgan uchlar */
+.clip-shape-second::before,
+.clip-shape-second::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Uchburchak kengligi */
+  height: 50px; /* Uchburchak balandligi */
+  background-color: #191919;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* Chap tomondagi kesilgan uch */
+.clip-shape-second::before {
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+/* O‘ng tomondagi kesilgan uch */
+.clip-shape-second::after {
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%) rotate(180deg);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
