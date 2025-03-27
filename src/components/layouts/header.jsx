@@ -2,10 +2,10 @@ import React from 'react';
 import { IoEarthOutline } from "react-icons/io5";
 const header = () => {
     return (
-        <header className='container mx-auto h-20 py-7'>
+        <header className='container mx-auto h-20 py-7 px-5'>
             <nav className='flex items-center justify-between '>
                 <h1 className='text-white text-2xl font-normal'>KRAN</h1>
-                <ul className='flex gap-[72px]'>
+                <ul className='flex gap-[72px] z-10 ml-40'>
                     <li><a className='text-white text-xl font-semibold' href="">Biz haqimizda</a></li>
                     <li><a className='text-white text-xl font-semibold' href="">Hizmatlar</a></li>
                     <li><a className='text-white text-xl font-semibold' href="">Kontakt</a></li>
