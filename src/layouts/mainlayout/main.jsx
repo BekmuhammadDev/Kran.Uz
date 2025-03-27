@@ -6,7 +6,9 @@ const MainLayout = () => {
     return (
         <div>
             <Header/>
+            <div className='px-10'>
             <Outlet/>
+            </div>
             
             
         </div>

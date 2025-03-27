@@ -3,10 +3,10 @@ import { IoEarthOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 const header = () => {
   return (
-    <header className="container mx-auto h-20 py-7">
+    <header className="container mx-auto h-20 py-7 px-5">
       <nav className="flex items-center justify-between ">
         <h1 className="text-white text-2xl font-normal">KRAN</h1>
-        <ul className="flex gap-[72px]">
+        <ul className="flex gap-[72px] z-10 ml-40">
           <li>
             <NavLink to={"/"} className="text-white text-xl font-semibold">
               Biz haqimizda
