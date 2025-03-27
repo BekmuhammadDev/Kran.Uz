@@ -1,0 +1,29 @@
+import React from 'react';
+import { IoEarthOutline } from "react-icons/io5";
+const header = () => {
+    return (
+        <header className='container mx-auto h-20 py-7'>
+            <nav className='flex items-center justify-between '>
+                <h1 className='text-white text-2xl font-normal'>KRAN</h1>
+                <ul className='flex gap-[72px]'>
+                    <li><a className='text-white text-xl font-semibold' href="">Biz haqimizda</a></li>
+                    <li><a className='text-white text-xl font-semibold' href="">Hizmatlar</a></li>
+                    <li><a className='text-white text-xl font-semibold' href="">Kontakt</a></li>
+                </ul>
+
+                <div className='flex items-center gap-9'>
+                    <div className='flex items-center gap-1 cursor-pointer'>
+                        <IoEarthOutline color='white' fontSize={24}/>
+                        <h2 className='text-white text-xl font-semibold'>UZ</h2>
+
+                    </div>
+                    <button className='bg-[#FEDF51]  py-2 px-8 rounded-xl text-xl font-semibold'>Bog‘lanish</button>
+                </div>
+
+            </nav>
+          
+        </header>
+    );
+};
+
+export default header;
