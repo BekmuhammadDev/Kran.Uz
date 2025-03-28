@@ -58,8 +58,10 @@ const home = () => {
                 </div>
             </section>
 
+            {/* prosta */}
 
-            <section className="flex justify-center items-center py-10 z-10 mt-[65px] bg-gray-500 ">
+
+            <section className="flex justify-center items-center py-10  mt-[65px] bg-gray-500 ">
                 <div className="bg-gray-700 rounded-2xl p-6 z-10 flex items-center space-x-6 w-[800px] shadow-lg">
                     {/* Ism Input */}
                     <div className="flex items-center space-x-3 flex-1 border-r border-gray-500 pr-6">
