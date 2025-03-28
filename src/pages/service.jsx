@@ -2,13 +2,15 @@ import React from "react";
 import "./Service.css";
 import logoHunday from "../assets/images/logoHunday.svg";
 import HundayKamaz from "../assets/images/hyundaiKamaz.svg";
+import smKamaz from "../assets/images/smKamaz.svg";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 import { TfiArrowCircleRight } from "react-icons/tfi";
+import Footer from "../components/layouts/footer";
 
 const Service = () => {
   return (
-    <div className="relative w-full h-screen text-white py-10 container mx-auto">
-      <div className="flex">
+    <div className="relative w-full h-screen bg-[#191919] text-white py-10 container mx-auto">
+      <section className="flex">
         <div className="gradient relative right-0 h-[600px] w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
         <div className="absolute left-0 p-10 flex-col items-center h-[600px]">
           <img src={logoHunday} alt="" />
@@ -57,12 +59,48 @@ const Service = () => {
             </button>
           </div>
         </div>
-      </div>
-      <section className="w-full h-[450px]">
-        <div>
-          <div className="clip-shape-second w-[302px] h-[204px] gradient"></div>
+      </section>
+      <section className="w-full h-[450px] pt-28 bg-[#191919]">
+        <div className="flex items-center justify-center gap-14">
+          <div className="w-[320px] h-[204px] relative flex">
+            <div className="parallelogram smGradient w-[280px] h-[204px] gradient absolute"></div>
+            <img
+              src={logoHunday}
+              alt=""
+              className="absolute left-12 top-6 w-[44px] h-[28px]"
+            />
+            <img src={smKamaz} alt="" className="absolute top-3 right-0" />
+          </div>
+          <div className="w-[320px] h-[204px] relative flex">
+            <div className="parallelogram smGradient w-[280px] h-[204px] gradient absolute"></div>
+            <img
+              src={logoHunday}
+              alt=""
+              className="absolute left-12 top-6 w-[44px] h-[28px]"
+            />
+            <img src={smKamaz} alt="" className="absolute top-3 right-0" />
+          </div>
+          <div className="w-[320px] h-[204px] relative flex">
+            <div className="parallelogram smGradient w-[280px] h-[204px] gradient absolute"></div>
+            <img
+              src={logoHunday}
+              alt=""
+              className="absolute left-12 top-6 w-[44px] h-[28px]"
+            />
+            <img src={smKamaz} alt="" className="absolute top-3 right-0" />
+          </div>
+          <div className="w-[320px] h-[204px] relative flex">
+            <div className="parallelogram smGradient w-[280px] h-[204px] gradient absolute"></div>
+            <img
+              src={logoHunday}
+              alt=""
+              className="absolute left-12 top-6 w-[44px] h-[28px]"
+            />
+            <img src={smKamaz} alt="" className="absolute top-3 right-0" />
+          </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -65,3 +65,20 @@
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  transform: skew(-20deg);
+  border-radius: 30px;
+  background: #191919;
+}
+
+.smGradient {
+  background: radial-gradient(
+      73.93% 71.81% at 50% 51.44%,
+      #504e4e 0%,
+      #191919 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

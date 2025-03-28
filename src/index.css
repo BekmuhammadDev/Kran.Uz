@@ -19,3 +19,13 @@ body {
 .mont {
   font-family: "Montserrat";
 }
+
+.secondGradient {
+  background: radial-gradient(
+    95.48% 52.85% at 50% 50%,
+    #8c8c8c 0%,
+    #262626 100%
+  );
+}
+
+

@@ -3,10 +3,10 @@ import { IoEarthOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 const header = () => {
   return (
-    <header className="container mx-auto h-20 py-7 px-5">
+    <header className="container mx-auto h-20 py-7 px-10 pr-20 bg-transparent z-10">
       <nav className="flex items-center justify-between ">
-        <h1 className="text-white text-2xl font-normal">KRAN</h1>
-        <ul className="flex gap-[72px] z-10 ml-40">
+        <h1 className="krone font-normal text-[24px] text-white">KRAN</h1>
+        <ul className="mont font-semibold text-[20px] flex gap-[72px] z-10 ml-40">
           <li>
             <NavLink to={"/"} className="text-white text-xl font-semibold">
               Biz haqimizda
@@ -17,13 +17,18 @@ const header = () => {
               to={"/services"}
               className="text-white text-xl font-semibold"
             >
-              Hizmatlar
+              Texnikalar
             </NavLink>
           </li>
           <li>
-            <a className="text-white text-xl font-semibold" href="">
-              Kontakt
-            </a>
+            <NavLink className="text-white text-xl font-semibold">
+              Aksiyalar
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="text-white text-xl font-semibold">
+              Hamkorlar
+            </NavLink>
           </li>
         </ul>
 

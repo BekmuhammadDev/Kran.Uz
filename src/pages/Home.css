@@ -1,0 +1,20 @@
+.gradient {
+  background: linear-gradient(
+    268.28deg,
+    #191919 1.14%,
+    rgba(60, 60, 60, 0.7) 47.25%
+  );
+}
+
+.rounding {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+}
+
+.parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(-20deg);
+    border-radius: 30px;
+    background: #191919;
+}
