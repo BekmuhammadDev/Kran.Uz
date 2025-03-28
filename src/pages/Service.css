@@ -1,0 +1,84 @@
+.clip-shape {
+  position: relative;
+  background-color: gray; /* Foningiz */
+  clip-path: polygon(0% 0%, 100% 0%, 85% 0%, 45% 100%, 0% 100%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Burchaklarga radius berish uchun pseudo-element */
+.clip-shape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 0%, 45% 100%, 0% 100%);
+  border-radius: 15px; /* Mukammal radius */
+  z-index: -1;
+}
+
+.gradient {
+  background: radial-gradient(
+      73.93% 73.93% at 50% 50%,
+      #504e4e 0%,
+      #191919 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.clip-shape-second {
+  background-color: #191919; /* Qoramtir fon */
+  padding: 40px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  border-radius: 25px; /* Yumshoq burchaklar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Kesilgan uchlar */
+.clip-shape-second::before,
+.clip-shape-second::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Uchburchak kengligi */
+  height: 50px; /* Uchburchak balandligi */
+  background-color: #191919;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* Chap tomondagi kesilgan uch */
+.clip-shape-second::before {
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+/* O‘ng tomondagi kesilgan uch */
+.clip-shape-second::after {
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%) rotate(180deg);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  transform: skew(-20deg);
+  border-radius: 30px;
+  background: #191919;
+}
+
+.smGradient {
+  background: radial-gradient(
+      73.93% 71.81% at 50% 51.44%,
+      #504e4e 0%,
+      #191919 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

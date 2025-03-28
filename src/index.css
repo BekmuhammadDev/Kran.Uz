@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
+
+.krone {
+  font-family: "Krona One";
+}
+
+.mont {
+  font-family: "Montserrat";
+}
+
+.secondGradient {
+  background: radial-gradient(
+    95.48% 52.85% at 50% 50%,
+    #8c8c8c 0%,
+    #262626 100%
+  );
+}
+
+

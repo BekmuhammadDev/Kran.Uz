@@ -1,29 +1,49 @@
-import React from 'react';
+import React from "react";
 import { IoEarthOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 const header = () => {
-    return (
-        <header className='container mx-auto h-20 py-7 px-5'>
-            <nav className='flex items-center justify-between '>
-                <h1 className='text-white text-2xl font-normal'>KRAN</h1>
-                <ul className='flex gap-[72px] z-10 ml-40'>
-                    <li><a className='text-white text-xl font-semibold' href="">Biz haqimizda</a></li>
-                    <li><a className='text-white text-xl font-semibold' href="">Hizmatlar</a></li>
-                    <li><a className='text-white text-xl font-semibold' href="">Kontakt</a></li>
-                </ul>
+  return (
+    <header className="container mx-auto h-20 py-7 px-10 pr-20 bg-transparent z-10">
+      <nav className="flex items-center justify-between ">
+        <h1 className="krone font-normal text-[24px] text-white">KRAN</h1>
+        <ul className="mont font-semibold text-[20px] flex gap-[72px] z-10 ml-40">
+          <li>
+            <NavLink to={"/"} className="text-white text-xl font-semibold">
+              Biz haqimizda
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/services"}
+              className="text-white text-xl font-semibold"
+            >
+              Texnikalar
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="text-white text-xl font-semibold">
+              Aksiyalar
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="text-white text-xl font-semibold">
+              Hamkorlar
+            </NavLink>
+          </li>
+        </ul>
 
-                <div className='flex items-center gap-9'>
-                    <div className='flex items-center gap-1 cursor-pointer'>
-                        <IoEarthOutline color='white' fontSize={24}/>
-                        <h2 className='text-white text-xl font-semibold'>UZ</h2>
-
-                    </div>
-                    <button className='bg-[#FEDF51]  py-2 px-8 rounded-xl text-xl font-semibold'>Bog‘lanish</button>
-                </div>
-
-            </nav>
-          
-        </header>
-    );
+        <div className="flex items-center gap-9">
+          <div className="flex items-center gap-1 cursor-pointer">
+            <IoEarthOutline color="white" fontSize={24} />
+            <h2 className="text-white text-xl font-semibold">UZ</h2>
+          </div>
+          <button className="bg-[#FEDF51]  py-2 px-8 rounded-xl text-xl font-semibold">
+            Bog‘lanish
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
 };
 
 export default header;
