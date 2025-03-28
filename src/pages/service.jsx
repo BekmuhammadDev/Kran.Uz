@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Service.css";
 import logoHunday from "../assets/images/logoHunday.svg";
 import HundayKamaz from "../assets/images/hyundaiKamaz.svg";
@@ -8,6 +8,13 @@ import { TfiArrowCircleRight } from "react-icons/tfi";
 import Footer from "../components/layouts/footer";
 
 const Service = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="relative w-full h-screen bg-[#191919] text-white py-10 container mx-auto">
       <section className="flex">
