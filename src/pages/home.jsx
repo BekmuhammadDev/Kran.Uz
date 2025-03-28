@@ -35,38 +35,38 @@ const home = () => {
           <article>
             <ul>
               <li>
-                <h1 className="krone font-normal text-[32px]">50 Tonna</h1>
-                <p className="mont font-normal text-[20px]">Yuk sig‘imi</p>
+                <h1 className="krone font-normal text-[32px]">550 000 UZS</h1>
+                <p className="mont font-normal text-[20px]">Soati</p>
               </li>
               <br />
               <br />
               <li>
-                <h1 className="krone font-normal text-[32px]">70 METR</h1>
-                <p className="mont font-normal text-[20px]">Strello</p>
+                <h1 className="krone font-normal text-[32px]">41m (9m+)</h1>
+                <p className="mont font-normal text-[20px]">Uzunligi</p>
               </li>
               <br />
               <br />
               <li>
-                <h1 className="krone font-normal text-[32px]">18 METR</h1>
-                <p className="mont font-normal text-[20px]">Gusak</p>
+                <h1 className="krone font-normal text-[32px]">30 Tonna</h1>
+                <p className="mont font-normal text-[20px]">Og‘irligi</p>
               </li>
             </ul>
           </article>
           <article className="absolute pt-32">
-            <h1 className="krone font-normal text-[32px]">550 000</h1>
-            <p className="mont font-normal text-[20px]">Narx 1 soatiga</p>
+            <h1 className="krone font-normal text-[32px]">5 soat</h1>
+            <p className="mont font-normal text-[20px]">Minimal soat</p>
           </article>
         </motion.aside>
 
         {/* O‘rta qism */}
-        <div className="w-[50%] h-[800px] secondGradient relative overflow-visible flex-col items-center justify-center">
+        <div className="w-[50%] h-[800px] secondGradient relative overflow-visible flex-col items-center justify-center pt-16">
           <motion.h1
             className="krone font-thin text-[42px] text-center"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           >
-            Avtovishka Daewoo Novus
+            Hyundai 55W
           </motion.h1>
           <motion.img
             src={homeHunday}

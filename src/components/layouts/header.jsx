@@ -5,7 +5,9 @@ const header = () => {
   return (
     <header className="container mx-auto h-20 py-7 pl-20 pr-20">
       <nav className="flex items-center justify-between bg-transparent">
-        <h1 className="krone font-normal text-[24px] text-white">KRAN</h1>
+        <NavLink to={"/"} className="krone font-normal text-[24px] text-white">
+          KRAN
+        </NavLink>
         <ul className="mont font-semibold text-[20px] flex gap-[72px] ml-40">
           <li>
             <NavLink to={"/"} className="text-white text-xl font-semibold">
