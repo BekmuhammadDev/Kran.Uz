@@ -10,7 +10,7 @@ const header = () => {
         </NavLink>
         <ul className="mont font-semibold text-[20px] flex gap-[72px] ml-40">
           <li>
-            <NavLink to={"/"} className="text-white text-xl font-semibold">
+            <NavLink to={"/about"} className="text-white text-xl font-semibold">
               Biz haqimizda
             </NavLink>
           </li>
