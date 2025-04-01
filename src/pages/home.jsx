@@ -24,7 +24,7 @@ const home = () => {
 
   return (
     <main className="container mx-auto">
-      <section className="text-white h-screen flex container m-auto px-10 overflow-hidden">
+      <section className="text-white flex container m-auto px-10 overflow-hidden">
         {/* Chap tomondagi aside */}
         <motion.aside
           initial={{ x: "-100%", opacity: 0 }}
@@ -103,6 +103,7 @@ const home = () => {
           </button>
         </motion.aside>
       </section>
+
       <section
         className="flex w-full justify-center items-center py-10 rounding container mx-auto"
         style={{
@@ -142,6 +143,7 @@ const home = () => {
           </button>
         </div>
       </section>
+
       <section className="w-full h-[800px] flex items-center justify-center bg-[#191919] py-10 container mx-auto">
         <div className="max-w-7xl w-full text-white flex flex-col items-center">
           {/* Sarlavha */}
@@ -197,6 +199,7 @@ const home = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-[#191919] py-16 text-center overflow-hidden">
         {/* Logolar container */}
         <div className="space-y-6">
