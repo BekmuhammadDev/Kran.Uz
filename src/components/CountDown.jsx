@@ -21,7 +21,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-black text-white py-6 w-full h-[200px]">
+    <div className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px]">
       <p className="mb-2 mont font-bold text-[28px]">Aksiya tugashiga</p>
       <div className="flex items-center w-full px-4">
         <div className="flex-1 h-px bg-gray-600"></div>

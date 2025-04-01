@@ -8,7 +8,6 @@ import Footer from "../components/layouts/footer";
 
 const Service = () => {
   const vehicleServices = [
-    // Shalanda (Trailers)
     {
       id: 1,
       category: "Shalanda",
@@ -23,32 +22,6 @@ const Service = () => {
     },
     {
       id: 2,
-      category: "Shalanda",
-      name: "Pritsep shalanda",
-      description:
-        "Pritsep shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: HundayKamaz,
-    },
-    {
-      id: 3,
-      category: "Shalanda",
-      name: "Kontenerovoz shalanda",
-      description:
-        "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: HundayKamaz,
-    },
-
-    // Ekskavator (Excavators)
-    {
-      id: 4,
       category: "Ekskavator",
       name: "Hyundai 55W",
       description:
@@ -60,7 +33,56 @@ const Service = () => {
       image: HundayKamaz,
     },
     {
+      id: 3,
+      category: "Manipulyator Kran",
+      name: "Mercedes",
+      description:
+        "Mercedes manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "8 tonna",
+      price: "1,600,000 UZS",
+      minHours: null,
+      advanceNotice: null,
+      image: HundayKamaz,
+    },
+
+    {
+      id: 4,
+      category: "Kara",
+      name: "Avto Kara 3 tonna",
+      description:
+        "Avto Kara 3 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "3 tonna",
+      price: "500,000 UZS",
+      minHours: 4,
+      advanceNotice: null,
+      image: HundayKamaz,
+    },
+    {
       id: 5,
+      category: "Shalanda",
+      name: "Pritsep shalanda",
+      description:
+        "Pritsep shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "30 tonna",
+      price: "1,600,000 UZS",
+      minHours: null,
+      advanceNotice: null,
+      image: HundayKamaz,
+    },
+    {
+      id: 6,
+      category: "Shalanda",
+      name: "Kontenerovoz shalanda",
+      description:
+        "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "30 tonna",
+      price: "1,600,000 UZS",
+      minHours: null,
+      advanceNotice: null,
+      image: HundayKamaz,
+    },
+    {
+      id: 7,
       category: "Ekskavator",
       name: "Hyundai 140W",
       description:
@@ -72,7 +94,7 @@ const Service = () => {
       image: HundayKamaz,
     },
     {
-      id: 6,
+      id: 8,
       category: "Ekskavator",
       name: "Volvo 145W",
       description:
@@ -83,42 +105,8 @@ const Service = () => {
       advanceNotice: "2 soat oldindan",
       image: HundayKamaz,
     },
-
-    // Special Hyundai SSW (Kamaz)
     {
-      id: 13,
-      category: "Ekskavator",
-      name: "Hyundai SSW",
-      description:
-        "Hyundai SSW ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      specifications: [
-        { label: "Yuk sig'imi", value: "40 tonna" },
-        { label: "Baladlik", value: "70 metr" },
-        { label: "Uzunlik", value: "18 metr" },
-      ],
-      price: "1,800,000 UZS",
-      capacity: "40 tonna",
-      minHours: 5,
-      advanceNotice: "2 soat oldindan",
-      image: HundayKamaz,
-      specialLayout: true,
-    },
-
-    // Manipulyator Kran (Crane Manipulators)
-    {
-      id: 7,
-      category: "Manipulyator Kran",
-      name: "Mercedes",
-      description:
-        "Mercedes manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "8 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: HundayKamaz,
-    },
-    {
-      id: 8,
+      id: 10,
       category: "Manipulyator Kran",
       name: "Hyundai",
       description:
@@ -130,7 +118,7 @@ const Service = () => {
       image: HundayKamaz,
     },
     {
-      id: 9,
+      id: 11,
       category: "Manipulyator Kran",
       name: "Isuzu",
       description:
@@ -144,19 +132,7 @@ const Service = () => {
 
     // Kara (Trucks)
     {
-      id: 10,
-      category: "Kara",
-      name: "Avto Kara 3 tonna",
-      description:
-        "Avto Kara 3 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "3 tonna",
-      price: "500,000 UZS",
-      minHours: 4,
-      advanceNotice: null,
-      image: HundayKamaz,
-    },
-    {
-      id: 11,
+      id: 12,
       category: "Kara",
       name: "Avto Kara 5 tonna",
       description:
@@ -168,7 +144,7 @@ const Service = () => {
       image: HundayKamaz,
     },
     {
-      id: 12,
+      id: 13,
       category: "Kara",
       name: "Avto Kara 10 tonna",
       description:
@@ -194,8 +170,6 @@ const Service = () => {
         (prevIndex - 1 + vehicleServices.length) % vehicleServices.length
     );
   };
-
-  // ... (rest of your component code remains the same)
 
   return (
     <div className="relative w-full min-h-screen bg-[#191919] text-white pt-10 container mx-auto">
@@ -258,7 +232,7 @@ const Service = () => {
 
         <div className="relative w-[450px] h-[520px] p-[10px] mr-10">
           <article className="text-center flex-col">
-            <h1 className="krone font-normal text-[24px]">
+            <h1 className="krone font-normal text-[24px] text-right">
               {currentVehicle.name}
             </h1>
             <p className="mont font-normal text-[16px] leading-6 text-right my-10">
@@ -284,7 +258,6 @@ const Service = () => {
         </div>
       </section>
 
-      {/* Thumbnail Navigation Section */}
       <section className="w-full h-[450px] pt-28 bg-[#191919]">
         <div className="flex items-center justify-center gap-14">
           {vehicleServices.slice(0, 4).map((vehicle, index) => (
@@ -294,19 +267,19 @@ const Service = () => {
               onClick={() => setCurrentIndex(index)}
             >
               <div
-                className={`parallelogram smGradient w-[280px] h-[204px] gradient absolute ${
+                className={`smGradient w-[280px] h-[204px] gradient absolute  ${
                   currentIndex === index ? "border-2 border-[#fedf51]" : ""
                 }`}
               ></div>
               <img
                 src={logoHunday}
                 alt=""
-                className="absolute left-12 top-6 w-[44px] h-[28px]"
+                className="absolute left-2 top-2 w-[44px] h-[28px]"
               />
               <img
                 src={vehicle.image || smKamaz}
                 alt={vehicle.name}
-                className="absolute top-3 right-0"
+                className="absolute bottom-5 w-[255px] h-[180px]"
               />
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="text-lg font-medium">{vehicle.category}</h3>
