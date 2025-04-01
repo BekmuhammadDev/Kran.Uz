@@ -3,12 +3,14 @@ import { IoEarthOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 const header = () => {
   return (
-    <header className="container mx-auto h-20 py-7 px-10 pr-20 bg-transparent z-10">
-      <nav className="flex items-center justify-between ">
-        <h1 className="krone font-normal text-[24px] text-white">KRAN</h1>
-        <ul className="mont font-semibold text-[20px] flex gap-[72px] z-10 ml-40">
+    <header className="container mx-auto h-20 py-7 pl-20 pr-20">
+      <nav className="flex items-center justify-between bg-transparent">
+        <NavLink to={"/"} className="krone font-normal text-[24px] text-white">
+          KRAN
+        </NavLink>
+        <ul className="mont font-semibold text-[20px] flex gap-[72px] ml-40">
           <li>
-            <NavLink to={"/"} className="text-white text-xl font-semibold">
+            <NavLink to={"/about"} className="text-white text-xl font-semibold">
               Biz haqimizda
             </NavLink>
           </li>

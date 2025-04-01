@@ -1,47 +1,69 @@
 import React from "react";
-import ilmoqImage from "../../assets/images/ilmoq.svg";
-import smIlmoq from "../../assets/images/smIlmoq.svg";
 import { NavLink } from "react-router-dom";
+import { FaTelegramPlane } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="w-full h-[235px] bg-[#000000] container mx-auto px-10 pl-20 text-white">
-      <div className="flex justify-between items-center">
-        <h1 className="krone font-normal text-[32px]">KRAN</h1>
-        <article className="flex gap-20 mont font-semibold text-[16px] ml-40">
-          <ul>
-            <li>
-              <NavLink to={"/"}>Biz haqimizda</NavLink>
-            </li>
-            <li>
-              <NavLink to={"/services"}>Hizmatlar</NavLink>
-            </li>
-            <li>
-              <NavLink to={"/partners"}>Partners</NavLink>
-            </li>
-          </ul>
-          <ul>
-            <li>Telegram</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
-          </ul>
-        </article>
-        <div className="flex items-center">
-          <img
-            src={ilmoqImage}
-            alt=""
-            className="w-[165px] h-[180px] relative top-[-6px] left-[95px] "
-          />
-          <img
-            src={smIlmoq}
-            alt=""
-            className="w-[110px] h-[115px] relative top-[-36px]"
-          />
+    <div className="w-full bg-[#000000] text-white py-8 px-10 krone">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+          {/* Logo Section */}
+          <div className="w-full md:w-auto">
+            <h1 className="text-2xl font-bold mb-4">KRAN</h1>
+          </div>
+
+          {/* Contacts Section */}
+          <div className="w-full md:w-auto">
+            <h2 className="text-lg font-semibold mb-3">Kontaktlar</h2>
+            <ul className="space-y-2">
+              <li>Toshkent, Yunusobod</li>
+              <li>998 00 000 00 00</li>
+              <li>998 00 000 00 00</li>
+            </ul>
+          </div>
+
+          {/* Links Section */}
+          <div className="w-full md:w-auto">
+            <h2 className="text-lg font-semibold mb-3">Linklar</h2>
+            <ul className="space-y-2">
+              <li>
+                <NavLink to={"/about"} className="hover:text-gray-300">
+                  Biz haqimizda
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/services"} className="hover:text-gray-300">
+                  Hizmatlar
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/partners"} className="hover:text-gray-300">
+                  Partners
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="w-full md:w-auto">
+            <h2 className="text-lg font-semibold mb-3">Medialar</h2>
+            <ul className="flex items-center text-[24px] gap-2">
+              <li>
+                <FaTelegramPlane />
+              </li>
+              <li>
+                <BsInstagram />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="mt-8 pt-4 border-t border-gray-700 text-center">
+          <p className="text-sm">2025 IPro Support</p>
         </div>
       </div>
-      <p className="krone font-normal text-[16px] text-center">
-        2025 iPro Group
-      </p>
     </div>
   );
 };
