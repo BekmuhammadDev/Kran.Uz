@@ -8,6 +8,7 @@ import kranImg from "../assets/images/kranImg.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
 import "./Home.css";
 import SectionForHome from "../components/SectionForHome";
+// ///
 
 const home = () => {
   return (
