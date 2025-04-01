@@ -32,13 +32,13 @@ export default function Avtovishkalar() {
   };
 
   return (
-    <section className="container mx-auto w-full h-[700px] flex-col items-center justify-center py-20 overflow-hidden">
+    <section className="container mx-auto w-full h-[700px] flex-col items-center justify-center py-20 overflow-hidden bg-[#191919]">
       <h1 className="krone text-center mb-10 font-normal text-[40px] text-[#fedf51]">
         Spec Texnikalar
       </h1>
-      <div className="relative flex left-[180px]">
+      <div className="radius relative flex left-[180px]">
         <NavLink to={"/services"}>
-          <div className="parallelogram smGradient w-[440px] h-[380px] gradient absolute">
+          <div className="smGradient w-[440px] h-[380px] gradient absolute">
             <h4 className="absolute krone font-normal text-[32px] text-white top-10 left-10">
               Avto Kran
             </h4>
@@ -52,7 +52,7 @@ export default function Avtovishkalar() {
       </div>
       <div className="relative left-[850px]">
         <NavLink to={"/services"}>
-          <div className="parallelogram smGradient w-[440px] h-[380px] gradient absolute">
+          <div className="smGradient w-[440px] h-[380px] gradient absolute">
             <h4 className="absolute krone font-normal text-[32px] text-white top-10 left-10">
               Ekskavator
             </h4>

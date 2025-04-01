@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaUser, FaPhone } from "react-icons/fa";
 import Footer from "../components/layouts/footer";
 import homeHunday from "../assets/images/homeHunday.svg";
@@ -13,8 +13,16 @@ import Countdown from "../components/CountDown";
 import mapImg from "../assets/images/map.svg";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
+import Contact from "../components/forContact/Contact";
+import artel from "../assets/images/artel.svg";
+import park from "../assets/images/park.svg";
+import enter from "../assets/images/enter.svg";
+import grand from "../assets/images/grand.svg";
+import discover from "../assets/images/discover.svg";
 
 const home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -30,9 +38,9 @@ const home = () => {
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-[25%] h-full pt-24 container m-auto"
+          className="w-[25%] container m-auto hidden md:block"
         >
-          <article>
+          <article className="relative top-[-150px]">
             <ul>
               <li>
                 <h1 className="krone font-normal text-[32px]">550 000 UZS</h1>
@@ -52,16 +60,16 @@ const home = () => {
               </li>
             </ul>
           </article>
-          <article className="absolute pt-32">
+          <article className="absolute">
             <h1 className="krone font-normal text-[32px]">5 soat</h1>
             <p className="mont font-normal text-[20px]">Minimal soat</p>
           </article>
         </motion.aside>
 
         {/* O‘rta qism */}
-        <div className="w-[50%] h-[800px] secondGradient relative overflow-visible flex-col items-center justify-center pt-16">
+        <div className="md:w-[50%] md:h-[800px] secondGradient relative overflow-visible mdflex-col items-center justify-center pt-16">
           <motion.h1
-            className="krone font-thin text-[42px] text-center"
+            className="krone font-thin md:text-[42px] text-[28px] text-center"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -74,15 +82,16 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[950px] h-[670px] relative bottom-36"
+            className="md:w-[950px] md:h-[670px] w-[350px] h-[253px] relative bottom-36 top-[10px]"
           />
           <motion.button
+            onClick={() => setIsModalOpen(true)}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[170px] h-[40px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[20px] relative left-[260px] top-[-190px]"
+            className="w-[170px] h-[40px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[20px] relative md:left-[260px] top-[-190px]"
           >
-            Bog‘lanish
+            Texnikalar
           </motion.button>
         </div>
 
@@ -91,7 +100,7 @@ const home = () => {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          className="w-[25%] px-10 pt-20 relative"
+          className="w-[25%] px-10 pt-20 relative hidden md:block"
         >
           <p className="mont font-normal text-[16px] leading-6 h-full">
             Website orqali buyurtma qoldiring va o‘zingizga qulay avtovishkani
@@ -99,13 +108,16 @@ const home = () => {
             telefon qiling.
           </p>
           <button className="w-[50px] h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[24px] absolute top-0 mt-[580px] right-0">
-            <IoCall />
+            <a href="tel:+998887024742">
+              {" "}
+              <IoCall />
+            </a>
           </button>
         </motion.aside>
       </section>
 
       <section
-        className="flex w-full justify-center items-center py-10 rounding container mx-auto"
+        className="flex w-full mt-10 justify-center items-center py-10 rounding container mx-auto"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}
@@ -144,142 +156,15 @@ const home = () => {
         </div>
       </section>
 
-      <section className="w-full h-[800px] flex items-center justify-center bg-[#191919] py-10 container mx-auto">
-        <div className="max-w-7xl w-full text-white flex flex-col items-center">
-          {/* Sarlavha */}
-          <h2 className="text-[40px] text-center font-normal text-[#FEDF51] relative mb-24 krone">
-            Nega Kran Uz?
-            <span className="block w-[456px] h-1 bg-[#FEDF51] mx-auto"></span>
-          </h2>
-
-          {/* Kontent qismi */}
-          <div className="flex justify-between items-center w-full relative">
-            {/* Chap tomondagi matnlar */}
-            <div className="text-left space-y-16">
-              <div>
-                <h3 className="text-[32px] font-normal">Qayerda?</h3>
-                <p className="text-gray-400 mont font-normal text-[20px]">
-                  Butun Uzbekistan bo‘ylab ijaraga olish
-                </p>
-              </div>
-              <hr className="border-gray-600 w-[456px]" />
-              <div>
-                <h3 className="text-[32px] font-normal">Tarif?</h3>
-                <p className="text-gray-400 mont font-normal text-[20px]">
-                  Kunlik, oylik yoki yillik tariflar asosida ijaraga olish
-                </p>
-              </div>
-            </div>
-
-            {/* Markazdagi rasm */}
-            <div className="absolute left-1/2 transform -translate-x-1/2">
-              <img
-                src={kranImg}
-                alt="Crane Hook"
-                className="w-[445px] h-[485px]"
-              />
-            </div>
-
-            {/* O‘ng tomondagi matnlar */}
-            <div className="text-right space-y-16">
-              <div>
-                <h3 className="text-[32px] font-normal">Tarif?</h3>
-                <p className="text-gray-400 mont font-normal text-[20px]">
-                  Kunlik, oylik yoki yillik tariflar asosida ijaraga olish
-                </p>
-              </div>
-              <hr className="border-gray-600 w-[456px] ml-auto" />
-              <div>
-                <h3 className="text-[32px] font-normal">Qayerda?</h3>
-                <p className="text-gray-400 mont font-normal text-[20px]">
-                  Butun Uzbekistan bo‘ylab ijaraga olish
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#191919] py-16 text-center overflow-hidden">
-        {/* Logolar container */}
-        <div className="space-y-6">
-          {/* Yuqori qator (chapdan o‘ngga) */}
-          <div className="relative flex overflow-hidden">
-            <div className="flex animate-marquee">
-              {[...Array(10)].map((_, i) => (
-                <div
-                  key={i}
-                  className="bg-[#333] parallelogram p-6 rounded-2xl shadow-lg flex items-center justify-center w-[150px] h-[100px] mx-3"
-                >
-                  <img src={logoHunday} alt="Hyundai" className="w-24" />
-                </div>
-              ))}
-            </div>
-            <div className="flex animate-marquee" aria-hidden="true">
-              {[...Array(10)].map((_, i) => (
-                <div
-                  key={i + 10}
-                  className="bg-[#333] parallelogram p-6 rounded-2xl shadow-lg flex items-center justify-center w-[150px] h-[100px] mx-3"
-                >
-                  <img src={logoHunday} alt="Hyundai" className="w-24" />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Pastki qator (o‘ngdan chapga) */}
-          <div className="relative flex overflow-hidden">
-            <div className="flex animate-marquee-reverse">
-              {[...Array(10)].map((_, i) => (
-                <div
-                  key={i + 20}
-                  className="bg-[#333] p-6 parallelogram rounded-2xl shadow-lg flex items-center justify-center w-[150px] h-[100px] mx-3"
-                >
-                  <img src={logoHunday} alt="Hyundai" className="w-24" />
-                </div>
-              ))}
-            </div>
-            <div className="flex animate-marquee-reverse" aria-hidden="true">
-              {[...Array(10)].map((_, i) => (
-                <div
-                  key={i + 30}
-                  className="bg-[#333] parallelogram p-6 rounded-2xl shadow-lg flex items-center justify-center w-[150px] h-[100px] mx-3"
-                >
-                  <img src={logoHunday} alt="Hyundai" className="w-24" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
+        <img src={artel} alt="" />
+        <img src={park} alt="" />
+        <img src={enter} alt="" />
+        <img src={grand} alt="" />
+        <img src={discover} alt="" />
+        <img src={artel} alt="" />
       </section>
       <Countdown />
-
-      {/* Animatsiya uchun Tailwind CSS */}
-      <style>
-        {`
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
-    }
-
-    @keyframes marquee-reverse {
-      from { transform: translateX(-100%); }
-      to { transform: translateX(0); }
-    }
-
-    .animate-marquee {
-      display: flex;
-      width: 200%;
-      animation: marquee 15s linear infinite;
-    }
-
-    .animate-marquee-reverse {
-      display: flex;
-      width: 200%;
-      animation: marquee-reverse 15s linear infinite;
-    }
-  `}
-      </style>
 
       <SectionForHome />
 
