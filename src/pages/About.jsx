@@ -1,5 +1,6 @@
 import React from "react";
 import bgAbout from "../assets/images/bgAbout.svg";
+//hello world
 
 const About = () => {
   return (
