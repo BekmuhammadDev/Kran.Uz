@@ -21,16 +21,18 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px]">
-      <p className="mb-2 mont font-bold text-[28px]">Aksiya tugashiga</p>
+    <div className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px] md:h-[250px]">
+      <p className="mb-2 mont font-bold text-[24px] sm:text-[28px] lg:text-[32px]">
+        Aksiya tugashiga
+      </p>
       <div className="flex items-center w-full px-4">
         <div className="flex-1 h-px bg-gray-600"></div>
-        <span className="text-5xl font-bold text-[#fedf51] mx-4 krone">
+        <span className="text-4xl sm:text-5xl font-bold text-[#fedf51] mx-4 krone">
           {formatTime(timeLeft)}
         </span>
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
-      <p className="mt-2 font-bold mont text-[28px]">
+      <p className="mt-2 font-bold mont text-[20px] sm:text-[24px] lg:text-[28px]">
         qoldi. <span className="underline">Qatnashishga ulguring</span>
       </p>
     </div>

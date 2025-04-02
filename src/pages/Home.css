@@ -18,3 +18,24 @@
   border-radius: 30px;
   background: #191919;
 }
+
+/* Mobile uchun tasvirlar cheksiz aylanib turishi */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 5s alternate infinite;
+}
+
+@media (min-width: 1024px) {
+  /* Desktop uchun tasvirlar qotib turadi */
+  .animate-marquee {
+    animation: none;
+  }
+}

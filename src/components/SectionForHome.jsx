@@ -2,8 +2,8 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState } from "react";
 import hundayKamaz from "../assets/images/hyundaiKamaz.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
-import smKamaz from "../assets/images/smKamaz.svg";
 import { NavLink } from "react-router-dom";
+import smKamaz from "../assets/images/smKamaz.svg";
 
 const vehicles = [
   {
@@ -32,37 +32,44 @@ export default function Avtovishkalar() {
   };
 
   return (
-    <section className="container mx-auto w-full h-[700px] flex-col items-center justify-center py-20 overflow-hidden bg-[#191919]">
+    <section className="container mx-auto w-full py-20 bg-[#191919]">
       <h1 className="krone text-center mb-10 font-normal text-[40px] text-[#fedf51]">
         Spec Texnikalar
       </h1>
-      <div className="radius relative flex left-[180px]">
-        <NavLink to={"/services"}>
-          <div className="smGradient w-[440px] h-[380px] gradient absolute">
-            <h4 className="absolute krone font-normal text-[32px] text-white top-10 left-10">
-              Avto Kran
-            </h4>
-          </div>
-          <img
-            src={smKamaz}
-            alt=""
-            className="absolute w-[580px] h-[400px] top-3 left-10 transition-transform duration-300 hover:scale-110"
-          />
-        </NavLink>
-      </div>
-      <div className="relative left-[850px]">
-        <NavLink to={"/services"}>
-          <div className="smGradient w-[440px] h-[380px] gradient absolute">
-            <h4 className="absolute krone font-normal text-[32px] text-white top-10 left-10">
-              Ekskavator
-            </h4>
-          </div>
-          <img
-            src={smKamaz}
-            alt=""
-            className="absolute w-[580px] h-[400px] top-3 left-10 transition-transform duration-300 hover:scale-110"
-          />
-        </NavLink>
+
+      {/* Flex Container for Cards */}
+      <div className="flex flex-wrap justify-center gap-10">
+        {/* First Card */}
+        <div className="w-full sm:w-[440px] h-[380px] bg-[#2a2a2a] rounded-lg overflow-hidden relative flex justify-center items-center">
+          <NavLink to={"/services"} className="block w-full h-full">
+            <div className="smGradient w-full h-full flex justify-center items-center relative">
+              <img
+                src={smKamaz}
+                alt="Avto Kran"
+                className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
+              />
+              <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
+                Avto Kran
+              </h4>
+            </div>
+          </NavLink>
+        </div>
+
+        {/* Second Card */}
+        <div className="w-full sm:w-[440px] h-[380px] bg-[#2a2a2a] rounded-lg overflow-hidden relative flex justify-center items-center">
+          <NavLink to={"/services"} className="block w-full h-full">
+            <div className="smGradient w-full h-full flex justify-center items-center relative">
+              <img
+                src={smKamaz}
+                alt="Ekskavator"
+                className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
+              />
+              <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
+                Ekskavator
+              </h4>
+            </div>
+          </NavLink>
+        </div>
       </div>
     </section>
   );
