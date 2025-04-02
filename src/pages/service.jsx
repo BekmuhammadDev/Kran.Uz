@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./Service.css";
 import logoHunday from "../assets/images/logoHunday.svg";
-import HundayKamaz from "../assets/images/hyundaiKamaz.svg";
 import smKamaz from "../assets/images/smKamaz.svg";
 import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 import Footer from "../components/layouts/footer";
+import tentovkaImg from "../assets/images/tentovka.svg";
+import hundayEks from "../assets/images/Hyundai_55W.svg";
+import mercedesManipul from "../assets/images/mersedesManipul.svg";
+import karaAvto from "../assets/images/avto_kara.svg";
+import shalandaPrit from "../assets/images/pritsep_shalanda.svg";
+import shalandaKont from "../assets/images/kontenerovoz.svg";
+import eksW140 from "../assets/images/Hyundai_140W.svg";
+import eks145W from "../assets/images/Volvo_145W.svg";
+import hundayManipull from "../assets/images/hundayManipull.svg";
+import isuzuManipul from "../assets/images/isuzu_manipul.svg";
 
 const Service = () => {
   const vehicleServices = [
@@ -18,7 +27,7 @@ const Service = () => {
       price: "2,000,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: tentovkaImg,
     },
     {
       id: 2,
@@ -30,7 +39,7 @@ const Service = () => {
       price: "500,000 UZS",
       minHours: 4,
       advanceNotice: "2 soat oldindan",
-      image: HundayKamaz,
+      image: hundayEks,
     },
     {
       id: 3,
@@ -42,7 +51,7 @@ const Service = () => {
       price: "1,600,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: mercedesManipul,
     },
 
     {
@@ -55,7 +64,7 @@ const Service = () => {
       price: "500,000 UZS",
       minHours: 4,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: karaAvto,
     },
     {
       id: 5,
@@ -67,7 +76,7 @@ const Service = () => {
       price: "1,600,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: shalandaPrit,
     },
     {
       id: 6,
@@ -79,7 +88,7 @@ const Service = () => {
       price: "1,600,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: shalandaKont,
     },
     {
       id: 7,
@@ -91,7 +100,7 @@ const Service = () => {
       price: "600,000 UZS",
       minHours: 5,
       advanceNotice: "2 soat oldindan",
-      image: HundayKamaz,
+      image: eksW140,
     },
     {
       id: 8,
@@ -103,7 +112,7 @@ const Service = () => {
       price: "650,000 UZS",
       minHours: 5,
       advanceNotice: "2 soat oldindan",
-      image: HundayKamaz,
+      image: eks145W,
     },
     {
       id: 10,
@@ -115,7 +124,7 @@ const Service = () => {
       price: "1,400,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: hundayManipull,
     },
     {
       id: 11,
@@ -127,7 +136,7 @@ const Service = () => {
       price: "1,300,000 UZS",
       minHours: null,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: isuzuManipul,
     },
 
     // Kara (Trucks)
@@ -141,7 +150,7 @@ const Service = () => {
       price: "600,000 UZS",
       minHours: 4,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: karaAvto,
     },
     {
       id: 13,
@@ -153,7 +162,7 @@ const Service = () => {
       price: "800,000 UZS",
       minHours: 6,
       advanceNotice: null,
-      image: HundayKamaz,
+      image: karaAvto,
     },
   ];
 
@@ -186,7 +195,7 @@ const Service = () => {
             </h2>
           </div>
           <img
-            src={currentVehicle.image || HundayKamaz}
+            src={currentVehicle.image || mercedesManipul}
             alt={currentVehicle.name}
             className="relative bottom-28 left-16"
           />

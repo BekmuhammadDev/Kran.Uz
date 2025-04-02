@@ -2,10 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { FaUser, FaPhone } from "react-icons/fa";
 import Footer from "../components/layouts/footer";
-import homeHunday from "../assets/images/homeHunday.svg";
 import { IoCall } from "react-icons/io5";
 import { motion } from "framer-motion";
-import kranImg from "../assets/images/kranImg.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
 import "./Home.css";
 import SectionForHome from "../components/SectionForHome";
@@ -20,6 +18,7 @@ import enter from "../assets/images/enter.svg";
 import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import Hyundai_55W from "../assets/images/hundayEks.svg";
+import { NavLink } from "react-router-dom";
 
 const home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +38,7 @@ const home = () => {
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full md:w-[25%] container m-auto hidden md:block"
+          className="w-full md:w-[25%] container m-auto hidden md:block pt-32"
         >
           <article className="relative md:top-[-150px] top-0">
             <ul className="text-center md:text-left">
@@ -127,7 +126,7 @@ const home = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
             className="w-full md:w-[170px] h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[18px] md:text-[20px] mt-5 md:hidden"
           >
-            Texnikalar
+            <NavLink to={"/services"}>Texnikalar</NavLink>
           </motion.button>
         </motion.aside>
 
@@ -142,7 +141,7 @@ const home = () => {
             Hyundai 55W
           </motion.h1>
           <motion.img
-            src={homeHunday}
+            src={Hyundai_55W}
             alt="Hyundai 55W"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -156,7 +155,7 @@ const home = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
             className="w-[150px] md:w-[170px] h-[40px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[18px] md:text-[20px] absolute md:bottom-[190px] hidden md:block"
           >
-            Texnikalar
+            <NavLink to={"/services"}>Texnikalar</NavLink>
           </motion.button>
         </div>
 
@@ -165,7 +164,7 @@ const home = () => {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          className="w-full md:w-[25%] px-5 md:px-10 pt-10 md:pt-20 relative hidden md:block"
+          className="w-full md:w-[25%] px-5 md:px-10 pt-10 md:pt-32 relative hidden md:block"
         >
           <p className="mont font-normal text-[14px] md:text-[16px] leading-6 h-full">
             Website orqali buyurtma qoldiring va o‘zingizga qulay avtovishkani

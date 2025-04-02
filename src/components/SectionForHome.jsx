@@ -1,19 +1,19 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState } from "react";
-import hundayKamaz from "../assets/images/hyundaiKamaz.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
 import { NavLink } from "react-router-dom";
-import smKamaz from "../assets/images/smKamaz.svg";
+import eks145W from "../assets/images/Volvo_145W.svg";
+import mercedesManipul from "../assets/images/mersedesManipul.svg";
 
 const vehicles = [
   {
     name: "Avtovishka Daewoo Novus",
-    image: hundayKamaz,
+    image: eks145W,
     capacity: ["300 KG", "25 METR", "40 METR"],
   },
   {
     name: "Avtovishka Hyundai",
-    image: hundayKamaz,
+    image: eks145W,
     capacity: ["350 KG", "28 METR", "45 METR"],
   },
 ];
@@ -44,7 +44,7 @@ export default function Avtovishkalar() {
           <NavLink to={"/services"} className="block w-full h-full">
             <div className="smGradient w-full h-full flex justify-center items-center relative">
               <img
-                src={smKamaz}
+                src={mercedesManipul}
                 alt="Avto Kran"
                 className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
               />
@@ -60,7 +60,7 @@ export default function Avtovishkalar() {
           <NavLink to={"/services"} className="block w-full h-full">
             <div className="smGradient w-full h-full flex justify-center items-center relative">
               <img
-                src={smKamaz}
+                src={eks145W}
                 alt="Ekskavator"
                 className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
               />
