@@ -200,7 +200,7 @@ const Service = () => {
           <img
             src={currentVehicle.image || mercedesManipul}
             alt={currentVehicle.name}
-            className="relative w-[390px] h-[245px] md:w-[800px] md:h-[650px] bottom-11 md:bottom-36 md:left-16"
+            className="relative w-[490px] h-[345px] md:w-[800px] md:h-[650px] bottom-16 md:bottom-36 md:left-16"
           />
         </div>
 
@@ -243,7 +243,7 @@ const Service = () => {
                   </article>
                 </div>
 
-                <article className="w-[200px] flex flex-col items-center col-span-2">
+                <article className="w-[200px] flex flex-col items-center col-span-2 pt-2">
                   <h1 className="font-normal text-[16px] md:text-[28px]">
                     {currentVehicle.price}
                   </h1>
