@@ -133,7 +133,7 @@ const home = () => {
         {/* O‘rta qism */}
         <div className="w-full md:w-[50%] md:h-[800px] secondGradient relative overflow-visible flex flex-col items-center justify-center pt-10 md:pt-16">
           <motion.h1
-            className="krone font-thin text-[24px] md:text-[42px] text-center mb-5"
+            className="krone font-thin text-[24px] md:text-[42px] text-center mb-10"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -146,7 +146,7 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[280px] h-[200px] md:w-[950px] md:h-[670px] relative md:bottom-[160px]"
+            className="w-[350px] h-[300px] md:w-[950px] md:h-[670px] relative md:bottom-[100px]"
           />
           <motion.button
             onClick={() => setIsModalOpen(true)}
@@ -180,7 +180,7 @@ const home = () => {
       </section>
 
       <section
-        className="flex w-full mt-10 justify-center items-center py-10 rounding container mx-auto"
+        className="flex w-full justify-center items-center py-10 rounding container mx-auto"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}

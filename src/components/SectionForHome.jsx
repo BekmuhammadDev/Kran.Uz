@@ -46,7 +46,7 @@ export default function Avtovishkalar() {
               <img
                 src={mercedesManipul}
                 alt="Avto Kran"
-                className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
+                className="w-[400px] h-[280px] object-cover transition-transform duration-300 hover:scale-110"
               />
               <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
                 Avto Kran
@@ -62,7 +62,7 @@ export default function Avtovishkalar() {
               <img
                 src={eks145W}
                 alt="Ekskavator"
-                className="w-[280px] h-[210px] object-cover transition-transform duration-300 hover:scale-110"
+                className="w-[400px] h-[280px] object-cover transition-transform duration-300 hover:scale-110 md:mb-10"
               />
               <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
                 Ekskavator
