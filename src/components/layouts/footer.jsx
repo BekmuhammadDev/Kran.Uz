@@ -33,12 +33,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to={"/services"} className="hover:text-gray-300">
-                  Hizmatlar
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/partners"} className="hover:text-gray-300">
-                  Partners
+                  Texnikalar
                 </NavLink>
               </li>
             </ul>

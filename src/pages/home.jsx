@@ -38,7 +38,7 @@ const home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="text-white flex flex-col md:flex-row container m-auto px-5 md:px-10 overflow-hidden relative top-0"
+        className="text-white flex flex-col items-center justify-center md:flex-row container m-auto px-5 md:px-10 overflow-hidden relative top-0"
       >
         {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
         <div className="absolute w-[300px] md:h-[900px] lg:h-[1200px] bg-yellow-400 lg:left-32 lg:top-[-100px] md:top-[-50px] transform md:-rotate-12 lg:-rotate-45 opacity-80 z-0 hidden md:block"></div>
@@ -59,7 +59,7 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative left-[50px] top-[-40px] md:left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
+            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative left-[30px] top-[-40px] md:left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
           />
         </div>
 

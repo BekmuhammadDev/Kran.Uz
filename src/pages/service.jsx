@@ -180,6 +180,13 @@ const Service = () => {
     );
   };
 
+  const topFunction = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10 container mx-auto">
       {/* Main Carousel Section */}
@@ -197,6 +204,9 @@ const Service = () => {
               {currentVehicle.category}
             </h2>
           </div>
+          <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center md:hidden">
+            {currentVehicle.name}
+          </h1>
           <img
             src={currentVehicle.image || mercedesManipul}
             alt={currentVehicle.name}
@@ -284,18 +294,18 @@ const Service = () => {
           )}
         </div>
 
-        <div className="relative w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
+        <div className="relative top-[-90px] md:top-[110px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
           <article className="text-center flex-col md:mb-[300px] order-2 md:order-1">
-            <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center">
+            <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center hidden md:block">
               {currentVehicle.name}
             </h1>
-            <p className="mont font-normal text-[14px] md:text-[16px] leading-6 md:text-right text-center my-10">
+            <p className="mont font-normal text-[14px] md:text-[16px] leading-6 md:text-right text-center md:my-10 relative">
               {currentVehicle.description}
             </p>
           </article>
 
           <div className="w-full flex-col items-center gap-4 md:absolute bottom-0 order-1 md:order-2 md:hidden">
-            <div className="flex gap-5 mb-4 pl-24">
+            <div className="flex gap-5 my-6 pl-24">
               <TfiArrowCircleLeft
                 className="w-[45px] h-[45px] md:w-[55px] md:h-[55px] cursor-pointer"
                 onClick={prevSlide}
@@ -333,7 +343,10 @@ const Service = () => {
             <div
               key={vehicle.id}
               className="w-[320px] h-[204px] relative flex cursor-pointer items-center justify-center"
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => {
+                topFunction();
+                setCurrentIndex(index);
+              }}
             >
               <div className="smGradient w-[280px] h-[204px] gradient absolute"></div>
               {/* Logo chap tomonga surildi */}
