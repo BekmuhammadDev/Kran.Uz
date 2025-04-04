@@ -184,9 +184,9 @@ const Service = () => {
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10 container mx-auto">
       {/* Main Carousel Section */}
       <section className="grid-col md:flex relative">
-        <div className="w-[420px] h-[300px] gradient relative right-0 md:h-[600px] md:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
+        <div className="w-[420px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
 
-        <div className="absolute left-0 p-10 flex-col items-center h-[600px] top-0">
+        <div className="absolute left-0 lg:p-10 md:p-5 flex-col items-center h-[600px] top-0">
           <div className="flex items-center justify-around pb-10">
             <img
               src={logoHunday}
@@ -200,7 +200,7 @@ const Service = () => {
           <img
             src={currentVehicle.image || mercedesManipul}
             alt={currentVehicle.name}
-            className="relative w-[490px] h-[345px] md:w-[800px] md:h-[650px] bottom-16 md:bottom-36 md:left-16"
+            className="relative w-[490px] h-[345px] md:w-[405px] md:h-[348px] md:top-[20] lg:w-[800px] lg:h-[650px] bottom-16 lg:bottom-36 lg:left-16"
           />
         </div>
 
@@ -222,9 +222,8 @@ const Service = () => {
             <div>
               <div className="w-[300px] flex-col md:gap-10 krone relative top-[300px] md:hidden pl-[50px]">
                 <div className="flex w-[200px] items-center justify-center gap-5">
-                  {" "}
                   <article className="flex flex-col items-center">
-                    <h1 className="font-normal text-[14px] md:text-[28px]">
+                    <h1 className="font-normal text-[14px] md:text-[18px] lg:text-[28px]">
                       {currentVehicle.capacity || "N/A"}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px] pt-1">
@@ -253,30 +252,30 @@ const Service = () => {
                 </article>
               </div>
 
-              <div className="w-full flex items-center md:gap-10 krone absolute md:bottom-0 gap-3 opacity-0 md:opacity-100">
+              <div className="w-full flex items-center md:gap-5 lg:gap-10 krone absolute md:top-[350px] gap-3 opacity-0 md:opacity-100">
                 <article>
-                  <h1 className="font-normal text-[14px] md:text-[28px]">
+                  <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.capacity || "N/A"}
                   </h1>
-                  <p className="mont font-normal text-[16px] md:text-[20px]">
+                  <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
                     Yuk sig'imi
                   </p>
                 </article>
                 <article>
-                  <h1 className="font-normal text-[16px] md:text-[28px]">
+                  <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.price}
                   </h1>
-                  <p className="mont font-normal text-[16px] md:text-[20px]">
+                  <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
                     Narxi
                   </p>
                 </article>
                 <article>
-                  <h1 className="font-normal text-[20px] md:text-[28px]">
+                  <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.minHours
                       ? `${currentVehicle.minHours} soat`
                       : "1 reys"}
                   </h1>
-                  <p className="mont font-normal text-[16px] md:text-[20px]">
+                  <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
                     {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
                   </p>
                 </article>
@@ -287,7 +286,7 @@ const Service = () => {
 
         <div className="relative w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
           <article className="text-center flex-col md:mb-[300px] order-2 md:order-1">
-            <h1 className="krone font-normal text-[20px] md:text-[24px] md:text-right text-center">
+            <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center">
               {currentVehicle.name}
             </h1>
             <p className="mont font-normal text-[14px] md:text-[16px] leading-6 md:text-right text-center my-10">
@@ -310,7 +309,7 @@ const Service = () => {
               Bog'lanish
             </button>
           </div>
-          <div className="w-full hidden md:flex md:items-center gap-4 md:absolute md:justify-between bottom-0 order-1 md:order-2 pr-12">
+          <div className="w-full hidden md:flex md:flex-col lg:flex md:items-center gap-4 md:absolute md:justify-between bottom-0 order-1 md:order-2 pr-12">
             <div className="flex gap-5 mb-4 pt-[15px]">
               <TfiArrowCircleLeft
                 className="w-[45px] h-[45px] md:w-[55px] md:h-[55px] cursor-pointer"
@@ -328,7 +327,7 @@ const Service = () => {
         </div>
       </section>
 
-      <section className="w-full h-auto pt-16 bg-[#191919] flex justify-center pb-10">
+      <section className="w-full h-auto pt-16 bg-[#191919] flex justify-center pb-10 mt-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14">
           {vehicleServices.slice(0, 4).map((vehicle, index) => (
             <div

@@ -39,3 +39,14 @@
     animation: none;
   }
 }
+
+.text {
+  -webkit-text-stroke: 2px #fedf51; /* width and color */
+
+  font-family: sans;
+  color: #191919;
+}
+
+.zen {
+  font-family: "Zen Dots";
+}
