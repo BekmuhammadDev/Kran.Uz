@@ -252,7 +252,7 @@ const Service = () => {
                 </article>
               </div>
 
-              <div className="w-full flex items-center md:gap-5 lg:gap-10 krone absolute md:top-[350px] gap-3 opacity-0 md:opacity-100">
+              <div className="w-full flex items-center md:gap-5 lg:gap-10 krone absolute md:bottom-0 lg:bottom-0 gap-3 opacity-0 md:opacity-100">
                 <article>
                   <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.capacity || "N/A"}
@@ -309,7 +309,7 @@ const Service = () => {
               Bog'lanish
             </button>
           </div>
-          <div className="w-full hidden md:flex md:flex-col lg:flex md:items-center gap-4 md:absolute md:justify-between bottom-0 order-1 md:order-2 pr-12">
+          <div className="w-full hidden md:flex lg:flex md:items-center gap-4 md:absolute md:justify-between bottom-0 order-1 md:order-2 pr-12">
             <div className="flex gap-5 mb-4 pt-[15px]">
               <TfiArrowCircleLeft
                 className="w-[45px] h-[45px] md:w-[55px] md:h-[55px] cursor-pointer"

@@ -44,9 +44,9 @@ const home = () => {
         <div className="absolute w-[300px] md:h-[900px] lg:h-[1200px] bg-yellow-400 lg:left-32 lg:top-[-100px] md:top-[-50px] transform md:-rotate-12 lg:-rotate-45 opacity-80 z-0 hidden md:block"></div>
 
         {/* Chap tomon - Ekskavator rasmi */}
-        <div className="relative w-full md:w-[50%] lg:w-[50%] min-h-[800px] flex flex-col items-start justify-start pt-10 md:pt-16 z-10">
+        <div className="relative w-full md:w-[50%] lg:w-[50%] min-h-[600px] md:min-h-[800px] flex flex-col items-start justify-start pt-10 md:pt-16 z-10">
           <motion.h1
-            className="krone font-thin text-[20px] md:text-[24px] lg:text-[42px] text-center mb-10 md:hidden"
+            className="text zen font-thin text-center ml-20 text-[22px] mb-10 md:hidden"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -59,7 +59,7 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
+            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative left-[50px] top-[-40px] md:left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
           />
         </div>
 
@@ -106,9 +106,38 @@ const home = () => {
             </button>
           </div>
         </motion.aside>
+        <motion.aside
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="w-full px-5 flex-col items-center justify-center relative top-[-250px] md:hidden lg:hidden"
+        >
+          <p className="mont font-normal text-[12px] text-center">
+            Horyong SKY 450SF havo platformalari 45 metrgacha bo'lgan
+            balandlikdagi har qanday qurilish-montaj ishlarini bajarish uchun
+            ajralmas uskunadir. Shuning uchun biz buni xususiy mijozlarga ham,
+            kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya
+            qilamiz.
+          </p>
+
+          {/* Texnikalar tugmasi */}
+
+          {/* Telefon orqali bog‘lanish tugmasi */}
+          <div>
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+              className="w-full mt-10 md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] md:text-[18px] lg:text-[20px] md:mt-10 relative lg:left-[460px] lg:top-[50px]"
+            >
+              <NavLink to={"/services"}>Texnikalar</NavLink>
+            </motion.button>
+          </div>
+        </motion.aside>
       </section>
       <section
-        className="flex w-full justify-center items-center py-20 rounding container mx-auto"
+        className="flex w-full justify-center items-center md:py-20 rounding container mx-auto"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}
@@ -166,39 +195,39 @@ const home = () => {
       <SectionForHome />
       <section className="container mx-auto w-full h-[600px] flex flex-col md:flex-row justify-center items-center gap-10">
         <article className="text-center md:text-left">
-          <h1 className="krone font-normal text-[36px] sm:text-[48px] leading-10 text-[#fedf51] mb-5">
+          <h1 className="krone font-normal text-[32px] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
             Biz bilan bog'lanish
           </h1>
           <div className="text-center md:text-left">
-            <p className="mont font-normal text-[18px] sm:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
+            <p className="mont font-normal text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
               <span>
                 <IoLocationOutline />
               </span>
               Bizning manzil
             </p>
-            <p className="mont font-semibold text-[18px] sm:text-[20px] text-white">
+            <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               Amir Temur shox ko'chasi, 107 B-uy, Toshkent, O'zbekiston
             </p>
           </div>
           <div className="my-6 sm:my-8 text-center md:text-left">
-            <p className="mont font-normal text-[18px] sm:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
+            <p className="mont font-normal text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
               <span>
                 <IoMailOutline />
               </span>
               Elektron pochta manzil
             </p>
-            <p className="mont font-semibold text-[18px] sm:text-[20px] text-white">
+            <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               example@mail.uz
             </p>
           </div>
           <div className="text-center md:text-left">
-            <p className="mont font-normal text-[18px] sm:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
+            <p className="mont font-normal text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
               <span>
                 <IoCallOutline />
               </span>
               Telefon
             </p>
-            <p className="mont font-semibold text-[18px] sm:text-[20px] text-white">
+            <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               +998 00 000 00 00
             </p>
           </div>
@@ -210,6 +239,7 @@ const home = () => {
           className="w-full sm:w-[400px] h-[300px] object-cover mt-8 sm:mt-0"
         />
       </section>
+
       <Footer />
     </main>
   );
