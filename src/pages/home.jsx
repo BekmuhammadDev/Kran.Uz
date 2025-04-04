@@ -43,97 +43,47 @@ const home = () => {
           <article className="relative md:top-[-150px] top-0">
             <ul className="text-center md:text-left">
               <li>
-                <h1 className="krone font-normal text-[28px] md:text-[32px]">
+                <h1 className="krone font-normal text-[24px] md:text-[28px] lg:text-[32px]">
                   550 000 UZS
                 </h1>
-                <p className="mont font-normal text-[16px] md:text-[20px]">
+                <p className="mont font-normal text-[14px] md:text-[18px] lg:text-[20px]">
                   Soati
                 </p>
               </li>
               <br />
               <li>
-                <h1 className="krone font-normal text-[28px] md:text-[32px]">
+                <h1 className="krone font-normal text-[24px] md:text-[28px] lg:text-[32px]">
                   41m (9m+)
                 </h1>
-                <p className="mont font-normal text-[16px] md:text-[20px]">
+                <p className="mont font-normal text-[14px] md:text-[18px] lg:text-[20px]">
                   Uzunligi
                 </p>
               </li>
               <br />
               <li>
-                <h1 className="krone font-normal text-[28px] md:text-[32px]">
+                <h1 className="krone font-normal text-[24px] md:text-[28px] lg:text-[32px]">
                   30 Tonna
                 </h1>
-                <p className="mont font-normal text-[16px] md:text-[20px]">
+                <p className="mont font-normal text-[14px] md:text-[18px] lg:text-[20px]">
                   Og‘irligi
                 </p>
               </li>
             </ul>
           </article>
           <article className="absolute md:relative">
-            <h1 className="krone font-normal text-[28px] md:text-[32px]">
+            <h1 className="krone font-normal text-[24px] md:text-[28px] lg:text-[32px]">
               5 soat
             </h1>
-            <p className="mont font-normal text-[16px] md:text-[20px]">
+            <p className="mont font-normal text-[14px] md:text-[18px] lg:text-[20px]">
               Minimal soat
             </p>
           </article>
-        </motion.aside>
-        <motion.aside
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full md:w-[25%] text-center md:text-left mt-5 md:mt-0 order-2 md:order-none md:hidden"
-        >
-          <ul className="grid grid-cols-2 gap-x-5 gap-y-2 md:block">
-            <li>
-              <h1 className="krone font-normal text-[18px] md:text-[32px]">
-                550 000 UZS
-              </h1>
-              <p className="mont font-normal text-[14px] md:text-[20px]">
-                Soati
-              </p>
-            </li>
-            <li>
-              <h1 className="krone font-normal text-[20px] md:text-[32px]">
-                41m (9m+)
-              </h1>
-              <p className="mont font-normal text-[14px] md:text-[20px]">
-                Uzunligi
-              </p>
-            </li>
-            <li>
-              <h1 className="krone font-normal text-[20px] md:text-[32px]">
-                5 soat
-              </h1>
-              <p className="mont font-normal text-[14px] md:text-[20px]">
-                Minimal soat
-              </p>
-            </li>
-            <li>
-              <h1 className="krone font-normal text-[20px] md:text-[32px]">
-                30 Tonna
-              </h1>
-              <p className="mont font-normal text-[14px] md:text-[20px]">
-                Og‘irligi
-              </p>
-            </li>
-          </ul>
-          <motion.button
-            onClick={() => setIsModalOpen(true)}
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-full md:w-[170px] h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[18px] md:text-[20px] mt-5 md:hidden"
-          >
-            <NavLink to={"/services"}>Texnikalar</NavLink>
-          </motion.button>
         </motion.aside>
 
         {/* O‘rta qism */}
         <div className="w-full md:w-[50%] md:h-[800px] secondGradient relative overflow-visible flex flex-col items-center justify-center pt-10 md:pt-16">
           <motion.h1
-            className="krone font-thin text-[24px] md:text-[42px] text-center mb-10"
+            className="krone font-thin text-[20px] md:text-[32px] lg:text-[42px] text-center mb-10"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -146,14 +96,14 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[350px] h-[300px] md:w-[950px] md:h-[670px] relative md:bottom-[100px]"
+            className="w-[300px] md:w-[700px] lg:w-[950px] h-[250px] md:h-[500px] lg:h-[670px] relative md:bottom-[100px]"
           />
           <motion.button
             onClick={() => setIsModalOpen(true)}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[150px] md:w-[170px] h-[40px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[18px] md:text-[20px] absolute md:bottom-[190px] hidden md:block"
+            className="w-[140px] md:w-[160px] lg:w-[170px] h-[35px] md:h-[40px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] md:text-[18px] lg:text-[20px] absolute md:bottom-[150px] lg:bottom-[190px] hidden md:block"
           >
             <NavLink to={"/services"}>Texnikalar</NavLink>
           </motion.button>
@@ -166,12 +116,12 @@ const home = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           className="w-full md:w-[25%] px-5 md:px-10 pt-10 md:pt-32 relative hidden md:block"
         >
-          <p className="mont font-normal text-[14px] md:text-[16px] leading-6 h-full">
+          <p className="mont font-normal text-[12px] md:text-[14px] lg:text-[16px] leading-6 h-full">
             Website orqali buyurtma qoldiring va o‘zingizga qulay avtovishkani
             ijaraga oling. Qiziqtirgan savollar uchun murojat yuboring yoki
             telefon qiling.
           </p>
-          <button className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold lg:flex justify-center items-center text-[20px] md:text-[24px] absolute md:top-0 md:mt-[580px] right-0 hidden md:block">
+          <button className="w-[35px] md:w-[45px] lg:w-[50px] h-[35px] md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold lg:flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px] absolute md:top-0 md:mt-[500px] lg:mt-[580px] right-0 hidden md:block">
             <a href="tel:+998887024742">
               <IoCall />
             </a>
@@ -180,7 +130,7 @@ const home = () => {
       </section>
 
       <section
-        className="flex w-full justify-center items-center py-10 rounding container mx-auto"
+        className="flex w-full justify-center items-center py-20 rounding container mx-auto"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}

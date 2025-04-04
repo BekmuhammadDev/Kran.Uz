@@ -34,22 +34,6 @@ const Header = () => {
               Texnikalar
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="#"
-              className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
-            >
-              Aksiyalar
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="#"
-              className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
-            >
-              Hamkorlar
-            </NavLink>
-          </li>
         </ul>
 
         {/* Desktop Actions */}
@@ -151,24 +135,6 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Texnikalar
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#"
-                  className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Aksiyalar
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#"
-                  className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Hamkorlar
                 </NavLink>
               </li>
             </ul>
