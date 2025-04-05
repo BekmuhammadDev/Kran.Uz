@@ -3,7 +3,7 @@ import { useState } from "react";
 import logoHunday from "../assets/images/logoHunday.svg";
 import { NavLink } from "react-router-dom";
 import eks145W from "../assets/images/Volvo_145W.svg";
-import mercedesManipul from "../assets/images/mersedesManipul.svg";
+import mercedesManipul from "../assets/images/mercedesManipul.svg";
 
 const vehicles = [
   {
@@ -46,7 +46,7 @@ export default function Avtovishkalar() {
               <img
                 src={mercedesManipul}
                 alt="Avto Kran"
-                className="w-[350px] md:w-[400px] md:h-[280px] object-cover md:transition-transform md:duration-300 md:hover:scale-110"
+                className="w-[350px] object-cover md:transition-transform md:duration-300 md:hover:scale-110"
               />
               <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
                 Avto Kran
@@ -62,7 +62,7 @@ export default function Avtovishkalar() {
               <img
                 src={eks145W}
                 alt="Ekskavator"
-                className="w-[370px] md:w-[400px] md:h-[280px] object-cover md:transition-transform md:duration-300 md:hover:scale-110 md:mb-10"
+                className="w-[350px] object-cover md:transition-transform md:duration-300 md:hover:scale-110 md:mb-10"
               />
               <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
                 Ekskavator

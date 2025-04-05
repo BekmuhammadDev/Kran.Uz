@@ -6,14 +6,21 @@ import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 import Footer from "../components/layouts/footer";
 import tentovkaImg from "../assets/images/tentovka.svg";
 import hundayEks from "../assets/images/Hyundai_55W.svg";
-import mercedesManipul from "../assets/images/mersedesManipul.svg";
+import mercedesManipul from "../assets/images/mercedesManipul.svg";
 import karaAvto from "../assets/images/avto_kara.svg";
 import shalandaPrit from "../assets/images/pritsep_shalanda.svg";
 import shalandaKont from "../assets/images/kontenerovoz.svg";
 import eksW140 from "../assets/images/Hyundai_140W.svg";
 import eks145W from "../assets/images/Volvo_145W.svg";
-import hundayManipull from "../assets/images/hundayManipull.svg";
+import hundayManipull from "../assets/images/isuzu_manipul.svg";
 import isuzuManipul from "../assets/images/isuzu_manipul.svg";
+import xcmg30 from "../assets/images/xcmg30.svg";
+import xcmg50 from "../assets/images/xcmg_50.svg";
+import xcmg75 from "../assets/images/xcmg_75.svg";
+import mercedesLogo from "../assets/images/mersedesLogo.svg";
+import volvoLogo from "../assets/images/volvoLogo.svg";
+import isuzuLogo from "../assets/images/isuzuLogo.svg";
+import xcmgLogo from "../assets/images/xcmgLogo.svg";
 
 const Service = () => {
   const vehicleServices = [
@@ -28,6 +35,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: tentovkaImg,
+      logo: logoHunday,
     },
     {
       id: 2,
@@ -40,6 +48,7 @@ const Service = () => {
       minHours: 4,
       advanceNotice: "2 soat oldindan",
       image: hundayEks,
+      logo: logoHunday,
     },
     {
       id: 3,
@@ -52,6 +61,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: mercedesManipul,
+      logo: mercedesLogo,
     },
 
     {
@@ -65,6 +75,7 @@ const Service = () => {
       minHours: 4,
       advanceNotice: null,
       image: karaAvto,
+      logo: logoHunday,
     },
     {
       id: 5,
@@ -77,6 +88,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: shalandaPrit,
+      logo: logoHunday,
     },
     {
       id: 6,
@@ -89,6 +101,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: shalandaKont,
+      logo: logoHunday,
     },
     {
       id: 7,
@@ -101,6 +114,7 @@ const Service = () => {
       minHours: 5,
       advanceNotice: "2 soat oldindan",
       image: eksW140,
+      logo: logoHunday,
     },
     {
       id: 8,
@@ -113,6 +127,7 @@ const Service = () => {
       minHours: 5,
       advanceNotice: "2 soat oldindan",
       image: eks145W,
+      logo: volvoLogo,
     },
     {
       id: 10,
@@ -125,6 +140,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: hundayManipull,
+      logo: logoHunday,
     },
     {
       id: 11,
@@ -137,6 +153,7 @@ const Service = () => {
       minHours: null,
       advanceNotice: null,
       image: isuzuManipul,
+      logo: isuzuLogo,
     },
 
     // Kara (Trucks)
@@ -151,6 +168,7 @@ const Service = () => {
       minHours: 4,
       advanceNotice: null,
       image: karaAvto,
+      logo: logoHunday,
     },
     {
       id: 13,
@@ -163,6 +181,46 @@ const Service = () => {
       minHours: 6,
       advanceNotice: null,
       image: karaAvto,
+      logo: logoHunday,
+    },
+    {
+      id: 14,
+      category: "Avtokran",
+      name: "Avtocran xcmg, zoomillion",
+      description:
+        "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "30 tonna",
+      price: "550 000 UZS",
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg30,
+      logo: xcmgLogo,
+    },
+    {
+      id: 15,
+      category: "Avtokran",
+      name: "Avtocran xcmg, zoomillion",
+      description:
+        "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "50 tonna",
+      price: "650 000 UZS",
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg50,
+      logo: xcmgLogo,
+    },
+    {
+      id: 16,
+      category: "Avtokran",
+      name: "Avtocran xcmg, zoomillion",
+      description:
+        "Avtocran xcmg, zoomillion ,Strelo 47 metr + gusak 17 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "75 tonna",
+      price: "Kelishilngan holda",
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg75,
+      logo: xcmgLogo,
     },
   ];
 
@@ -190,15 +248,15 @@ const Service = () => {
   return (
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10 container mx-auto">
       {/* Main Carousel Section */}
-      <section className="grid-col md:flex relative">
+      <section className="grid-col md:flex relative items-center">
         <div className="w-[420px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
 
         <div className="absolute left-0 lg:p-10 md:p-5 flex-col items-center h-[600px] top-0">
           <div className="flex items-center justify-around pb-10">
             <img
-              src={logoHunday}
+              src={currentVehicle.logo}
               alt="Hyundai Logo"
-              className="hidden md:block"
+              className="hidden md:block md:w-[46px] md:h-[28px] lg:w-[70px] lg:h-[40px]"
             />
             <h2 className="krone font-normal text-[18px] md:text-[24px] ml-20 hidden md:block">
               {currentVehicle.category}
@@ -210,7 +268,7 @@ const Service = () => {
           <img
             src={currentVehicle.image || mercedesManipul}
             alt={currentVehicle.name}
-            className="relative w-[490px] h-[345px] md:w-[405px] md:h-[348px] md:top-[20] lg:w-[800px] lg:h-[650px] bottom-16 lg:bottom-36 lg:left-16"
+            className="relative w-[300px] left-10 h-[245px] md:w-[405px] md:h-[348px] md:top-[20] lg:w-[660px] lg:h-[500px] lg:bottom-20 lg:left-16"
           />
         </div>
 
@@ -230,9 +288,10 @@ const Service = () => {
             </div>
           ) : (
             <div>
-              <div className="w-[300px] flex-col md:gap-10 krone relative top-[300px] md:hidden pl-[50px]">
-                <div className="flex w-[200px] items-center justify-center gap-5">
-                  <article className="flex flex-col items-center">
+              {/* Mobile app */}
+              <div className="w-[300px] flex-col krone relative top-[300px] md:hidden px-4 justify-center">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                  <article className="flex flex-col items-start border-b border-gray-500 pb-2">
                     <h1 className="font-normal text-[14px] md:text-[18px] lg:text-[28px]">
                       {currentVehicle.capacity || "N/A"}
                     </h1>
@@ -240,7 +299,7 @@ const Service = () => {
                       Yuk sig'imi
                     </p>
                   </article>
-                  <article className="flex flex-col items-center">
+                  <article className="flex flex-col items-start border-b border-gray-500 pb-2">
                     <h1 className="font-normal text-[18px] md:text-[28px]">
                       {currentVehicle.minHours
                         ? `${currentVehicle.minHours} soat`
@@ -250,17 +309,26 @@ const Service = () => {
                       {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
                     </p>
                   </article>
+                  <article className="flex flex-col items-start border-b border-gray-500 pb-2">
+                    <h1 className="font-normal text-[16px] md:text-[28px]">
+                      {currentVehicle.capacity}
+                    </h1>
+                    <p className="mont font-normal text-[16px] md:text-[20px]">
+                      Ogirligi
+                    </p>
+                  </article>
+                  <article className="flex flex-col items-start border-b border-gray-500 pb-2">
+                    <h1 className="font-normal text-[16px] md:text-[28px]">
+                      {currentVehicle.price}
+                    </h1>
+                    <p className="mont font-normal text-[16px] md:text-[20px]">
+                      Narxi
+                    </p>
+                  </article>
                 </div>
-
-                <article className="w-[200px] flex flex-col items-center col-span-2 pt-2">
-                  <h1 className="font-normal text-[16px] md:text-[28px]">
-                    {currentVehicle.price}
-                  </h1>
-                  <p className="mont font-normal text-[16px] md:text-[20px]">
-                    Narxi
-                  </p>
-                </article>
               </div>
+
+              {/* Tablet Desktop */}
 
               <div className="w-full flex items-center md:gap-5 lg:gap-10 krone absolute md:bottom-0 lg:bottom-0 gap-3 opacity-0 md:opacity-100">
                 <article>
@@ -294,7 +362,7 @@ const Service = () => {
           )}
         </div>
 
-        <div className="relative top-[-90px] md:top-[110px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
+        <div className="relative top-[- 120px] md:top-[110px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
           <article className="text-center flex-col md:mb-[300px] order-2 md:order-1">
             <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center hidden md:block">
               {currentVehicle.name}

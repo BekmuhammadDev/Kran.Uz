@@ -38,15 +38,15 @@ const home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="text-white flex flex-col items-center justify-center md:flex-row container m-auto px-5 md:px-10 overflow-hidden relative top-0"
+        className="text-white flex flex-col items-center md:flex-row container m-auto px-5 md:px-10 overflow-hidden relative"
       >
         {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
         <div className="absolute w-[300px] md:h-[900px] lg:h-[1200px] bg-yellow-400 lg:left-32 lg:top-[-100px] md:top-[-50px] transform md:-rotate-12 lg:-rotate-45 opacity-80 z-0 hidden md:block"></div>
 
         {/* Chap tomon - Ekskavator rasmi */}
-        <div className="relative w-full md:w-[50%] lg:w-[50%] min-h-[600px] md:min-h-[800px] flex flex-col items-start justify-start pt-10 md:pt-16 z-10">
+        <div className="relative w-full md:w-[50%] lg:w-[50%] min-h-[600px] md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
           <motion.h1
-            className="text zen font-thin text-center ml-20 text-[22px] mb-10 md:hidden"
+            className="text zen font-thin text-[22px] mb-10 md:hidden"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -59,7 +59,7 @@ const home = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative left-[30px] top-[-40px] md:left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
+            className="w-[300px] h-[300px] md:w-[600px] md:h-[550px] lg:w-[750px] relative top-[-40px] md:left-[-50px] lg:top-[20px] lg:left-[-120px] md:top-[80px]"
           />
         </div>
 
@@ -68,10 +68,10 @@ const home = () => {
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          className="w-full md:w-[50%] lg:w-[50%] px-5 md:px-10 pt-10 md:pt-32 flex flex-col relative hidden md:block z-10"
+          className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] px-5 md:px-10 flex-col relative hidden md:block z-10"
         >
           <motion.h1
-            className="text zen font-thin text-[20px] md:text-[24px] lg:text-[42px] text-center mb-10"
+            className="text zen font-thin text-[20px] md:text-[24px] lg:text-[42px] mb-10"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -95,7 +95,7 @@ const home = () => {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5 md:mt-10 relative lg:left-[460px] lg:top-[50px]"
+              className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5 relative lg:left-[460px] lg:top-[50px]"
             >
               <NavLink to={"/services"}>Texnikalar</NavLink>
             </motion.button>
@@ -106,11 +106,13 @@ const home = () => {
             </button>
           </div>
         </motion.aside>
+
+        {/* Mobile aside */}
         <motion.aside
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          className="w-full px-5 flex-col items-center justify-center relative top-[-250px] md:hidden lg:hidden"
+          className="w-full px-5 flex-col items-center justify-center relative top-[-220px] md:hidden lg:hidden"
         >
           <p className="mont font-normal text-[12px] text-center">
             Horyong SKY 450SF havo platformalari 45 metrgacha bo'lgan
