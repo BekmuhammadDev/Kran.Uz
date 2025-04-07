@@ -44,7 +44,7 @@ const About = () => {
         </button>
       </section>
       <section
-        className="flex w-full justify-center items-center py-20 rounding container mx-auto"
+        className="flex w-full justify-center items-center py-20 rounded-[50px] md:rounding container mx-auto"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}

@@ -223,7 +223,6 @@ export const vehicleServices = [
   },
 ];
 const Service = () => {
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentVehicle = vehicleServices[currentIndex];
 
@@ -289,7 +288,7 @@ const Service = () => {
           ) : (
             <div>
               {/* Mobile app */}
-              <div className="w-[300px] flex-col krone relative top-[300px] md:hidden px-4 justify-center">
+              <div className="w-[300px] flex-col krone relative top-[300px] md:hidden justify-center">
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
                     <h1 className="font-normal text-[14px] md:text-[18px] lg:text-[28px]">
@@ -367,7 +366,7 @@ const Service = () => {
             <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center hidden md:block">
               {currentVehicle.name}
             </h1>
-            <p className="mont font-normal text-[14px] md:text-[16px] leading-6 md:text-right text-center md:my-10 relative">
+            <p className="mont font-normal text-[14px] text-center md:text-[16px] leading-6 md:text-right md:my-10 relative">
               {currentVehicle.description}
             </p>
           </article>
@@ -375,7 +374,7 @@ const Service = () => {
           {/* Mobile */}
 
           <div className="w-full flex-col items-center gap-4 md:absolute bottom-0 order-1 md:order-2 md:hidden">
-            <div className="flex gap-5 my-6 pl-24">
+            <div className="flex gap-5 my-6 pl-20">
               <TfiArrowCircleLeft
                 className="w-[45px] h-[45px] md:w-[55px] md:h-[55px] cursor-pointer"
                 onClick={prevSlide}
