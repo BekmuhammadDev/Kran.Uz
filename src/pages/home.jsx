@@ -47,14 +47,14 @@ const home = () => {
 
   return (
     <main className="">
-      <section className="text-white pb-[100px] flex flex-col items-center md:flex-row px-5 md:px-10 overflow-hidden relative">
+      <section className="text-white pb-[100px] flex flex-col items-center md:flex-row px-5 md:px-10  relative">
         {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
-        <div className="absolute w-[300px] md:h-[1100px] lg:h-[1750px] bg-yellow-400 lg:left-32 transform md:-rotate-12 lg:-rotate-45 opacity-80 z-0 hidden md:block"></div>
+        <div className="absolute w-[300px] md:h-[1100px] lg:h-[1750px] bg-yellow-400 lg:left-32 z-0 transform md:-rotate-12 lg:-rotate-45 opacity-80  hidden md:block"></div>
 
         {/* Chap tomon - Ekskavator rasmi */}
 
-        <div className="container mx-auto flex items-center justify-center">
-          <div className="relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
+        <div className=" flex items-center justify-between">
+          <div className="container mx-auto relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
             <motion.h1
               className="text zen font-thin text-[22px] mb-10 md:hidden"
               initial={{ scale: 0.5, opacity: 0 }}
@@ -78,7 +78,7 @@ const home = () => {
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] px-5 md:px-10 flex-col relative hidden md:block z-10"
+            className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] flex-col relative hidden md:block z-10"
           >
             <motion.h1
               className="text zen font-thin text-[20px] md:text-[24px] lg:text-[42px] text-right mb-10"
@@ -95,17 +95,17 @@ const home = () => {
             {/* Texnikalar tugmasi */}
 
             {/* Telefon orqali bog‘lanish tugmasi */}
-            <div>
+            <div className="absolute right-0">
               <motion.button
                 onClick={() => setIsModalOpen(true)}
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5 relative lg:left-[460px] lg:top-[50px]"
+                className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5"
               >
                 <NavLink to={"/services"}>Texnikalar</NavLink>
               </motion.button>
-              <button className="w-[35px] md:w-[45px] lg:w-[50px] h-[35px] md:top-[30px] md:left-[220px] md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px] relative lg:left-[570px] lg:top-[170px]">
+              <button className="w-[35px]  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
                 <a href="tel:+998887024742">
                   <IoCall />
                 </a>
@@ -142,7 +142,7 @@ const home = () => {
         </motion.aside>
       </section>
       <section
-        className="flex w-full justify-center items-center md:py-20 rounded-[50px] md:rounding"
+        className="flex w-full justify-center items-center md:py-20 relative rounded-[50px] md:rounding"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}
