@@ -69,7 +69,7 @@ const home = () => {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="w-[300px] h-[300px] md:w-[550px] md:h-[540px] lg:w-[550px] relative top-[-40px] md:left-[-50px]"
+              className="w-[300px] h-[300px] md:w-[550px] md:h-[540px] lg:w-[550px] relative top-[-40px] md:left-[-50px] xl:w-[650px] xl:h-[700px]"
             />
           </div>
 
@@ -106,7 +106,7 @@ const home = () => {
                 <NavLink to={"/services"}>Texnikalar</NavLink>
               </motion.button>
               <button className="w-[35px]  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
-                <a href="tel:+998887024742">
+                <a href="tel:+998971114040">
                   <IoCall />
                 </a>
               </button>
@@ -246,7 +246,7 @@ const home = () => {
               Telefon
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
-              +998 00 000 00 00
+              +998 97 111 40 40
             </p>
           </div>
         </article>

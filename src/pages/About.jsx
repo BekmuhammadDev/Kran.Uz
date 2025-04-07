@@ -38,7 +38,7 @@ const About = () => {
           va sifatli bajarishga kafolat beramiz.
         </p>
         <button className="w-[50px] h-[50px] rounded-full bg-[#fedf51] text-black hidden font-semibold md:flex justify-center items-center text-[24px]">
-          <a href="tel:+998887024742">
+          <a href="tel:+998971114040">
             <IoCall />
           </a>
         </button>
