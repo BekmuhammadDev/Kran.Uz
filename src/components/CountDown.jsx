@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ONE_HOUR = 60 * 60 * 1000; // 1 soat millisekundda
+const SEVENTY_TWO_HOURS = 72 * 60 * 60 * 1000; // 72 soat millisekundda
 const STORAGE_KEY = "countdown_start_time";
 
 const CountdownTimer = () => {
@@ -11,22 +11,24 @@ const CountdownTimer = () => {
     let startTime = localStorage.getItem(STORAGE_KEY);
 
     if (!startTime) {
-      // Agar birinchi marta kirsa, hozirgi vaqtni saqlaymiz
+      // Birinchi marta kirgan bo‘lsa, hozirgi vaqtni saqlaymiz
       startTime = now;
       localStorage.setItem(STORAGE_KEY, startTime);
+    } else {
+      startTime = parseInt(startTime); // localStorage'dan string keladi, son qilish kerak
     }
 
     const interval = setInterval(() => {
       const currentTime = Date.now();
       const elapsed = currentTime - startTime;
 
-      if (elapsed >= ONE_HOUR) {
-        // Agar vaqt tugagan bo‘lsa, yangi boshlanish vaqtini saqlaymiz
+      if (elapsed >= SEVENTY_TWO_HOURS) {
+        // Agar 72 soat tugasa, yangilaymiz
         startTime = currentTime;
         localStorage.setItem(STORAGE_KEY, startTime);
-        setTimeLeft(ONE_HOUR / 1000); // Yana 1 soatni boshlaymiz
+        setTimeLeft(SEVENTY_TWO_HOURS / 1000);
       } else {
-        setTimeLeft(Math.floor((ONE_HOUR - elapsed) / 1000)); // Qolgan vaqt
+        setTimeLeft(Math.floor((SEVENTY_TWO_HOURS - elapsed) / 1000));
       }
     }, 1000);
 
