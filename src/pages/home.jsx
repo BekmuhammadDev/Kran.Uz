@@ -51,7 +51,7 @@ const home = () => {
         {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
         <div className="absolute w-[300px] md:h-[1100px] lg:h-[1750px] bg-yellow-400 lg:left-32 z-0 transform md:-rotate-12 lg:-rotate-45 opacity-80  hidden md:block"></div>
 
-        {/* Chap tomon - Ekskavator rasmi */}
+        {/* Chap tomon - Ekskavator rasmi aha */}
 
         <div className=" flex items-center justify-between">
           <div className="container mx-auto relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
