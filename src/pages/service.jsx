@@ -22,207 +22,207 @@ import volvoLogo from "../assets/images/volvoLogo.svg";
 import isuzuLogo from "../assets/images/isuzuLogo.svg";
 import xcmgLogo from "../assets/images/xcmgLogo.svg";
 
+export const vehicleServices = [
+  {
+    id: 1,
+    category: "Shalanda",
+    name: "Tentovka shalanda",
+    description:
+      "Tentovka shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "30 tonna",
+    price: "2,000,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: tentovkaImg,
+    logo: logoHunday,
+  },
+  {
+    id: 2,
+    category: "Ekskavator",
+    name: "Hyundai 55W",
+    description:
+      "Hyundai 55W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "5 tonna",
+    price: "500,000 UZS",
+    minHours: 4,
+    advanceNotice: "2 soat oldindan",
+    image: hundayEks,
+    logo: logoHunday,
+  },
+  {
+    id: 3,
+    category: "Manipulyator Kran",
+    name: "Mercedes",
+    description:
+      "Mercedes manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "8 tonna",
+    price: "1,600,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: mercedesManipul,
+    logo: mercedesLogo,
+  },
+
+  {
+    id: 4,
+    category: "Kara",
+    name: "Avto Kara 3 tonna",
+    description:
+      "Avto Kara 3 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "3 tonna",
+    price: "500,000 UZS",
+    minHours: 4,
+    advanceNotice: null,
+    image: karaAvto,
+    logo: logoHunday,
+  },
+  {
+    id: 5,
+    category: "Shalanda",
+    name: "Pritsep shalanda",
+    description:
+      "Pritsep shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "30 tonna",
+    price: "1,600,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: shalandaPrit,
+    logo: logoHunday,
+  },
+  {
+    id: 6,
+    category: "Shalanda",
+    name: "Kontenerovoz shalanda",
+    description:
+      "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "30 tonna",
+    price: "1,600,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: shalandaKont,
+    logo: logoHunday,
+  },
+  {
+    id: 7,
+    category: "Ekskavator",
+    name: "Hyundai 140W",
+    description:
+      "Hyundai 140W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "7 tonna",
+    price: "600,000 UZS",
+    minHours: 5,
+    advanceNotice: "2 soat oldindan",
+    image: eksW140,
+    logo: logoHunday,
+  },
+  {
+    id: 8,
+    category: "Ekskavator",
+    name: "Volvo 145W",
+    description:
+      "Volvo 145W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "8 tonna",
+    price: "650,000 UZS",
+    minHours: 5,
+    advanceNotice: "2 soat oldindan",
+    image: eks145W,
+    logo: volvoLogo,
+  },
+  {
+    id: 10,
+    category: "Manipulyator Kran",
+    name: "Hyundai",
+    description:
+      "Hyundai manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "4 tonna",
+    price: "1,400,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: hundayManipull,
+    logo: logoHunday,
+  },
+  {
+    id: 11,
+    category: "Manipulyator Kran",
+    name: "Isuzu",
+    description:
+      "Isuzu manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "3 tonna",
+    price: "1,300,000 UZS",
+    minHours: null,
+    advanceNotice: null,
+    image: isuzuManipul,
+    logo: isuzuLogo,
+  },
+
+  // Kara (Trucks)
+  {
+    id: 12,
+    category: "Kara",
+    name: "Avto Kara 5 tonna",
+    description:
+      "Avto Kara 5 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "5 tonna",
+    price: "600,000 UZS",
+    minHours: 4,
+    advanceNotice: null,
+    image: karaAvto,
+    logo: logoHunday,
+  },
+  {
+    id: 13,
+    category: "Kara",
+    name: "Avto Kara 10 tonna",
+    description:
+      "Avto Kara 10 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "10 tonna",
+    price: "800,000 UZS",
+    minHours: 6,
+    advanceNotice: null,
+    image: karaAvto,
+    logo: logoHunday,
+  },
+  {
+    id: 14,
+    category: "Avtokran",
+    name: "Avtocran xcmg, zoomillion",
+    description:
+      "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "30 tonna",
+    price: "550 000 UZS",
+    minHours: 5,
+    advanceNotice: null,
+    image: xcmg30,
+    logo: xcmgLogo,
+  },
+  {
+    id: 15,
+    category: "Avtokran",
+    name: "Avtocran xcmg, zoomillion",
+    description:
+      "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "50 tonna",
+    price: "650 000 UZS",
+    minHours: 5,
+    advanceNotice: null,
+    image: xcmg50,
+    logo: xcmgLogo,
+  },
+  {
+    id: 16,
+    category: "Avtokran",
+    name: "Avtocran xcmg, zoomillion",
+    description:
+      "Avtocran xcmg, zoomillion ,Strelo 47 metr + gusak 17 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+    capacity: "75 tonna",
+    price: "Kelishilngan holda",
+    minHours: 5,
+    advanceNotice: null,
+    image: xcmg75,
+    logo: xcmgLogo,
+  },
+];
 const Service = () => {
-  const vehicleServices = [
-    {
-      id: 1,
-      category: "Shalanda",
-      name: "Tentovka shalanda",
-      description:
-        "Tentovka shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "2,000,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: tentovkaImg,
-      logo: logoHunday,
-    },
-    {
-      id: 2,
-      category: "Ekskavator",
-      name: "Hyundai 55W",
-      description:
-        "Hyundai 55W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "5 tonna",
-      price: "500,000 UZS",
-      minHours: 4,
-      advanceNotice: "2 soat oldindan",
-      image: hundayEks,
-      logo: logoHunday,
-    },
-    {
-      id: 3,
-      category: "Manipulyator Kran",
-      name: "Mercedes",
-      description:
-        "Mercedes manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "8 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: mercedesManipul,
-      logo: mercedesLogo,
-    },
-
-    {
-      id: 4,
-      category: "Kara",
-      name: "Avto Kara 3 tonna",
-      description:
-        "Avto Kara 3 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "3 tonna",
-      price: "500,000 UZS",
-      minHours: 4,
-      advanceNotice: null,
-      image: karaAvto,
-      logo: logoHunday,
-    },
-    {
-      id: 5,
-      category: "Shalanda",
-      name: "Pritsep shalanda",
-      description:
-        "Pritsep shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: shalandaPrit,
-      logo: logoHunday,
-    },
-    {
-      id: 6,
-      category: "Shalanda",
-      name: "Kontenerovoz shalanda",
-      description:
-        "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "1,600,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: shalandaKont,
-      logo: logoHunday,
-    },
-    {
-      id: 7,
-      category: "Ekskavator",
-      name: "Hyundai 140W",
-      description:
-        "Hyundai 140W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "7 tonna",
-      price: "600,000 UZS",
-      minHours: 5,
-      advanceNotice: "2 soat oldindan",
-      image: eksW140,
-      logo: logoHunday,
-    },
-    {
-      id: 8,
-      category: "Ekskavator",
-      name: "Volvo 145W",
-      description:
-        "Volvo 145W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "8 tonna",
-      price: "650,000 UZS",
-      minHours: 5,
-      advanceNotice: "2 soat oldindan",
-      image: eks145W,
-      logo: volvoLogo,
-    },
-    {
-      id: 10,
-      category: "Manipulyator Kran",
-      name: "Hyundai",
-      description:
-        "Hyundai manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "4 tonna",
-      price: "1,400,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: hundayManipull,
-      logo: logoHunday,
-    },
-    {
-      id: 11,
-      category: "Manipulyator Kran",
-      name: "Isuzu",
-      description:
-        "Isuzu manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "3 tonna",
-      price: "1,300,000 UZS",
-      minHours: null,
-      advanceNotice: null,
-      image: isuzuManipul,
-      logo: isuzuLogo,
-    },
-
-    // Kara (Trucks)
-    {
-      id: 12,
-      category: "Kara",
-      name: "Avto Kara 5 tonna",
-      description:
-        "Avto Kara 5 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "5 tonna",
-      price: "600,000 UZS",
-      minHours: 4,
-      advanceNotice: null,
-      image: karaAvto,
-      logo: logoHunday,
-    },
-    {
-      id: 13,
-      category: "Kara",
-      name: "Avto Kara 10 tonna",
-      description:
-        "Avto Kara 10 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "10 tonna",
-      price: "800,000 UZS",
-      minHours: 6,
-      advanceNotice: null,
-      image: karaAvto,
-      logo: logoHunday,
-    },
-    {
-      id: 14,
-      category: "Avtokran",
-      name: "Avtocran xcmg, zoomillion",
-      description:
-        "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "550 000 UZS",
-      minHours: 5,
-      advanceNotice: null,
-      image: xcmg30,
-      logo: xcmgLogo,
-    },
-    {
-      id: 15,
-      category: "Avtokran",
-      name: "Avtocran xcmg, zoomillion",
-      description:
-        "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "50 tonna",
-      price: "650 000 UZS",
-      minHours: 5,
-      advanceNotice: null,
-      image: xcmg50,
-      logo: xcmgLogo,
-    },
-    {
-      id: 16,
-      category: "Avtokran",
-      name: "Avtocran xcmg, zoomillion",
-      description:
-        "Avtocran xcmg, zoomillion ,Strelo 47 metr + gusak 17 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "75 tonna",
-      price: "Kelishilngan holda",
-      minHours: 5,
-      advanceNotice: null,
-      image: xcmg75,
-      logo: xcmgLogo,
-    },
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentVehicle = vehicleServices[currentIndex];
@@ -249,7 +249,7 @@ const Service = () => {
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10 container mx-auto">
       {/* Main Carousel Section */}
       <section className="grid-col md:flex relative items-center">
-        <div className="w-[420px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
+        <div className="w-[520px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
 
         <div className="absolute left-0 lg:p-10 md:p-5 flex-col items-center h-[600px] top-0">
           <div className="flex items-center justify-around pb-10">
@@ -362,7 +362,7 @@ const Service = () => {
           )}
         </div>
 
-        <div className="relative top-[- 120px] md:top-[110px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
+        <div className="relative md:top-[50px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
           <article className="text-center flex-col md:mb-[300px] order-2 md:order-1">
             <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center hidden md:block">
               {currentVehicle.name}
@@ -371,6 +371,8 @@ const Service = () => {
               {currentVehicle.description}
             </p>
           </article>
+
+          {/* Mobile */}
 
           <div className="w-full flex-col items-center gap-4 md:absolute bottom-0 order-1 md:order-2 md:hidden">
             <div className="flex gap-5 my-6 pl-24">
@@ -387,6 +389,8 @@ const Service = () => {
               Bog'lanish
             </button>
           </div>
+
+          {/* Desktop Tablet */}
           <div className="w-full hidden md:flex lg:flex md:items-center gap-4 md:absolute md:justify-between bottom-0 order-1 md:order-2 pr-12">
             <div className="flex gap-5 mb-4 pt-[15px]">
               <TfiArrowCircleLeft
@@ -428,7 +432,7 @@ const Service = () => {
                 alt={vehicle.name}
                 className="absolute bottom-5 w-[255px] h-[180px]"
               />
-              <div className="absolute bottom-4 left-10 md:left-0text-white">
+              <div className="absolute bottom-0 left-10 text-white">
                 <h3 className="text-lg font-medium">{vehicle.category}</h3>
               </div>
             </div>

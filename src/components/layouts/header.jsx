@@ -12,7 +12,7 @@ const Header = () => {
     <>
       {/* ✅ Fixed va shisha effektli header */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
-        <nav className="container mx-auto h-20 py-5 px-4 sm:px-6 lg:px-20 flex items-center justify-between">
+        <nav className="container mx-auto h-20 py-5 px-10 sm:px-6 lg:px-20 flex items-center justify-between">
           {/* Logo */}
           <NavLink
             to={"/"}
