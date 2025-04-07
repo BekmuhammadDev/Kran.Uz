@@ -48,7 +48,7 @@ const home = () => {
   return (
     <main className="container mx-auto">
       <section className="text-white pb-[100px] flex flex-col items-center md:flex-row container m-auto px-5 md:px-10 overflow-hidden relative">
-        {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
+        {/* Sariq diagonal chiziq - \ shaklda bo‘ladi aha */}
         <div className="absolute w-[300px] md:h-[900px] lg:h-[1300px] bg-yellow-400 lg:left-32 lg:top-[-100px] md:top-[-50px] transform md:-rotate-12 lg:-rotate-45 opacity-80 z-0 hidden md:block"></div>
 
         {/* Chap tomon - Ekskavator rasmi */}
