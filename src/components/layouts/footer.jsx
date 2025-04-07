@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright Section footer */}
+        {/* Copyright Section footer svaeded */}
         <div className="mt-8 pt-4 border-t border-gray-700 text-center">
           <p className="text-sm">2025 IPro Support</p>
         </div>
