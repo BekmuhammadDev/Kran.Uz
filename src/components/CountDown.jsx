@@ -62,7 +62,6 @@ const CountdownTimer = () => {
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
       <p className="mt-2 font-bold mont text-[20px] sm:text-[24px] lg:text-[28px]">
-        qoldi. <span className="">Qatnashishga ulguring</span>
       </p>
     </div>
   );

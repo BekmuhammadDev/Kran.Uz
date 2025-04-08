@@ -30,6 +30,14 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden lg:flex mont font-semibold text-[20px] gap-[72px] ml-40">
+          <li>
+              <NavLink
+                to={""}
+                className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+              >
+               {t('partners')}
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to={"/about"}
@@ -44,6 +52,14 @@ const Header = () => {
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
                 {t("techniques")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={""}
+                className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+              >
+               {t('address')}
               </NavLink>
             </li>
           </ul>

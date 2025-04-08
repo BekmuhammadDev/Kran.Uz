@@ -130,7 +130,7 @@ const About = () => {
             className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto"
             onClick={handleSubmit}
           >
-            Buyurtma qoldirish
+            {t("place_an_order")}
           </button>
 
           {/* Habarni ko'rsatish */}

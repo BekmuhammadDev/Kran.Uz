@@ -14,16 +14,16 @@ const Footer = () => {
       <div className="max-w-screen-2xl container mx-auto">
         <div className="flex flex-col mx-auto md:flex-row justify-between items-start gap-8">
           {/* Logo Section */}
-          <div className="relative bottom-14 ml-10">
+          <div className="relative bottom-8 ml-10">
             <img src={Logo} alt="" width={180} />
           </div>
 
           {/* Contacts Section */}
           <div className="w-full md:w-auto mont">
             <h2 className="text-lg font-semibold mb-3">{t("contacts")}</h2>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
             {t("yunusobod")}, {t("toshkent")}
-              <li>+998 97 111 40 40</li>
+              <li className="mt-5">+998 97 111 40 40</li>
             </ul>
           </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Social Media Section */}
           <div className="w-full md:w-auto">
-            <h2 className="text-lg font-semibold mb-3">Medialar</h2>
+            <h2 className="text-lg font-semibold mb-3 mont">{t("media")}</h2>
             <ul className="flex items-center text-[24px] gap-2 justify-center">
               <li>
                 <FaTelegramPlane />
