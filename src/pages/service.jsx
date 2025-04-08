@@ -233,6 +233,8 @@ const Service = () => {
     });
   };
 
+  // Old code or new code
+
   return (
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10">
       {/* Main Carousel Section */}
