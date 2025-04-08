@@ -179,8 +179,7 @@ const Service = () => {
       id: 14,
       category: t("avtoKranCategory1"),
       name: t("avtoKranName1"),
-      description:
-      t("avtoKranDescription1"),
+      description: t("avtoKranDescription1"),
       capacity: t("avtoKranCapacity1"),
       price: t("avtoKranPrice1"),
       minHours: 5,
@@ -191,11 +190,10 @@ const Service = () => {
     {
       id: 15,
       category: t("avtoKranCategory2"),
-      name: "Avtocran xcmg, zoomillion",
-      description:
-        "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "50 tonna",
-      price: "650 000 UZS",
+      name: t("avtoKranName2"),
+      description: t("avtoKranDescription2"),
+      capacity: t("avtoKranCapacity2"),
+      price: t("avtoKranPrice2"),
       minHours: 5,
       advanceNotice: null,
       image: xcmg50,
@@ -203,12 +201,11 @@ const Service = () => {
     },
     {
       id: 16,
-      category: "Avtokran",
-      name: "Avtocran xcmg, zoomillion",
-      description:
-        "Avtocran xcmg, zoomillion ,Strelo 47 metr + gusak 17 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "75 tonna",
-      price: "Kelishilngan holda",
+      category: t("avtoKranCategory3"),
+      name: t("avtoKranName3"),
+      description: t("avtoKranDescription3"),
+      capacity: t("avtoKranCapacity3"),
+      price: t("avtoKranPrice3"),
       minHours: 5,
       advanceNotice: null,
       image: xcmg75,
