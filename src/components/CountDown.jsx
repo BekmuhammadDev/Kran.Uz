@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
-import "../i18"
+import { useTranslation } from "react-i18next";
+import "../i18";
 
 const SEVENTY_TWO_HOURS = 72 * 60 * 60 * 1000; // 72 soat millisekundda
 const STORAGE_KEY = "countdown_start_time";
@@ -61,9 +61,7 @@ const CountdownTimer = () => {
         </span>
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
-      <p className="mt-2 font-bold mont text-[20px] sm:text-[24px] lg:text-[28px]">
-        qoldi. <span className="">Qatnashishga ulguring</span>
-      </p>
+      <p className="mt-2 font-bold mont text-[20px] sm:text-[24px] lg:text-[28px]"></p>
     </div>
   );
 };

@@ -17,6 +17,7 @@ import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
 import { sendCustomEmail } from "../components/SendEmail";
 import { useTranslation } from "react-i18next";
+import "../i18";
 import tentovkaImg from "../assets/images/tentovka.svg";
 import hundayEks from "../assets/images/Hyundai_55W.svg";
 import mercedesManipul from "../assets/images/mercedesManipul.svg";
@@ -35,14 +36,8 @@ import volvoLogo from "../assets/images/volvoLogo.svg";
 import isuzuLogo from "../assets/images/isuzuLogo.svg";
 import xcmgLogo from "../assets/images/xcmgLogo.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
-import "../i18";
 
 const home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [message, setMessage] = useState(""); // Yangi state qo'shildi
-
   const { t } = useTranslation();
 
   const vehicleServices = [
@@ -235,6 +230,11 @@ const home = () => {
   const filteredVehicles = vehicleServices.filter(
     (v) => v.image && v.name && v.description
   );
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState(""); // Yangi state qo'shildi
 
   const handleSubmit = async () => {
     if (!name || !number) {
@@ -456,7 +456,10 @@ const home = () => {
         </div>
       </section>
 
-      <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
+      <section
+        id="partners"
+        className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around"
+      >
         <div className="overflow-hidden w-full">
           <div className="space-x-8 animate-marquee flex items-center justify-around">
             <img src={artel} alt="" />

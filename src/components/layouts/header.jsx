@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { IoEarthOutline, IoClose, IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import OrderForm from "../forContact/Contact";
-import { useTranslation } from 'react-i18next';
-import "../../i18"
-import Logo from "../../assets/public/Spectex_LOGO svg.svg"
+import { useTranslation } from "react-i18next";
+import "../../i18";
+import Logo from "../../assets/public/Spectex_LOGO svg.svg";
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +22,7 @@ const Header = () => {
       <header className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
         <nav className="container mx-auto h-20 py-5 px-10 sm:px-6 lg:px-20 flex items-center justify-between">
           {/* Logo */}
-          <NavLink
-            to={"/"}
-          >
+          <NavLink to={"/"}>
             <img src={Logo} alt="" width={180} className="ml-5" />
           </NavLink>
 
@@ -32,10 +30,18 @@ const Header = () => {
           <ul className="hidden lg:flex mont font-semibold text-[20px] gap-[72px] ml-40">
             <li>
               <NavLink
+                to={"/partners"}
+                className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+              >
+                {t("partners")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to={"/about"}
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
-               {t('about')}
+                {t("about")}
               </NavLink>
             </li>
             <li>
@@ -44,6 +50,14 @@ const Header = () => {
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
                 {t("techniques")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={""}
+                className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+              >
+                {t("address")}
               </NavLink>
             </li>
           </ul>
@@ -65,7 +79,7 @@ const Header = () => {
                     <li>
                       <button
                         className="  py-2 text-white text-center text-sm "
-                        onClick={() => changeLanguage('uz')}
+                        onClick={() => changeLanguage("uz")}
                       >
                         UZ
                       </button>
@@ -73,7 +87,7 @@ const Header = () => {
                     <li>
                       <button
                         className=" py-2 text-white text-sm "
-                        onClick={() => changeLanguage('ru')}
+                        onClick={() => changeLanguage("ru")}
                       >
                         RU
                       </button>
@@ -88,7 +102,7 @@ const Header = () => {
               className="bg-[#FEDF51] py-2 px-8 rounded-xl text-xl font-semibold hover:bg-[#fed035] transition-colors"
               onClick={() => setIsModalOpen(true)}
             >
-             {t("contact")}
+              {t("contact")}
             </button>
           </div>
 
@@ -142,7 +156,7 @@ const Header = () => {
                   className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t('about')}
+                  {t("about")}
                 </NavLink>
               </li>
               <li>
@@ -151,7 +165,7 @@ const Header = () => {
                   className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                    {t("techniques")}
+                  {t("techniques")}
                 </NavLink>
               </li>
             </ul>

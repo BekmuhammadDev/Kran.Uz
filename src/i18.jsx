@@ -135,9 +135,9 @@ i18n
         translation: {
           about: "О нас",
           contact: "Контакты",
-          techniques: "техника",
-          techniqueses: "техникаи",
-          phone_number: "Номер телефона",
+          techniques: "Техника",
+          techniqueses: "Техники",
+          phone_number: "Номер Телефона",
           name: "Ваше имя",
           write_here: "Напишите здесь",
           place_an_order: "Оформить заказ",
