@@ -10,16 +10,13 @@ import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import Footer from "../components/layouts/footer";
 import { sendCustomEmail } from "../components/SendEmail";
-import { useTranslation } from 'react-i18next';
-import "../i18"
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
-
   const { t } = useTranslation();
-
 
   const handleSubmit = async () => {
     if (!name || !number) {
@@ -83,12 +80,10 @@ const About = () => {
           <div className="flex items-center space-x-3 flex-1 border-b md:border-b-0 md:border-r border-gray-500 pb-3 md:pb-0 pr-0 md:pr-6 w-full justify-center md:justify-start">
             <FaUser className="text-white text-xl" />
             <div>
-              <p className="text-white font-semibold text-left">
-                Sizning ismingiz
-              </p>
+              <p className="text-white font-semibold text-left">{t("name")}</p>
               <input
                 type="text"
-                placeholder="Shu yerga yozing"
+                placeholder={t("write_here")}
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[A-Za-z\u0400-\u04FF\s]+"
                 inputMode="text"
@@ -98,6 +93,7 @@ const About = () => {
                     e.target.value.replace(/[^A-Za-z\u0400-\u04FF\s]/g, "")
                   )
                 }
+                maxLength={20} // Maksimal uzunlikni 20 belgiga cheklash
               />
             </div>
           </div>
@@ -107,18 +103,24 @@ const About = () => {
             <FaPhone className="text-white text-xl" />
             <div>
               <p className="text-white font-semibold text-left">
-                Telefon raqamingiz
+                {t("phone_number")}
               </p>
               <input
                 type="tel"
-                placeholder="Shu yerga yozing"
+                placeholder="+998 (99) 999 99 99"
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[0-9]+"
                 inputMode="numeric"
                 value={number}
-                onChange={(e) =>
-                  setNumber(e.target.value.replace(/[^0-9]/g, ""))
-                }
+                onChange={(e) => {
+                  // Raqam kiritishda +998 avtomatik qo'shilsin
+                  let input = e.target.value.replace(/[^0-9]/g, ""); // faqat raqamlarni qabul qilish
+                  if (!input.startsWith("998")) {
+                    input = "998" + input; // +998 ni avtomatik qo'shish
+                  }
+                  setNumber(input);
+                }}
+                maxLength={12} // Telefon raqamining maksimal uzunligini cheklash (+998 (99) 999 99 99 formatida)
               />
             </div>
           </div>

@@ -17,8 +17,8 @@ import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
 import { vehicleServices } from "./service";
 import { sendCustomEmail } from "../components/SendEmail";
-import { useTranslation } from 'react-i18next';
-import "../i18"
+import { useTranslation } from "react-i18next";
+import "../i18";
 
 const filteredVehicles = vehicleServices.filter(
   (v) => v.image && v.name && v.description
@@ -119,8 +119,6 @@ const home = () => {
             </motion.h1>
             <p className="mont font-normal text-[12px] md:text-[14px] lg:text-[16px] leading-6 md:text-right">
               {currentVehicle.description}
-
-
             </p>
 
             {/* Texnikalar tugmasi */}
@@ -184,9 +182,7 @@ const home = () => {
           <div className="flex items-center space-x-3 flex-1 border-b md:border-b-0 md:border-r border-gray-500 pb-3 md:pb-0 pr-0 md:pr-6 w-full justify-center md:justify-start">
             <FaUser className="text-white text-xl" />
             <div>
-              <p className="text-white font-semibold text-left">
-               {t("name")}
-              </p>
+              <p className="text-white font-semibold text-left">{t("name")}</p>
               <input
                 type="text"
                 placeholder={t("write_here")}
@@ -199,6 +195,7 @@ const home = () => {
                     e.target.value.replace(/[^A-Za-z\u0400-\u04FF\s]/g, "")
                   )
                 }
+                maxLength={20} // Maksimal uzunlikni 20 belgiga cheklash
               />
             </div>
           </div>
@@ -208,18 +205,24 @@ const home = () => {
             <FaPhone className="text-white text-xl" />
             <div>
               <p className="text-white font-semibold text-left">
-               {t("phone_number")}
+                {t("phone_number")}
               </p>
               <input
                 type="tel"
-                placeholder={t("write_here")}
+                placeholder="+998 (99) 999 99 99"
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[0-9]+"
                 inputMode="numeric"
                 value={number}
-                onChange={(e) =>
-                  setNumber(e.target.value.replace(/[^0-9]/g, ""))
-                }
+                onChange={(e) => {
+                  // Raqam kiritishda +998 avtomatik qo'shilsin
+                  let input = e.target.value.replace(/[^0-9]/g, ""); // faqat raqamlarni qabul qilish
+                  if (!input.startsWith("998")) {
+                    input = "998" + input; // +998 ni avtomatik qo'shish
+                  }
+                  setNumber(input);
+                }}
+                maxLength={12} // Telefon raqamining maksimal uzunligini cheklash (+998 (99) 999 99 99 formatida)
               />
             </div>
           </div>
@@ -275,7 +278,7 @@ const home = () => {
               <span>
                 <IoLocationOutline />
               </span>
-             {t("adreess")}
+              {t("adreess")}
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               {t("yunusobod")}, {t("toshkent")}, {t("Ozbekiston")}
