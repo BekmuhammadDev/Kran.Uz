@@ -7,12 +7,11 @@ import park from "../assets/images/park.svg";
 import enter from "../assets/images/enter.svg";
 import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
-import Hyundai_55W from "../assets/images/hundayEks.svg";
 import Footer from "../components/layouts/footer";
 
 const About = () => {
   return (
-    <div className="w-full container mx-auto">
+    <div className="w-full">
       <section
         className="w-full h-[467px]"
         style={{

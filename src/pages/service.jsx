@@ -245,7 +245,7 @@ const Service = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10 container mx-auto">
+    <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10">
       {/* Main Carousel Section */}
       <section className="grid-col md:flex relative items-center">
         <div className="w-[520px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>

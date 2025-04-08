@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import "./Home.css";
 import SectionForHome from "../components/SectionForHome";
 import Countdown from "../components/CountDown";
-import mapImg from "../assets/images/map.svg";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
 import artel from "../assets/images/artel.svg";
@@ -15,7 +14,6 @@ import park from "../assets/images/park.svg";
 import enter from "../assets/images/enter.svg";
 import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
-import Hyundai_55W from "../assets/images/hundayEks.svg";
 import { NavLink } from "react-router-dom";
 import { vehicleServices } from "./service";
 
@@ -46,7 +44,7 @@ const home = () => {
   const currentVehicle = filteredVehicles[currentIndex];
 
   return (
-    <main className="">
+    <main>
       <section className="text-white pb-[100px] flex flex-col items-center md:flex-row px-5 md:px-10  relative">
         {/* Sariq diagonal chiziq - \ shaklda bo‘ladi */}
         <div className="absolute w-[300px] md:h-[1100px] lg:h-[1750px] bg-yellow-400 lg:left-32 z-0 transform md:-rotate-12 lg:-rotate-45 opacity-80  hidden md:block"></div>
@@ -54,7 +52,7 @@ const home = () => {
         {/* Chap tomon - Ekskavator rasmi aha */}
 
         <div className=" flex items-center justify-between">
-          <div className="container mx-auto relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
+          <div className=" relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
             <motion.h1
               className="text zen font-thin text-[22px] mb-10 md:hidden"
               initial={{ scale: 0.5, opacity: 0 }}
@@ -141,6 +139,7 @@ const home = () => {
           </div>
         </motion.aside>
       </section>
+
       <section
         className="flex w-full justify-center items-center md:py-20 relative rounded-[50px] md:rounding"
         style={{
@@ -197,6 +196,7 @@ const home = () => {
           </button>
         </div>
       </section>
+
       <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
         <div className="overflow-hidden w-full">
           <div className="space-x-8 animate-marquee flex items-center justify-around">
@@ -209,11 +209,14 @@ const home = () => {
           </div>
         </div>
       </section>
+
       <Countdown />
       <SectionForHome />
-      <section className="w-full h-[600px] flex flex-col md:flex-row justify-center items-center gap-10">
+
+      <section className="w-full my-40 md:my-0 h-[600px] flex flex-col md:flex-row justify-between md:px-20 items-center md:gap-20">
+
         <article className="text-center md:text-left">
-          <h1 className="krone font-normal text-[32px] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
+          <h1 className="krone font-normal text-[32px] sm:leading-[1.1] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
             Biz bilan bog'lanish
           </h1>
           <div className="text-center md:text-left">
@@ -224,7 +227,7 @@ const home = () => {
               Bizning manzil
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
-              Amir Temur shox ko'chasi, 107 B-uy, Toshkent, O'zbekiston
+              Yunusobod, Toshkent, O'zbekiston
             </p>
           </div>
           <div className="my-6 sm:my-8 text-center md:text-left">
@@ -251,11 +254,19 @@ const home = () => {
           </div>
         </article>
 
-        <img
-          src={mapImg}
-          alt="Map"
-          className="w-full sm:w-[400px] h-[300px] object-cover mt-8 sm:mt-0"
-        />
+        <div className=" md:w-[600px] mt-20 md:mt-0">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5995.790829453292!2d69.28601115!3d41.35328015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef53f5b5f6f0d%3A0x8a78d69d52d2b1c!2sYunusobod%2C%20Tashkent!5e0!3m2!1sen!2s!4v1712569500000!5m2!1sen!2s"
+            width="100%"
+            height="350"
+            className="rounded-md"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+
       </section>
 
       <Footer />

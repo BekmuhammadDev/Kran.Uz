@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import { IoEarthOutline, IoClose, IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import OrderForm from "../forContact/Contact";
-
+import { useTranslation } from 'react-i18next';
+import "../../i18"
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
@@ -28,7 +35,7 @@ const Header = () => {
                 to={"/about"}
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
-                Biz haqimizda
+               {t('about')}
               </NavLink>
             </li>
             <li>
@@ -53,22 +60,22 @@ const Header = () => {
                 <h2 className="text-white">UZ</h2>
               </button>
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-2 bg-white text-black rounded-md shadow-lg py-2 w-24">
+                <div className="absolute left-0 mt-5 bg-black rounded-md shadow-lg py-2 w-[73px] text-center">
                   <ul>
                     <li>
                       <button
-                        className="block px-4 py-2 text-sm"
-                        onClick={() => setIsDropdownOpen(false)}
+                        className="  py-2 text-white text-center text-sm "
+                        onClick={() => changeLanguage('uz')}
                       >
                         UZ
                       </button>
                     </li>
                     <li>
                       <button
-                        className="block px-4 py-2 text-sm"
-                        onClick={() => setIsDropdownOpen(false)}
+                        className=" py-2 text-white text-sm "
+                        onClick={() => changeLanguage('ru')}
                       >
-                        EN
+                        RU
                       </button>
                     </li>
                   </ul>
