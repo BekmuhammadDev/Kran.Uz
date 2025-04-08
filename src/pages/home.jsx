@@ -17,6 +17,8 @@ import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
 import { vehicleServices } from "./service";
 import { sendCustomEmail } from "../components/SendEmail";
+import { useTranslation } from 'react-i18next';
+import "../i18"
 
 const filteredVehicles = vehicleServices.filter(
   (v) => v.image && v.name && v.description
@@ -27,6 +29,8 @@ const home = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
+
+   const { t } = useTranslation();
 
   const handleSubmit = async () => {
     if (!name || !number) {
@@ -225,7 +229,7 @@ const home = () => {
             className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto"
             onClick={handleSubmit}
           >
-            Buyurtma qoldirish
+            {t("place_an_order")}
           </button>
 
           {/* Habarni ko'rsatish */}

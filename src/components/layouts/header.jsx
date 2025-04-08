@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import OrderForm from "../forContact/Contact";
 import { useTranslation } from 'react-i18next';
 import "../../i18"
+import Logo from "../../assets/public/Spectex_LOGO svg.svg"
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,8 @@ const Header = () => {
           {/* Logo */}
           <NavLink
             to={"/"}
-            className="krone font-normal text-[24px] text-white"
           >
-            KRAN
+            <img src={Logo} alt="" width={180} className="ml-5" />
           </NavLink>
 
           {/* Desktop Navigation */}

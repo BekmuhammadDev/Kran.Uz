@@ -10,17 +10,22 @@ import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import Footer from "../components/layouts/footer";
 import { sendCustomEmail } from "../components/SendEmail";
+import { useTranslation } from 'react-i18next';
+import "../i18"
 
 const About = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
 
+  const { t } = useTranslation();
+
+
   const handleSubmit = async () => {
     if (!name || !number) {
-      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); // Habarni set qilish
+      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); 
       setTimeout(() => {
-        setMessage(""); // 3 sekunddan keyin xabarni tozalash
+        setMessage(""); 
       }, 3000);
       return;
     }
@@ -53,18 +58,13 @@ const About = () => {
       >
         <div className="flex items-center justify-center h-full">
           <h1 className="krone font-normal text-3xl sm:text-4xl md:text-5xl lg:text-[40px] text-[#fedf51] text-center">
-            Biz haqimizda
+            {t("about")}
           </h1>
         </div>
       </section>
       <section className="flex flex-col justify-center md:flex-row items-center p-10 md:p-20 text-white text-center md:text-left px-8 md:px-32 mont font-normal text-[20px] gap-20">
         <p className="md:w-3/4 text-center">
-          Biz 2015-yildan buyon aholiga sifatli va ishonchli xizmat ko‘rsatib
-          kelmoqdamiz. Shu kungacha ko‘plab yirik brendlar bilan hamkorlik
-          qilib, mijozlarimizga eng samarali va qulay transport xizmatlarini
-          taqdim etmoqdamiz. Tajribamiz va ishonchli texnikalarimiz bilan har
-          qanday yuk tashish, qurilish hamda maxsus texnika buyurtmalarini tez
-          va sifatli bajarishga kafolat beramiz.
+         {t("textabout1")}
         </p>
         <button className="w-[50px] h-[50px] rounded-full bg-[#fedf51] text-black hidden font-semibold md:flex justify-center items-center text-[24px]">
           <a href="tel:+998971114040">
@@ -150,7 +150,7 @@ const About = () => {
       <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
         <div className="overflow-hidden w-full">
           <h1 className="krone font-normal text-[24px] md:text-[40px] text-[#fedf51]">
-            Hamkorlarimiz
+            {t("our_partners")}
           </h1>
           <div className="space-x-8 animate-marquee flex items-center justify-around mt-20">
             <img src={artel} alt="" />
