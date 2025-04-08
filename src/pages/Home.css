@@ -1,0 +1,52 @@
+.gradient {
+  background: linear-gradient(
+    268.28deg,
+    #191919 1.14%,
+    rgba(60, 60, 60, 0.7) 47.25%
+  );
+}
+
+.rounding {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  transform: skew(-20deg);
+  border-radius: 30px;
+  background: #191919;
+}
+
+/* Mobile uchun tasvirlar cheksiz aylanib turishi */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 5s alternate infinite;
+}
+
+@media (min-width: 1024px) {
+  /* Desktop uchun tasvirlar qotib turadi */
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.text {
+  -webkit-text-stroke: 2px #fedf51; /* width and color */
+
+  font-family: sans;
+  color: #191919;
+}
+
+.zen {
+  font-family: "Zen Dots";
+}

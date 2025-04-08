@@ -1,0 +1,7 @@
+.radius {
+  width: 150px;
+  height: 100px;
+  transform: skew(-20deg);
+  border-radius: 30px;
+  background: #191919;
+}
