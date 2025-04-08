@@ -252,7 +252,7 @@ const home = () => {
         </div>
       </section>
 
-      <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
+      <section id="partners" className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
         <div className="overflow-hidden w-full">
           <div className="space-x-8 animate-marquee flex items-center justify-around">
             <img src={artel} alt="" />

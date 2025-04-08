@@ -32,7 +32,7 @@ const Header = () => {
           <ul className="hidden lg:flex mont font-semibold text-[20px] gap-[72px] ml-40">
           <li>
               <NavLink
-                to={""}
+                to={"/partners"}
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
                {t('partners')}
