@@ -16,6 +16,8 @@ import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
 import { vehicleServices } from "./service";
+import { useTranslation } from 'react-i18next';
+import "../i18"
 
 const filteredVehicles = vehicleServices.filter(
   (v) => v.image && v.name && v.description
@@ -23,6 +25,8 @@ const filteredVehicles = vehicleServices.filter(
 
 const home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo({
@@ -88,6 +92,8 @@ const home = () => {
             </motion.h1>
             <p className="mont font-normal text-[12px] md:text-[14px] lg:text-[16px] leading-6 md:text-right">
               {currentVehicle.description}
+
+
             </p>
 
             {/* Texnikalar tugmasi */}
@@ -101,7 +107,7 @@ const home = () => {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
                 className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5"
               >
-                <NavLink to={"/services"}>Texnikalar</NavLink>
+                <NavLink to={"/services"}>{t("techniqueses")}</NavLink>
               </motion.button>
               <button className="w-[35px]  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
                 <a href="tel:+998971114040">
@@ -134,7 +140,7 @@ const home = () => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
               className="w-full mt-10 h-[35px] bg-[#fedf51] text-black rounded-[10px] mont font-semibold text-[16px] relative top-[190px]"
             >
-              <NavLink to={"/services"}>Texnikalar</NavLink>
+              <NavLink to={"/services"}>{t("techniqueses")}</NavLink>
             </motion.button>
           </div>
         </motion.aside>
@@ -152,11 +158,11 @@ const home = () => {
             <FaUser className="text-white text-xl" />
             <div>
               <p className="text-white font-semibold text-left">
-                Sizning ismingiz
+               {t("name")}
               </p>
               <input
                 type="text"
-                placeholder="Shu yerga yozing"
+                placeholder={t("write_here")}
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[A-Za-z\u0400-\u04FF\s]+"
                 inputMode="text"
@@ -175,11 +181,11 @@ const home = () => {
             <FaPhone className="text-white text-xl" />
             <div>
               <p className="text-white font-semibold text-left">
-                Telefon raqamingiz
+               {t("phone_number")}
               </p>
               <input
                 type="tel"
-                placeholder="Shu yerga yozing"
+                placeholder={t("write_here")}
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[0-9]+"
                 inputMode="numeric"
@@ -192,7 +198,7 @@ const home = () => {
 
           {/* Buyurtma tugmasi */}
           <button className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto">
-            Buyurtma qoldirish
+            {t("place_an_order")}
           </button>
         </div>
       </section>
@@ -217,17 +223,17 @@ const home = () => {
 
         <article className="text-center md:text-left">
           <h1 className="krone font-normal text-[32px] sm:leading-[1.1] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
-            Biz bilan bog'lanish
+            {t("contact_us")}
           </h1>
           <div className="text-center md:text-left">
             <p className="mont font-normal text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] flex items-center gap-1 justify-center md:justify-start text-white">
               <span>
                 <IoLocationOutline />
               </span>
-              Bizning manzil
+             {t("adreess")}
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
-              Yunusobod, Toshkent, O'zbekiston
+              {t("yunusobod")}, {t("toshkent")}, {t("Ozbekiston")}
             </p>
           </div>
           <div className="my-6 sm:my-8 text-center md:text-left">
@@ -235,7 +241,7 @@ const home = () => {
               <span>
                 <IoMailOutline />
               </span>
-              Elektron pochta manzil
+              {t("email_address")}
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               example@mail.uz
@@ -246,7 +252,7 @@ const home = () => {
               <span>
                 <IoCallOutline />
               </span>
-              Telefon
+              {t("phone")}
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
               +998 97 111 40 40

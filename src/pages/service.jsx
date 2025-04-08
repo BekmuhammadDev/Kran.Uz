@@ -222,6 +222,8 @@ export const vehicleServices = [
     logo: xcmgLogo,
   },
 ];
+
+
 const Service = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentVehicle = vehicleServices[currentIndex];

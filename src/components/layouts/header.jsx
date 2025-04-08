@@ -43,7 +43,7 @@ const Header = () => {
                 to={"/services"}
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
-                Texnikalar
+                {t("techniques")}
               </NavLink>
             </li>
           </ul>
@@ -88,7 +88,7 @@ const Header = () => {
               className="bg-[#FEDF51] py-2 px-8 rounded-xl text-xl font-semibold hover:bg-[#fed035] transition-colors"
               onClick={() => setIsModalOpen(true)}
             >
-              Bog'lanish
+             {t("contact")}
             </button>
           </div>
 
@@ -142,7 +142,7 @@ const Header = () => {
                   className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Biz haqimizda
+                  {t('about')}
                 </NavLink>
               </li>
               <li>
@@ -151,7 +151,7 @@ const Header = () => {
                   className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Texnikalar
+                    {t("techniques")}
                 </NavLink>
               </li>
             </ul>
@@ -173,7 +173,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                Bog'lanish
+                {t("contact")}
               </button>
             </div>
           </nav>
