@@ -1,5 +1,6 @@
 import React from "react";
 import bgAbout from "../assets/images/bgAbout.svg";
+import { useState, useEffect } from "react";
 import { IoCall } from "react-icons/io5";
 import { FaUser, FaPhone } from "react-icons/fa";
 import artel from "../assets/images/artel.svg";
@@ -8,8 +9,37 @@ import enter from "../assets/images/enter.svg";
 import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import Footer from "../components/layouts/footer";
+import { sendCustomEmail } from "../components/SendEmail";
 
 const About = () => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState(""); // Yangi state qo'shildi
+
+  const handleSubmit = async () => {
+    if (!name || !number) {
+      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); // Habarni set qilish
+      setTimeout(() => {
+        setMessage(""); // 3 sekunddan keyin xabarni tozalash
+      }, 3000);
+      return;
+    }
+
+    const response = await sendCustomEmail(name, number);
+    setMessage(response.message); // Habarni set qilish
+
+    // Xabarni 3 sekunddan keyin o'chirish
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+
+    // Inputlarni tozalash
+    if (response.success) {
+      setName("");
+      setNumber("");
+    }
+  };
+
   return (
     <div className="w-full">
       <section
@@ -43,7 +73,7 @@ const About = () => {
         </button>
       </section>
       <section
-        className="flex w-full justify-center items-center py-20 rounded-[50px] md:rounding container mx-auto"
+        className="flex w-full justify-center items-center md:py-20 relative rounded-[50px] md:rounding"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
         }}
@@ -60,6 +90,14 @@ const About = () => {
                 type="text"
                 placeholder="Shu yerga yozing"
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
+                pattern="[A-Za-z\u0400-\u04FF\s]+"
+                inputMode="text"
+                value={name}
+                onChange={(e) =>
+                  setName(
+                    e.target.value.replace(/[^A-Za-z\u0400-\u04FF\s]/g, "")
+                  )
+                }
               />
             </div>
           </div>
@@ -72,17 +110,41 @@ const About = () => {
                 Telefon raqamingiz
               </p>
               <input
-                type="text"
+                type="tel"
                 placeholder="Shu yerga yozing"
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
+                pattern="[0-9]+"
+                inputMode="numeric"
+                value={number}
+                onChange={(e) =>
+                  setNumber(e.target.value.replace(/[^0-9]/g, ""))
+                }
               />
             </div>
           </div>
 
           {/* Buyurtma tugmasi */}
-          <button className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto">
+          <button
+            className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto"
+            onClick={handleSubmit}
+          >
             Buyurtma qoldirish
           </button>
+
+          {/* Habarni ko'rsatish */}
+          {message && (
+            <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+              <div
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
+                  message === "Xabar yuborildi!"
+                    ? "bg-[#28a745]"
+                    : "bg-[#FF4C4C]"
+                }`}
+              >
+                {message}
+              </div>
+            </div>
+          )}
         </div>
       </section>
       <section className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">

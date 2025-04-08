@@ -16,6 +16,7 @@ import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
 import { vehicleServices } from "./service";
+import { sendCustomEmail } from "../components/SendEmail";
 
 const filteredVehicles = vehicleServices.filter(
   (v) => v.image && v.name && v.description
@@ -23,7 +24,33 @@ const filteredVehicles = vehicleServices.filter(
 
 const home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState(""); // Yangi state qo'shildi
 
+  const handleSubmit = async () => {
+    if (!name || !number) {
+      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); // Habarni set qilish
+      setTimeout(() => {
+        setMessage(""); // 3 sekunddan keyin xabarni tozalash
+      }, 3000);
+      return;
+    }
+
+    const response = await sendCustomEmail(name, number);
+    setMessage(response.message); // Habarni set qilish
+
+    // Xabarni 3 sekunddan keyin o'chirish
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+
+    // Inputlarni tozalash
+    if (response.success) {
+      setName("");
+      setNumber("");
+    }
+  };
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -160,12 +187,12 @@ const home = () => {
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[A-Za-z\u0400-\u04FF\s]+"
                 inputMode="text"
-                onInput={(e) => {
-                  e.target.value = e.target.value.replace(
-                    /[^A-Za-z\u0400-\u04FF\s]/g,
-                    ""
-                  );
-                }}
+                value={name}
+                onChange={(e) =>
+                  setName(
+                    e.target.value.replace(/[^A-Za-z\u0400-\u04FF\s]/g, "")
+                  )
+                }
               />
             </div>
           </div>
@@ -183,17 +210,36 @@ const home = () => {
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[0-9]+"
                 inputMode="numeric"
-                onInput={(e) => {
-                  e.target.value = e.target.value.replace(/[^0-9]/g, "");
-                }}
+                value={number}
+                onChange={(e) =>
+                  setNumber(e.target.value.replace(/[^0-9]/g, ""))
+                }
               />
             </div>
           </div>
 
           {/* Buyurtma tugmasi */}
-          <button className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto">
+          <button
+            className="bg-[#FEDF51] text-black font-semibold px-6 py-3 rounded-lg shadow-md w-full md:w-auto"
+            onClick={handleSubmit}
+          >
             Buyurtma qoldirish
           </button>
+
+          {/* Habarni ko'rsatish */}
+          {message && (
+            <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+              <div
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
+                  message === "Xabar yuborildi!"
+                    ? "bg-[#28a745]"
+                    : "bg-[#FF4C4C]"
+                }`}
+              >
+                {message}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -214,7 +260,6 @@ const home = () => {
       <SectionForHome />
 
       <section className="w-full my-40 md:my-0 h-[600px] flex flex-col md:flex-row justify-between md:px-20 items-center md:gap-20">
-
         <article className="text-center md:text-left">
           <h1 className="krone font-normal text-[32px] sm:leading-[1.1] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
             Biz bilan bog'lanish
@@ -238,7 +283,7 @@ const home = () => {
               Elektron pochta manzil
             </p>
             <p className="mont font-semibold text-[16px] sm:text-[20px] md:text-[18px] lg:text-[20px] text-white">
-              example@mail.uz
+              spestexarendapro@gamil.com
             </p>
           </div>
           <div className="text-center md:text-left">
@@ -262,11 +307,9 @@ const home = () => {
             className="rounded-md"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-
-
       </section>
 
       <Footer />
