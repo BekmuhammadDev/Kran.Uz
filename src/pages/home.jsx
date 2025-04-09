@@ -293,7 +293,7 @@ const home = () => {
 
               </div>
 
-              <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 ">
+              <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 pb-10 xl:pb-0 ">
                 <PiTruckLight color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">{t("getting_technique")}</h1>
