@@ -336,14 +336,14 @@ const home = () => {
             className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] flex-col relative hidden md:block z-10"
           >
             <motion.h1
-              className="text zen  text-[20px]  md:text-[24px] lg:text-[48px] text-right mb-10"
+              className="text zen  text-[20px]  md:text-[24px] lg:text-[48px] uppercase text-right mb-10"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
             >
               {currentVehicle.name}
             </motion.h1>
-            <p className="mont font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-6 md:text-right">
+            <p className="mont font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-[1.1] md:text-left">
               {currentVehicle.description}
             </p>
 
@@ -356,11 +356,11 @@ const home = () => {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-9"
+                className="w-[140px] md:w-[214px] lg:w-[190px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-16"
               >
                 <NavLink to={"/services"}>{t("techniqueses")}</NavLink>
               </motion.button>
-              <button className="w-[35px] fixed  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
+              <button className=" p-7 fixed mt-16 ml-20 rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[40px]">
                 <a href="tel:+998971114040">
                   <IoCall />
                 </a>
@@ -567,7 +567,6 @@ const home = () => {
       </section>
 
       <SectionForHome />
-
       <section className="w-full my-40 md:my-0 h-[600px] flex flex-col md:flex-row justify-between md:px-20 items-center md:gap-20">
         <article className="text-center md:text-left">
           <h1 className="krone font-normal text-[32px] sm:leading-[1.1] sm:text-[48px] md:text-[40px] lg:text-[48px] leading-10 text-[#fedf51] mb-5">
