@@ -45,7 +45,7 @@ export default function OrderForm({ onClose }) {
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="flex items-center gap-2 text-lg mb-2">
-              <FaUser /> Sizning ismingiz
+              <FaUser /> {t("name")}
             </label>
             <input
               type="text"
@@ -62,7 +62,7 @@ export default function OrderForm({ onClose }) {
           </div>
           <div className="mb-6">
             <label className="flex items-center gap-2 text-lg mb-2">
-              <FaPhone /> Telefon raqamingiz
+              <FaPhone /> {t("phone_number")}
             </label>
             <input
               type="tel"

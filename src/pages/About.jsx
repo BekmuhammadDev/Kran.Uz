@@ -18,11 +18,18 @@ const About = () => {
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
   const { t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo({
+      top: "0",
+      behavior: "smooth",
+    });
+  }, []);
+
   const handleSubmit = async () => {
     if (!name || !number) {
-      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); 
+      setMessage("Iltimos, barcha maydonlarni to‘ldiring.");
       setTimeout(() => {
-        setMessage(""); 
+        setMessage("");
       }, 3000);
       return;
     }
@@ -60,9 +67,7 @@ const About = () => {
         </div>
       </section>
       <section className="flex flex-col justify-center md:flex-row items-center p-10 md:p-20 text-white text-center md:text-left px-8 md:px-32 mont font-normal text-[20px] gap-20">
-        <p className="md:w-3/4 text-center">
-         {t("textabout1")}
-        </p>
+        <p className="md:w-3/4 text-center">{t("textabout1")}</p>
         <button className="w-[50px] h-[50px] rounded-full bg-[#fedf51] text-black hidden font-semibold md:flex justify-center items-center text-[24px]">
           <a href="tel:+998971114040">
             <IoCall />
