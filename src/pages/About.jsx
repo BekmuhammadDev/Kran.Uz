@@ -27,7 +27,7 @@ const About = () => {
 
   const handleSubmit = async () => {
     if (!name || !number) {
-      setMessage("Iltimos, barcha maydonlarni to‘ldiring.");
+      setMessage(t("redAlert"));
       setTimeout(() => {
         setMessage("");
       }, 3000);
