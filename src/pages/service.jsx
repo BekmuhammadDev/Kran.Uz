@@ -284,17 +284,19 @@ const Service = () => {
                       {currentVehicle.capacity || "N/A"}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px] pt-1">
-                      Yuk sig'imi
+                      {t("justHeavy")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
                     <h1 className="font-normal text-[18px] md:text-[28px]">
                       {currentVehicle.minHours
-                        ? `${currentVehicle.minHours} soat`
-                        : "1 reys"}
+                        ? `${currentVehicle.minHours} ${t("time")}`
+                        : t("reys")}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
+                      {currentVehicle.minHours
+                        ? t("minimumTime")
+                        : t("serviceType")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
@@ -302,7 +304,7 @@ const Service = () => {
                       {currentVehicle.capacity}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      Ogirligi
+                      {t("justHeavy")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
@@ -310,7 +312,7 @@ const Service = () => {
                       {currentVehicle.price}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      Narxi
+                      {t("justPrice")}
                     </p>
                   </article>
                 </div>
@@ -324,7 +326,7 @@ const Service = () => {
                     {currentVehicle.capacity || "N/A"}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    Yuk sig'imi
+                    {t("justHeavy")}
                   </p>
                 </article>
                 <article>
@@ -332,17 +334,19 @@ const Service = () => {
                     {currentVehicle.price}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    Narxi
+                    {t("justPrice")}
                   </p>
                 </article>
                 <article>
                   <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.minHours
-                      ? `${currentVehicle.minHours} soat`
-                      : "1 reys"}
+                      ? `${currentVehicle.minHours} ${t("time")}`
+                      : t("reys")}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
+                    {currentVehicle.minHours
+                      ? t("minimumTime")
+                      : t("serviceType")}
                   </p>
                 </article>
               </div>
@@ -374,7 +378,7 @@ const Service = () => {
               />
             </div>
             <button className="w-full h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] mont font-semibold text-[18px] md:text-[20px]">
-              Bog'lanish
+              {t("place_an_order")}
             </button>
           </div>
 
@@ -390,8 +394,8 @@ const Service = () => {
                 onClick={nextSlide}
               />
             </div>
-            <button className="w-[150px] h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] mont font-semibold text-[18px] md:text-[20px]">
-              Bog'lanish
+            <button className="w-[200px] h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] md:text-[16px] font-bold">
+              {t("place_an_order")}
             </button>
           </div>
         </div>
