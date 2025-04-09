@@ -148,6 +148,7 @@ i18n
           justPrice: "Narxi",
           heavyAfford: "Yuk sig'imi",
           spets: "Spec Texnikalar",
+          how_much:"Qanday ijara olinadi?",
         },
       },
       ru: {
@@ -285,6 +286,8 @@ i18n
           justPrice: "Цена",
           heavyAfford: "Грузоподъемность",
           spets: "Спецтехники",
+          how_much:"Какова стоимость аренды?",
+
         },
       },
     },

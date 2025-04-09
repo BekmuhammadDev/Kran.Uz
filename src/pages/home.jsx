@@ -503,7 +503,7 @@ const home = () => {
       >
         <div className="container mx-auto">
           <div className="mb-20">
-            <h1 className="text-[#FEDF51] text-center text-5xl font-normal">Qanday ijara olinadi?</h1>
+            <h1 className="text-[#FEDF51] text-center text-5xl font-normal">{t("how_much")}</h1>
           </div>
 
           <div className="flex flex-wrap xl:flex-row justify-center">
