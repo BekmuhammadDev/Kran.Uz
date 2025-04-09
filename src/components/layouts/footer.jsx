@@ -14,15 +14,17 @@ const Footer = () => {
       <div className="max-w-screen-2xl container mx-auto">
         <div className="flex flex-col mx-auto md:flex-row justify-between items-start gap-8">
           {/* Logo Section */}
-          <div className="relative bottom-8 ml-10">
+
+          <div className="relative bottom-8">
             <img src={Logo} alt="" width={180} />
           </div>
+
 
           {/* Contacts Section */}
           <div className="w-full md:w-auto mont">
             <h2 className="text-lg font-semibold mb-3">{t("contacts")}</h2>
             <ul className="space-y-2 ">
-            {t("yunusobod")}, {t("toshkent")}
+              {t("yunusobod")}, {t("toshkent")}
               <li className="mt-5">+998 97 111 40 40</li>
             </ul>
           </div>
