@@ -360,7 +360,7 @@ const home = () => {
               >
                 <NavLink to={"/services"}>{t("techniqueses")}</NavLink>
               </motion.button>
-              <button className=" p-7 fixed mt-16 ml-20 rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[40px]">
+              <button className=" animate-bounce p-5 fixed mt-16 ml-20 rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[40px]">
                 <a href="tel:+998971114040">
                   <IoCall />
                 </a>

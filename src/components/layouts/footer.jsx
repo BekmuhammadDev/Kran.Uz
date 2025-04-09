@@ -13,11 +13,12 @@ const Footer = () => {
     <div className="w-full bg-[#000000] text-white py-8 px-10 krone text-center">
       <div className="max-w-screen-2xl container mx-auto">
         <div className="flex flex-col mx-auto md:flex-row justify-between items-start gap-8">
-          {/* Logo Section */}
 
-          <div className="relative bottom-8">
+          {/* Logo Section */}
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <img src={Logo} alt="" width={180} />
           </div>
+
 
 
           {/* Contacts Section */}
@@ -49,11 +50,11 @@ const Footer = () => {
           {/* Social Media Section */}
           <div className="w-full md:w-auto">
             <h2 className="text-lg font-semibold mb-3 mont">{t("media")}</h2>
-            <ul className="flex items-center text-[24px] gap-2 justify-center">
-              <li>
+            <ul className="flex items-center text-[24px] gap-5 justify-center">
+              <li className="hover:text-blue-400 cursor-pointer text-3xl">
                 <FaTelegramPlane />
               </li>
-              <li>
+              <li className="hover:text-red-400 cursor-pointer text-3xl">
                 <BsInstagram />
               </li>
             </ul>
