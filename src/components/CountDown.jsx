@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
-import "../i18"
+import { useTranslation } from "react-i18next";
+import "../i18";
 
 const SEVENTY_TWO_HOURS = 72 * 60 * 60 * 1000; // 72 soat millisekundda
 const STORAGE_KEY = "countdown_start_time";
@@ -50,7 +50,13 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div  className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px] md:h-[250px]">
+    <div
+      id="grad"
+      className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[400px] md:h-[400px]"
+      style={{
+        background: `radial-gradient(circle 300px at center right, rgba(254, 223, 81, 0.3), transparent 80%)`,
+      }}
+    >
       <p className="mb-2 mont font-bold text-[24px] sm:text-[28px] lg:text-[32px]">
         {t("until_campaign")}
       </p>

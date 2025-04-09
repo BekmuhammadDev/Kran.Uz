@@ -28,4 +28,6 @@ body {
   );
 }
 
-
+#grad {
+  background-image: radial-gradient(closest-side at 60% 55%, #fedf51);
+}

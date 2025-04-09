@@ -24,6 +24,13 @@ import xcmgLogo from "../assets/images/xcmgLogo.svg";
 import { useTranslation } from "react-i18next";
 
 const Service = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const { t } = useTranslation();
 
   const vehicleServices = [
@@ -237,10 +244,10 @@ const Service = () => {
     <div className="relative w-full min-h-screen bg-[#191919] overflow-hidden text-white pt-10">
       {/* Main Carousel Section */}
       <section className="grid-col md:flex relative items-center">
-        <div className="w-[520px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[70%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
+        <div className="w-[520px] h-[300px] gradient relative right-0 md:w-[670px] md:h-[505px] lg:h-[600px] lg:w-[80%] bg-gray-500 text-white py-10 px-20 text-center clip-shape"></div>
 
         <div className="absolute left-0 lg:p-10 md:p-5 flex-col items-center h-[600px] top-0">
-          <div className="flex items-center justify-around pb-10">
+          <div className="flex items-center justify-start pb-10">
             <img
               src={currentVehicle.logo}
               alt="Hyundai Logo"
@@ -284,17 +291,19 @@ const Service = () => {
                       {currentVehicle.capacity || "N/A"}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px] pt-1">
-                      Yuk sig'imi
+                      {t("justHeavy")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
                     <h1 className="font-normal text-[18px] md:text-[28px]">
                       {currentVehicle.minHours
-                        ? `${currentVehicle.minHours} soat`
-                        : "1 reys"}
+                        ? `${currentVehicle.minHours} ${t("time")}`
+                        : t("reys")}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
+                      {currentVehicle.minHours
+                        ? t("minimumTime")
+                        : t("serviceType")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
@@ -302,7 +311,7 @@ const Service = () => {
                       {currentVehicle.capacity}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      Ogirligi
+                      {t("justHeavy")}
                     </p>
                   </article>
                   <article className="flex flex-col items-start border-b border-gray-500 pb-2">
@@ -310,7 +319,7 @@ const Service = () => {
                       {currentVehicle.price}
                     </h1>
                     <p className="mont font-normal text-[16px] md:text-[20px]">
-                      Narxi
+                      {t("justPrice")}
                     </p>
                   </article>
                 </div>
@@ -324,7 +333,7 @@ const Service = () => {
                     {currentVehicle.capacity || "N/A"}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    Yuk sig'imi
+                    {t("justHeavy")}
                   </p>
                 </article>
                 <article>
@@ -332,17 +341,19 @@ const Service = () => {
                     {currentVehicle.price}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    Narxi
+                    {t("justPrice")}
                   </p>
                 </article>
                 <article>
                   <h1 className="font-normal text-[14px] md:text-[20px] lg:text-[28px]">
                     {currentVehicle.minHours
-                      ? `${currentVehicle.minHours} soat`
-                      : "1 reys"}
+                      ? `${currentVehicle.minHours} ${t("time")}`
+                      : t("reys")}
                   </h1>
                   <p className="mont font-normal text-[16px] md:text-[18px] lg:text-[20px]">
-                    {currentVehicle.minHours ? "Minimal vaqt" : "Xizmat turi"}
+                    {currentVehicle.minHours
+                      ? t("minimumTime")
+                      : t("serviceType")}
                   </p>
                 </article>
               </div>
@@ -352,10 +363,10 @@ const Service = () => {
 
         <div className="relative md:top-[50px] w-[350px] md:w-[450px] h-[520px] pl-[50px] p-[10px] md:mr-10 flex flex-col-reverse md:flex-col">
           <article className="text-center flex-col md:mb-[300px] order-2 md:order-1">
-            <h1 className="krone font-normal text-[20px] md:text-[22px] lg:text-[24px] md:text-right text-center hidden md:block">
+            <h1 className="krone font-normal lg:text-[39px] text-center hidden md:block leading-[1.1]">
               {currentVehicle.name}
             </h1>
-            <p className="mont font-normal text-[14px] text-center md:text-[16px] leading-6 md:text-right md:my-10 relative">
+            <p className="mont font-normal text-[14px] text-center md:text-[18px] leading-9 md:text-right md:my-10 relative">
               {currentVehicle.description}
             </p>
           </article>
@@ -374,7 +385,7 @@ const Service = () => {
               />
             </div>
             <button className="w-full h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] mont font-semibold text-[18px] md:text-[20px]">
-              Bog'lanish
+              {t("place_an_order")}
             </button>
           </div>
 
@@ -390,8 +401,8 @@ const Service = () => {
                 onClick={nextSlide}
               />
             </div>
-            <button className="w-[150px] h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] mont font-semibold text-[18px] md:text-[20px]">
-              Bog'lanish
+            <button className="w-[200px] h-[35px] md:w-[174px] md:h-[41px] text-black bg-[#fedf51] rounded-[10px] md:text-[16px] font-bold">
+              {t("place_an_order")}
             </button>
           </div>
         </div>
