@@ -1,12 +1,12 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'uz',
+    fallbackLng: "uz",
     debug: true,
     interpolation: {
       escapeValue: false,
@@ -30,22 +30,117 @@ i18n
           email_address: "Elektron pochta manzil",
           phone: "Telefon",
           until_campaign: "Aksiya tugashiga ",
-          textabout1: "Biz 2015-yildan buyon aholiga sifatli va ishonchli xizmat ko‘rsatib kelmoqdamiz. Shu kungacha ko‘plab yirik brendlar bilan hamkorlik qilib, mijozlarimizga eng samarali va qulay transport xizmatlarini taqdim etmoqdamiz. Tajribamiz va ishonchli texnikalarimiz bilan har qanday yuk tashish, qurilish hamda maxsus texnika buyurtmalarini tez va sifatli bajarishga kafolat beramiz.",
-          our_partners:"Hamkorlarimiz",
-          contacts:"Kontaktlar",
-          links:"Linklar",
-          media:"Medialar",
-          cargo_capacity:"Yuk sig'imi",
-          weight:"O'girligi",
-          partners:"Hamkorlar",
-          address:"Manzil",
-          aksiya:"Chegirma",
-          qoldi:"qoldi:",
-          leave_call:"Qo‘ng‘iroq qoldirish",
-          select_techniques: "Texnikalarni tanlang va <br /> buyurtma qoldiring",
-          getting_technique:"Texnikani olish",
-          payment:"To'lov",
-        }
+          textabout1:
+            "Biz 2015-yildan buyon aholiga sifatli va ishonchli xizmat ko‘rsatib kelmoqdamiz. Shu kungacha ko‘plab yirik brendlar bilan hamkorlik qilib, mijozlarimizga eng samarali va qulay transport xizmatlarini taqdim etmoqdamiz. Tajribamiz va ishonchli texnikalarimiz bilan har qanday yuk tashish, qurilish hamda maxsus texnika buyurtmalarini tez va sifatli bajarishga kafolat beramiz.",
+          our_partners: "Hamkorlarimiz",
+          contacts: "Kontaktlar",
+          links: "Linklar",
+          media: "Medialar",
+          cargo_capacity: "Yuk sig'imi",
+          weight: "O'girligi",
+          partners: "Hamkorlar",
+          address: "Manzil",
+          aksiya: "Chegirma",
+          qoldi: "qoldi:",
+          leave_call: "Qo‘ng‘iroq qoldirish",
+          select_techniques:
+            "Texnikalarni tanlang va <br /> buyurtma qoldiring",
+          getting_technique: "Texnikani olish",
+          payment: "To'lov",
+          shalandaCategory1: "Shalanda",
+          shalandaName1: "Tentovka shalanda",
+          shalandaDescription1:
+            "Tentovka shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          Shalandacapacity1: "30 tonna",
+          shalandaPrice1: "2,000,000 UZS",
+          shalandaCategory2: "Shalanda",
+          shalandaName2: "Pritsep shalanda",
+          shalandaDescription2:
+            "Pritsep shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          shalandaCapacity2: "30 tonna",
+          shalandaPrice2: "1,600,000 UZS",
+          shalandaCategory3: "Shalanda",
+          shalandaName3: "Kontenerovoz shalanda",
+          shalandaDescription3:
+            "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          shalandaCapacity3: "30 tonna",
+          shalandaPrice3: "1,600,000 UZS",
+          ekskavatorCategory1: "Ekskavator",
+          ekskavatorName1: "Hyundai 55W",
+          ekskavatorDescription1:
+            "Hyundai 55W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          ekskavatorCapacity1: "5 tonna",
+          ekskavatorPrice1: "500,000 UZS",
+          ekskavatorAdvanceNotice1: "2 soat oldindan",
+          ekskavatorCategory2: "Ekskavator",
+          ekskavatorName2: "Hyundai 140W",
+          ekskavatorDescription2:
+            "Hyundai 140W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          ekskavatorCapacity2: "7 tonna",
+          ekskavatorPrice2: "600,000 UZS",
+          ekskavatorAdvanceNotice2: "2 soat oldindan",
+          ekskavatorCategory3: "Ekskavator",
+          ekskavatorName3: "Volvo 145W",
+          ekskavatorDescription3:
+            "Volvo 145W ekskavator qurilish va qazish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          ekskavatorCapacity3: "8 tonna",
+          ekskavatorPrice3: "650,000 UZS",
+          ekskavatorAdvanceNotice3: "2 soat oldindan",
+          kranCategory1: "Manipulyator Kran",
+          kranName1: "Mercedes",
+          kranDescription1:
+            "Mercedes manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          kranCapacity1: "8 tonna",
+          kranPrice1: "1,600,000 UZS",
+          kranCategory2: "Manipulyator Kran",
+          kranName2: "Hyundai",
+          kranDescription2:
+            "Hyundai manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          kranCapacity2: "4 tonna",
+          kranPrice2: "1,400,000 UZS",
+          kranCategory3: "Manipulyator Kran",
+          kranName3: "Isuzu",
+          kranDescription3:
+            "Isuzu manipulyator kran yuk tashish va ko'tarish ishlari uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          kranCapacity3: "3 tonna",
+          kranPrice3: "1,300,000 UZS",
+          karaCategory1: "Kara",
+          karaName1: "Avto Kara 3 tonna",
+          karaDescription1:
+            "Avto Kara 3 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          karaCapacity1: "3 tonna",
+          karaPrice1: "500,000 UZS",
+          karaCategory2: "Kara",
+          karaName2: "Avto Kara 5 tonna",
+          karaDescription2:
+            "Avto Kara 5 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          karaCapacity2: "5 tonna",
+          karaPrice2: "600,000 UZS",
+          karaCategory3: "Kara",
+          karaName3: "Avto Kara 10 tonna",
+          karaDescription3:
+            "Avto Kara 10 tonna yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          karaCapacity3: "10 tonna",
+          karaPrice3: "800,000 UZS",
+          avtoKranCategory1: "Avtokran",
+          avtoKranName1: "Avtocran xcmg, zoomillion",
+          avtoKranDescription1:
+            "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          avtoKranCapacity1: "30 tonna",
+          avtoKranPrice1: "550 000 UZS",
+          avtoKranCategory2: "Avtokran",
+          avtoKranName2: "Avtocran xcmg, zoomillion",
+          avtoKranDescription2:
+            "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          avtoKranCapacity2: "50 tonna",
+          avtoKranPrice2: "650 000 UZS",
+          avtoKranCategory3: "Avtokran",
+          avtoKranName3: "Avtocran xcmg, zoomillion",
+          avtoKranDescription3:
+            "Avtocran xcmg, zoomillion ,Strelo 44 metr + gusak 16 metr bolgan mashina yuk tashish xizmati uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+          avtoKranCapacity3: "75 tonna",
+          avtoKranPrice3: "Kelishilngan holda",
+        },
       },
       ru: {
         translation: {
@@ -65,25 +160,118 @@ i18n
           email_address: "Адрес электронной почты",
           phone: "Телефон",
           until_campaign: "До окончание cкидки",
-          textabout1:"Мы предоставляем качественные и надежные услуги населению с 2015 года.Мы идем. На сегодняшний день сотрудничество со многими крупными брендамипредоставление нашим клиентам наиболее эффективных и удобных транспортных услугМы представляем. Благодаря нашему опыту и надежным технологиям, каждыйкак быстро оформить заказ на грузоперевозки, строительную и спецтехникуи мы гарантируем качественное исполнение.",
-          our_partners:"Наши партнеры",
-          contacts:"Контакты",
-          links:"ссылки",
-          media:"медиа",
-          cargo_capacity:"Грузоподъемность",
-          weight:"Масса",
-          partners:"Партнеры",
-          address:"Адрес",
-          aksiya:"Cкидки",
-          qoldi:"Осталось:",
-          leave_call:"Оставьте звонок",
-          select_techniques:"Выберите методы и <br/> оформить заказ",
-          getting_technique:"Получение техники",
-          payment:"Оплата",
-
-        }
-      }
-    }
+          textabout1:
+            "Мы предоставляем качественные и надежные услуги населению с 2015 года.Мы идем. На сегодняшний день сотрудничество со многими крупными брендамипредоставление нашим клиентам наиболее эффективных и удобных транспортных услугМы представляем. Благодаря нашему опыту и надежным технологиям, каждыйкак быстро оформить заказ на грузоперевозки, строительную и спецтехникуи мы гарантируем качественное исполнение.",
+          our_partners: "Наши партнеры",
+          contacts: "Контакты",
+          links: "ссылки",
+          media: "медиа",
+          cargo_capacity: "Грузоподъемность",
+          weight: "Масса",
+          partners: "Партнеры",
+          address: "Адрес",
+          aksiya: "Cкидки",
+          qoldi: "Осталось:",
+          leave_call: "Оставьте звонок",
+          select_techniques: "Выберите методы и <br/> оформить заказ",
+          getting_technique: "Получение техники",
+          payment: "Оплата",
+          shalandaCategory1: "Шаланда",
+          shalandaName1: "Тентовка шаланда",
+          shalandaDescription1:
+            "Тентовка шаланда предназначена для перевозки грузов до 30 тонн. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          Shalandacapacity1: "30 тонн",
+          shalandaPrice1: "2 000 000 UZS",
+          shalandaCategory2: "Шаланда",
+          shalandaName2: "Прицеп шаланда",
+          shalandaDescription2:
+            "Прицеп шаланда предназначен для перевозки грузов до 30 тонн. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          shalandaCapacity2: "30 тонн",
+          shalandaPrice2: "1 600 000 UZS",
+          shalandaCategory3: "Шаланда",
+          shalandaName3: "Контейнеровоз шаланда",
+          shalandaDescription3:
+            "Контейнеровоз шаланда предназначен для перевозки грузов до 30 тонн. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          shalandaCapacity3: "30 тонн",
+          shalandaPrice3: "1 600 000 UZS",
+          ekskavatorCategory1: "Экскаватор",
+          ekskavatorName1: "Hyundai 55W",
+          ekskavatorDescription1:
+            "Экскаватор Hyundai 55W предназначен для строительных и земляных работ. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          ekskavatorCapacity1: "5 тонн",
+          ekskavatorPrice1: "500 000 UZS",
+          ekskavatorAdvanceNotice1: "За 2 часа до использования",
+          ekskavatorCategory2: "Экскаватор",
+          ekskavatorName2: "Hyundai 140W",
+          ekskavatorDescription2:
+            "Экскаватор Hyundai 140W предназначен для строительных и земляных работ. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          ekskavatorCapacity2: "7 тонн",
+          ekskavatorPrice2: "600 000 UZS",
+          ekskavatorAdvanceNotice2: "За 2 часа до использования",
+          ekskavatorCategory3: "Экскаватор",
+          ekskavatorName3: "Volvo 145W",
+          ekskavatorDescription3:
+            "Экскаватор Volvo 145W предназначен для строительных и земляных работ. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          ekskavatorCapacity3: "8 тонн",
+          ekskavatorPrice3: "650 000 UZS",
+          ekskavatorAdvanceNotice3: "За 2 часа до использования",
+          kranCategory1: "Манипулятор Кран",
+          kranName1: "Mercedes",
+          kranDescription1:
+            "Манипулятор кран Mercedes предназначен для перевозки и подъема грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          kranCapacity1: "8 тонн",
+          kranPrice1: "1 600 000 UZS",
+          kranCategory2: "Манипулятор Кран",
+          kranName2: "Hyundai",
+          kranDescription2:
+            "Манипулятор кран Hyundai предназначен для перевозки и подъема грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          kranCapacity2: "4 тонны",
+          kranPrice2: "1 400 000 UZS",
+          kranCategory3: "Манипулятор Кран",
+          kranName3: "Isuzu",
+          kranDescription3:
+            "Манипулятор кран Isuzu предназначен для перевозки и подъема грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          kranCapacity3: "3 тонны",
+          kranPrice3: "1 300 000 UZS",
+          karaCategory1: "Кара",
+          karaName1: "Авто Кара 3 тонны",
+          karaDescription1:
+            "Авто кара 3 тонны предназначена для перевозки грузов. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          karaCapacity1: "3 тонны",
+          karaPrice1: "500 000 UZS",
+          karaCategory2: "Кара",
+          karaName2: "Авто Кара 5 тонн",
+          karaDescription2:
+            "Авто кара 5 тонн предназначена для перевозки грузов. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          karaCapacity2: "5 тонн",
+          karaPrice2: "600 000 UZS",
+          karaCategory3: "Кара",
+          karaName3: "Авто Кара 10 тонн",
+          karaDescription3:
+            "Авто кара 10 тонн предназначена для перевозки грузов. Поэтому мы рекомендуем её как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          karaCapacity3: "10 тонн",
+          karaPrice3: "800 000 UZS",
+          avtoKranCategory1: "Автокран",
+          avtoKranName1: "Автокран xcmg, zoomillion",
+          avtoKranDescription1:
+            "Автокран xcmg, zoomillion с стрела 44 метра + гусек 16 метров предназначен для перевозки грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          avtoKranCapacity1: "30 тонн",
+          avtoKranPrice1: "550 000 UZS",
+          avtoKranCategory2: "Автокран",
+          avtoKranName2: "Автокран xcmg, zoomillion",
+          avtoKranDescription2:
+            "Автокран xcmg, zoomillion с стрела 44 метра + гусек 16 метров предназначен для перевозки грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          avtoKranCapacity2: "50 тонн",
+          avtoKranPrice2: "650 000 UZS",
+          avtoKranCategory3: "Автокран",
+          avtoKranName3: "Автокран xcmg, zoomillion",
+          avtoKranDescription3:
+            "Автокран xcmg, zoomillion с стрела 44 метра + гусек 16 метров предназначен для перевозки грузов. Поэтому мы рекомендуем его как для частных клиентов, так и для небольших строительных групп, и для крупных постоянных клиентов.",
+          avtoKranCapacity3: "75 тонн",
+          avtoKranPrice3: "По договоренности",
+        },
+      },
+    },
   });
 
 export default i18n;
