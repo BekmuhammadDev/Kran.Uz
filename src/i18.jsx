@@ -29,7 +29,7 @@ i18n
           Ozbekiston: "O'zbekiston",
           email_address: "Elektron pochta manzil",
           phone: "Telefon",
-          until_campaign: "Aksiya tugashiga: ",
+          until_campaign: "Aksiya tugashiga ",
           textabout1: "Biz 2015-yildan buyon aholiga sifatli va ishonchli xizmat ko‘rsatib kelmoqdamiz. Shu kungacha ko‘plab yirik brendlar bilan hamkorlik qilib, mijozlarimizga eng samarali va qulay transport xizmatlarini taqdim etmoqdamiz. Tajribamiz va ishonchli texnikalarimiz bilan har qanday yuk tashish, qurilish hamda maxsus texnika buyurtmalarini tez va sifatli bajarishga kafolat beramiz.",
           our_partners:"Hamkorlarimiz",
           contacts:"Kontaktlar",
@@ -39,6 +39,12 @@ i18n
           weight:"O'girligi",
           partners:"Hamkorlar",
           address:"Manzil",
+          aksiya:"Chegirma",
+          qoldi:"qoldi:",
+          leave_call:"Qo‘ng‘iroq qoldirish",
+          select_techniques: "Texnikalarni tanlang va <br /> buyurtma qoldiring",
+          getting_technique:"Texnikani olish",
+          payment:"To'lov",
         }
       },
       ru: {
@@ -58,7 +64,7 @@ i18n
           Ozbekiston: "Узбекистан",
           email_address: "Адрес электронной почты",
           phone: "Телефон",
-          until_campaign: "До окончание акции:",
+          until_campaign: "До окончание cкидки",
           textabout1:"Мы предоставляем качественные и надежные услуги населению с 2015 года.Мы идем. На сегодняшний день сотрудничество со многими крупными брендамипредоставление нашим клиентам наиболее эффективных и удобных транспортных услугМы представляем. Благодаря нашему опыту и надежным технологиям, каждыйкак быстро оформить заказ на грузоперевозки, строительную и спецтехникуи мы гарантируем качественное исполнение.",
           our_partners:"Наши партнеры",
           contacts:"Контакты",
@@ -68,6 +74,12 @@ i18n
           weight:"Масса",
           partners:"Партнеры",
           address:"Адрес",
+          aksiya:"Cкидки",
+          qoldi:"Осталось:",
+          leave_call:"Оставьте звонок",
+          select_techniques:"Выберите методы и <br/> оформить заказ",
+          getting_technique:"Получение техники",
+          payment:"Оплата",
 
         }
       }

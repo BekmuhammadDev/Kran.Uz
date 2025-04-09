@@ -50,7 +50,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px] md:h-[250px]">
+    <div  className="flex flex-col items-center justify-center bg-[#191919] text-white py-6 w-full h-[200px] md:h-[250px]">
       <p className="mb-2 mont font-bold text-[24px] sm:text-[28px] lg:text-[32px]">
         {t("until_campaign")}
       </p>
@@ -62,6 +62,7 @@ const CountdownTimer = () => {
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
       <p className="mt-2 font-bold mont text-[20px] sm:text-[24px] lg:text-[28px]">
+        {t("qoldi")}
       </p>
     </div>
   );

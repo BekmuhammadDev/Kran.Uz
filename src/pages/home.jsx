@@ -19,6 +19,11 @@ import { vehicleServices } from "./service";
 import { sendCustomEmail } from "../components/SendEmail";
 import { useTranslation } from "react-i18next";
 import "../i18";
+import { BsCashCoin } from "react-icons/bs";
+import { PiPencilSimpleLineLight } from "react-icons/pi";
+import { PiTruckLight } from "react-icons/pi";
+
+
 
 const filteredVehicles = vehicleServices.filter(
   (v) => v.image && v.name && v.description
@@ -30,7 +35,7 @@ const home = () => {
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
 
-   const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const handleSubmit = async () => {
     if (!name || !number) {
@@ -85,7 +90,7 @@ const home = () => {
         <div className=" flex items-center justify-between">
           <div className=" relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
             <motion.h1
-              className="text zen font-thin text-[22px] mb-10 md:hidden"
+              className="text zen font-thin text-[48px] mb-10 md:hidden"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -110,14 +115,14 @@ const home = () => {
             className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] flex-col relative hidden md:block z-10"
           >
             <motion.h1
-              className="text zen font-thin text-[20px] md:text-[24px] lg:text-[42px] text-right mb-10"
+              className="text zen  text-[20px]  md:text-[24px] lg:text-[42px] text-right mb-10"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
             >
               {currentVehicle.name}
             </motion.h1>
-            <p className="mont font-normal text-[12px] md:text-[14px] lg:text-[16px] leading-6 md:text-right">
+            <p className="mont font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-6 md:text-right">
               {currentVehicle.description}
             </p>
 
@@ -130,11 +135,11 @@ const home = () => {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-5"
+                className="w-[140px] md:w-[214px] lg:w-[170px] h-[35px] md:h-[44px] md:left-[50px] lg:h-[50px] bg-[#fedf51] text-black rounded-[10px] font-semibold text-[16px] md:text-[18px] lg:text-[20px] mt-9"
               >
                 <NavLink to={"/services"}>{t("techniqueses")}</NavLink>
               </motion.button>
-              <button className="w-[35px]  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
+              <button className="w-[35px] fixed  md:w-[45px] lg:w-[50px] h-[35px] mt-10 ml-28  md:h-[45px] lg:h-[50px] rounded-full bg-[#fedf51] text-black font-semibold flex justify-center items-center text-[18px] md:text-[22px] lg:text-[24px]">
                 <a href="tel:+998971114040">
                   <IoCall />
                 </a>
@@ -172,6 +177,7 @@ const home = () => {
       </section>
 
       <section
+        id="partners"
         className="flex w-full justify-center items-center md:py-20 relative rounded-[50px] md:rounding"
         style={{
           background: "linear-gradient(to bottom, #4B4B4B, #191919)",
@@ -239,11 +245,10 @@ const home = () => {
           {message && (
             <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
               <div
-                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
-                  message === "Xabar yuborildi!"
-                    ? "bg-[#28a745]"
-                    : "bg-[#FF4C4C]"
-                }`}
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${message === "Xabar yuborildi!"
+                  ? "bg-[#28a745]"
+                  : "bg-[#FF4C4C]"
+                  }`}
               >
                 {message}
               </div>
@@ -252,7 +257,7 @@ const home = () => {
         </div>
       </section>
 
-      <section id="partners" className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
+      <section id="count" className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
         <div className="overflow-hidden w-full">
           <div className="space-x-8 animate-marquee flex items-center justify-around">
             <img src={artel} alt="" />
@@ -266,6 +271,76 @@ const home = () => {
       </section>
 
       <Countdown />
+
+      <section className="mt-40">
+        <div className="container mx-auto">
+
+          <div className="flex flex-wrap xl:flex-row justify-center">
+
+            <div>
+
+              <div className="flex gap-8  xl:border-r-2 pr-10 pb-10  border-b-2">
+                <IoCallOutline color="yellow" fontSize={90} />
+                <div>
+                  <h1 className="text-white text-3xl font-bold mb-2">{t("leave_call")}</h1>
+
+                  <p
+                    className="text-white text-xl font-semibold"
+                    dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
+                  ></p>
+
+                </div>
+
+              </div>
+
+              <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 ">
+                <PiTruckLight color="yellow" fontSize={90} />
+                <div>
+                  <h1 className="text-white text-3xl font-bold mb-2">{t("getting_technique")}</h1>
+                  <p
+                    className="text-white text-xl font-semibold"
+                    dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
+                  ></p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div className="flex gap-8 border-b-2 border-t-2 md:border-t-0 pl-10 pb-10">
+                <PiPencilSimpleLineLight color="yellow" fontSize={90} />
+                <div>
+                  <h1 className="text-white text-3xl font-bold mb-2">{t("place_an_order")}</h1>
+                  <p
+                    className="text-white text-xl font-semibold"
+                    dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
+                  ></p>
+                </div>
+
+              </div>
+
+              <div className=" flex gap-8 pl-10 pt-10 ">
+                <BsCashCoin color="yellow" fontSize={90} />
+                <div>
+                  <h1 className="text-white text-3xl font-bold mb-2">{t("payment")}</h1>
+                  <p
+                    className="text-white text-xl font-semibold"
+                    dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
+                  ></p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
       <SectionForHome />
 
       <section className="w-full my-40 md:my-0 h-[600px] flex flex-col md:flex-row justify-between md:px-20 items-center md:gap-20">

@@ -2,8 +2,22 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState } from "react";
 import logoHunday from "../assets/images/logoHunday.svg";
 import { NavLink } from "react-router-dom";
+
 import eks145W from "../assets/images/Volvo_145W.svg";
 import mercedesManipul from "../assets/images/mercedesManipul.svg";
+import hundayEks from "../assets/images/hundayEks.svg"
+import isuzu_manipul from "../assets/images/isuzu_manipul.svg"
+import isuzu_manipul_140W from "../assets/images/Hyundai_140W.svg"
+
+
+const cards = [
+  { title: "Avto Kran", image: mercedesManipul },
+  { title: "hundayEks", image: hundayEks },
+  { title: "Isuzu", image: isuzu_manipul },
+  { title: "Hyundai_140W ", image: isuzu_manipul_140W },
+
+];
+
 
 const vehicles = [
   {
@@ -37,40 +51,37 @@ export default function Avtovishkalar() {
         Spec Texnikalar
       </h1>
 
-      {/* Flex Container for Cards */}
-      <div className="flex flex-wrap justify-center gap-10">
-        {/* First Card */}
-        <div className="w-full sm:w-[440px] h-[380px] bg-[#2a2a2a] rounded-lg overflow-hidden relative flex justify-center items-center">
-          <NavLink to={"/services"} className="block w-full h-full">
-            <div className="smGradient w-full h-full flex justify-center items-center relative">
-              <img
-                src={mercedesManipul}
-                alt="Avto Kran"
-                className="w-[350px] object-cover md:transition-transform md:duration-300 md:hover:scale-110"
-              />
-              <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
-                Avto Kran
-              </h4>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1  md:grid-cols-2 justify-center gap-20">
+
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[340px] md:w-[380px] lg:w-[440px] bg-[#2a2a2a] rounded-lg overflow-hidden relative flex justify-center items-center h-[320px] sm:h-[360px] md:h-[380px]"
+            >
+              <NavLink to="/services" className="block w-full h-full">
+                <div className="smGradient w-full h-full flex justify-center items-center relative">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="max-w-[90%] max-h-[90%] object-contain transition-transform duration-300 hover:scale-110"
+                  />
+                  <h4 className="absolute bottom-4 right-4 krone font-normal text-[20px] sm:text-[24px] md:text-[28px] text-white">
+                    {card.title}
+                  </h4>
+                </div>
+              </NavLink>
             </div>
-          </NavLink>
+          ))}
         </div>
 
-        {/* Second Card */}
-        <div className="w-full sm:w-[440px] h-[380px] bg-[#2a2a2a] rounded-lg overflow-hidden relative flex justify-center items-center">
-          <NavLink to={"/services"} className="block w-full h-full">
-            <div className="smGradient w-full h-full flex justify-center items-center relative">
-              <img
-                src={eks145W}
-                alt="Ekskavator"
-                className="w-[350px] object-cover md:transition-transform md:duration-300 md:hover:scale-110 md:mb-10"
-              />
-              <h4 className="absolute bottom-4 right-4 krone font-normal text-[24px] sm:text-[32px] text-white">
-                Ekskavator
-              </h4>
-            </div>
-          </NavLink>
-        </div>
+
+
       </div>
+
+
+
+
     </section>
   );
 }
