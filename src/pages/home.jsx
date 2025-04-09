@@ -476,11 +476,12 @@ const home = () => {
 
       <Countdown />
 
-      <section className="mt-40">
+      <section className="mt-40 mb-40">
         <div className="container mx-auto">
           <div className="flex flex-wrap xl:flex-row justify-center">
-            <div>
-              <div className="flex gap-8  md:border-r-2 pr-10 pb-10  border-b-2">
+
+            <div className="px-5 xl:px-0">
+              <div className="flex gap-8  xl:border-r-2 pr-10 pb-10  border-b-2">
                 <IoCallOutline color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">
@@ -494,7 +495,7 @@ const home = () => {
                 </div>
               </div>
 
-              <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 ">
+              <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 pb-10 xl:pb-0 ">
                 <PiTruckLight color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">
@@ -508,8 +509,8 @@ const home = () => {
               </div>
             </div>
 
-            <div>
-              <div className="flex gap-8 border-b-2 border-t-2 md:border-t-0 pl-10 pb-10">
+            <div className="px-5 xl:px-0">
+              <div className="flex gap-8 border-b-2 border-t-2 md:border-t-0 xl:pl-10 pr-10 pt-10 xl:pt-0 pb-10">
                 <PiPencilSimpleLineLight color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">
@@ -522,7 +523,7 @@ const home = () => {
                 </div>
               </div>
 
-              <div className=" flex gap-8 pl-10 pt-10 ">
+              <div className=" flex gap-8 xl:pl-10 pt-10 ">
                 <BsCashCoin color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">
