@@ -11,6 +11,7 @@ import discover from "../assets/images/discover.svg";
 import Footer from "../components/layouts/footer";
 import { sendCustomEmail } from "../components/SendEmail";
 import { useTranslation } from "react-i18next";
+// About
 
 const About = () => {
   const [name, setName] = useState("");
