@@ -27,7 +27,7 @@ const CountdownTimer = () => {
       const elapsed = currentTime - startTime;
 
       if (elapsed >= SEVENTY_TWO_HOURS) {
-        // Agar 72 soat tugasa, yangilaymiz
+        // Agar 73 soat tugasa, yangilaymiz
         startTime = currentTime;
         localStorage.setItem(STORAGE_KEY, startTime);
         setTimeLeft(SEVENTY_TWO_HOURS / 1000);
