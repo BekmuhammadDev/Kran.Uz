@@ -1,5 +1,6 @@
 // emailService.js
 import emailjs from "@emailjs/browser";
+import { t } from "i18next";
 
 export const sendCustomEmail = async (name, number) => {
   try {
@@ -21,8 +22,8 @@ export const sendCustomEmail = async (name, number) => {
       "d1IxGTYTA6CR9GRkk" // PUBLIC KEY
     );
 
-    return { success: true, message: "Xabar yuborildi!" };
+    return { success: true, message: t("greenAlertedSend") };
   } catch (error) {
-    return { success: false, message: "Xatolik yuz berdi!" };
+    return { success: false, message: t("redAlertedSend") };
   }
 };

@@ -110,12 +110,11 @@ const home = () => {
     },
     {
       id: 6,
-      category: "Shalanda",
-      name: "Kontenerovoz shalanda",
-      description:
-        "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
-      capacity: "30 tonna",
-      price: "1,600,000 UZS",
+      category: t("shalandaCategory3"),
+      name: t("shalandaName3"),
+      description: t("shalandaDescription3"),
+      capacity: t("shalandaCapacity3"),
+      price: t("shalandaPrice3"),
       minHours: null,
       advanceNotice: null,
       image: shalandaKont,
@@ -243,7 +242,7 @@ const home = () => {
 
   const handleSubmit = async () => {
     if (!name || !number) {
-      setMessage("Iltimos, barcha maydonlarni to‘ldiring."); // Habarni set qilish
+      setMessage(t("redAlert")); // Habarni set qilish
       setTimeout(() => {
         setMessage(""); // 3 sekunddan keyin xabarni tozalash
       }, 3000);
@@ -443,7 +442,6 @@ const home = () => {
                 inputMode="numeric"
                 value={number}
                 onChange={(e) => {
-
                   let input = e.target.value.replace(/[^0-9]/g, "");
 
                   setNumber(input);
@@ -465,10 +463,11 @@ const home = () => {
           {message && (
             <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
               <div
-                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${message === "Xabar yuborildi!"
-                  ? "bg-[#28a745]"
-                  : "bg-[#FF4C4C]"
-                  }`}
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
+                  message === t("greenAlertedSend")
+                    ? "bg-[#28a745]"
+                    : "bg-[#FF4C4C]"
+                }`}
               >
                 {message}
               </div>
