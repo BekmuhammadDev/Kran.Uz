@@ -279,7 +279,7 @@ const home = () => {
 
             <div>
 
-              <div className="flex gap-8  xl:border-r-2 pr-10 pb-10  border-b-2">
+              <div className="flex gap-8  md:border-r-2 pr-10 pb-10  border-b-2">
                 <IoCallOutline color="yellow" fontSize={90} />
                 <div>
                   <h1 className="text-white text-3xl font-bold mb-2">{t("leave_call")}</h1>
