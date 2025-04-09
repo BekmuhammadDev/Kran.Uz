@@ -151,6 +151,7 @@ i18n
           redAlert: "Iltimos, barcha maydonlarni to‘ldiring.",
           greenAlertedSend: "Xabar yuborildi!",
           redAlertedSend: "Xatolik yuz berdi!",
+          how_much:"Qanday ijara olinadi?",
         },
       },
       ru: {
@@ -291,6 +292,7 @@ i18n
           redAlert: "Пожалуйста, заполните все поля.",
           greenAlertedSend: "Сообщение отправлено!",
           redAlertedSend: "Произошла ошибка!",
+          how_much:"Какова стоимость аренды?",
         },
       },
     },
