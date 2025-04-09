@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FaUser, FaPhone } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import Footer from "../components/layouts/footer";
 import { IoCall } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -40,6 +40,7 @@ import volvoLogo from "../assets/images/volvoLogo.svg";
 import isuzuLogo from "../assets/images/isuzuLogo.svg";
 import xcmgLogo from "../assets/images/xcmgLogo.svg";
 import logoHunday from "../assets/images/logoHunday.svg";
+import { IoCallSharp } from "react-icons/io5";
 
 const home = () => {
   const { t } = useTranslation();
@@ -422,34 +423,32 @@ const home = () => {
                     e.target.value.replace(/[^A-Za-z\u0400-\u04FF\s]/g, "")
                   )
                 }
-                maxLength={20} // Maksimal uzunlikni 20 belgiga cheklash
+                maxLength={20}
               />
             </div>
           </div>
 
           {/* Telefon Input */}
           <div className="flex items-center space-x-3 flex-1 border-b md:border-b-0 md:border-r border-gray-500 pb-3 md:pb-0 pr-0 md:pr-6 w-full justify-center md:justify-start">
-            <FaPhone className="text-white text-xl" />
+            <IoCallSharp className="text-white text-xl" />
             <div>
               <p className="text-white font-semibold text-left">
                 {t("phone_number")}
               </p>
               <input
                 type="tel"
-                placeholder="+998 (99) 999 99 99"
+                placeholder="99 999 99 99"
                 className="bg-transparent text-gray-300 focus:outline-none w-full"
                 pattern="[0-9]+"
                 inputMode="numeric"
                 value={number}
                 onChange={(e) => {
-                  // Raqam kiritishda +998 avtomatik qo'shilsin
-                  let input = e.target.value.replace(/[^0-9]/g, ""); // faqat raqamlarni qabul qilish
-                  if (!input.startsWith("998")) {
-                    input = "998" + input; // +998 ni avtomatik qo'shish
-                  }
+
+                  let input = e.target.value.replace(/[^0-9]/g, "");
+
                   setNumber(input);
                 }}
-                maxLength={12} // Telefon raqamining maksimal uzunligini cheklash (+998 (99) 999 99 99 formatida)
+                maxLength={12}
               />
             </div>
           </div>
@@ -466,11 +465,10 @@ const home = () => {
           {message && (
             <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
               <div
-                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
-                  message === "Xabar yuborildi!"
-                    ? "bg-[#28a745]"
-                    : "bg-[#FF4C4C]"
-                }`}
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${message === "Xabar yuborildi!"
+                  ? "bg-[#28a745]"
+                  : "bg-[#FF4C4C]"
+                  }`}
               >
                 {message}
               </div>
@@ -504,6 +502,10 @@ const home = () => {
         className="mt-40 mb-20 md:h-[450px]"
       >
         <div className="container mx-auto">
+          <div className="mb-20">
+            <h1 className="text-[#FEDF51] text-center text-5xl font-normal">Qanday ijara olinadi?</h1>
+          </div>
+
           <div className="flex flex-wrap xl:flex-row justify-center">
             <div className="px-5 xl:px-0">
               <div className="flex gap-8  xl:border-r-2 pr-10 pb-10  border-b-2">
