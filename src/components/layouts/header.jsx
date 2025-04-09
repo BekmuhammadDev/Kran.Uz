@@ -144,23 +144,20 @@ const Header = () => {
 
       {/* Mobile Menu (Sidebar) */}
       <div
-        className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-[#191919] bg-opacity-90 transition-opacity ${
-            isMenuOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-[#191919] bg-opacity-90 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0"
+            }`}
           onClick={() => setIsMenuOpen(false)}
         ></div>
 
         {/* Menu Content */}
         <div
-          className={`absolute top-0 right-0 h-full w-80 bg-[#191919] shadow-lg transform transition-transform duration-300 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 h-full w-80 bg-[#191919] shadow-lg transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="p-4 flex justify-end">
             <button
@@ -172,6 +169,7 @@ const Header = () => {
           </div>
 
           <nav className="mt-8 px-6">
+
             <ul className="flex flex-col space-y-6">
               <li>
                 <Link
@@ -213,27 +211,53 @@ const Header = () => {
               </li>
             </ul>
 
-            <div className="mt-12 flex flex-col space-y-4">
-              <div className="relative">
-                <button
-                  className="flex items-center gap-1 text-white text-xl font-semibold"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                >
-                  <IoEarthOutline color="white" fontSize={24} />
-                  <h2 className="text-white">UZ</h2>
-                </button>
-              </div>
+            {/* Language Dropdown */}
+            <div className="relative top-5">
               <button
-                className="bg-[#FEDF51] py-2 px-8 rounded-xl text-xl font-semibold hover:bg-[#fed035] transition-colors w-full"
-                onClick={() => {
-                  setIsModalOpen(true);
-                  setIsMenuOpen(false);
-                }}
+                className="flex items-center gap-1 text-white text-xl font-semibold"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                {t("contact")}
+                <IoEarthOutline color="white" fontSize={24} />
+                <h2 className="text-white">{selectedLanguage}</h2>{" "}
+                {/* <-- fix qilingan */}
               </button>
+
+              {isDropdownOpen && (
+                <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg w-20">
+                  <ul className="bg-black rounded-md">
+                    <li>
+                      <button
+                        onClick={() => handleLanguageChange("UZ")}
+                        className="w-full text-center px-4 py-2 text-white"
+                      >
+                        UZ
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => handleLanguageChange("RU")}
+                        className="w-full text-center px-4 py-2 text-white"
+                      >
+                        RU
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
+
+            <button
+              className="bg-[#FEDF51] py-2 px-8 rounded-xl mt-10 text-xl font-semibold hover:bg-[#fed035] transition-colors w-full"
+              onClick={() => {
+                setIsModalOpen(true);
+                setIsMenuOpen(false);
+              }}
+            >
+              {t("contact")}
+            </button>
+
           </nav>
+
         </div>
       </div>
 
