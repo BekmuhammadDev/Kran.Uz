@@ -15,27 +15,227 @@ import enter from "../assets/images/enter.svg";
 import grand from "../assets/images/grand.svg";
 import discover from "../assets/images/discover.svg";
 import { NavLink } from "react-router-dom";
-import { vehicleServices } from "./service";
 import { sendCustomEmail } from "../components/SendEmail";
 import { useTranslation } from "react-i18next";
 import "../i18";
 import { BsCashCoin } from "react-icons/bs";
 import { PiPencilSimpleLineLight } from "react-icons/pi";
 import { PiTruckLight } from "react-icons/pi";
-
-
-
-const filteredVehicles = vehicleServices.filter(
-  (v) => v.image && v.name && v.description
-);
+import tentovkaImg from "../assets/images/tentovka.svg";
+import hundayEks from "../assets/images/Hyundai_55W.svg";
+import mercedesManipul from "../assets/images/mercedesManipul.svg";
+import karaAvto from "../assets/images/avto_kara.svg";
+import shalandaPrit from "../assets/images/pritsep_shalanda.svg";
+import shalandaKont from "../assets/images/kontenerovoz.svg";
+import eksW140 from "../assets/images/Hyundai_140W.svg";
+import eks145W from "../assets/images/Volvo_145W.svg";
+import hundayManipull from "../assets/images/isuzu_manipul.svg";
+import isuzuManipul from "../assets/images/isuzu_manipul.svg";
+import xcmg30 from "../assets/images/xcmg30.svg";
+import xcmg50 from "../assets/images/xcmg_50.svg";
+import xcmg75 from "../assets/images/xcmg_75.svg";
+import mercedesLogo from "../assets/images/mersedesLogo.svg";
+import volvoLogo from "../assets/images/volvoLogo.svg";
+import isuzuLogo from "../assets/images/isuzuLogo.svg";
+import xcmgLogo from "../assets/images/xcmgLogo.svg";
+import logoHunday from "../assets/images/logoHunday.svg";
 
 const home = () => {
+  const { t } = useTranslation();
+  const vehicleServices = [
+    {
+      id: 1,
+      category: t("shalandaCategory1"),
+      name: t("shalandaName1"),
+      description: t("shalandaDescription1"),
+      capacity: t("Shalandacapacity1"),
+      price: t("shalandaPrice1"),
+      minHours: null,
+      advanceNotice: null,
+      image: tentovkaImg,
+      logo: logoHunday,
+    },
+    {
+      id: 2,
+      category: t("ekskavatorCategory1"),
+      name: t("ekskavatorName1"),
+      description: t("ekskavatorDescription1"),
+      capacity: t("ekskavatorCapacity1"),
+      price: t("ekskavatorPrice1"),
+      minHours: 4,
+      advanceNotice: t("ekskavatorAdvanceNotice1"),
+      image: hundayEks,
+      logo: logoHunday,
+    },
+    {
+      id: 3,
+      category: t("kranCategory1"),
+      name: t("kranName1"),
+      description: t("kranDescription1"),
+      capacity: t("kranCapacity1"),
+      price: t("kranPrice1"),
+      minHours: null,
+      advanceNotice: null,
+      image: mercedesManipul,
+      logo: mercedesLogo,
+    },
+
+    {
+      id: 4,
+      category: t("karaCategory1"),
+      name: t("karaName1"),
+      description: t("karaDescription1"),
+      capacity: t("karaCapacity1"),
+      price: t("karaPrice1"),
+      minHours: 4,
+      advanceNotice: null,
+      image: karaAvto,
+      logo: logoHunday,
+    },
+    {
+      id: 5,
+      category: t("shalandaCategory2"),
+      name: t("shalandaName2"),
+      description: t("shalandaDescription2"),
+      capacity: t("shalandaCapacity2"),
+      price: t("shalandaPrice2"),
+      minHours: null,
+      advanceNotice: null,
+      image: shalandaPrit,
+      logo: logoHunday,
+    },
+    {
+      id: 6,
+      category: "Shalanda",
+      name: "Kontenerovoz shalanda",
+      description:
+        "Kontenerovoz shalanda 30 tonnagacha bo'lgan yuklarni tashish uchun mo'ljallangan. Shuning uchun biz buni xususiy mijozlarga ham, kichik qurilish guruhlariga ham, yirik doimiy mijozlarga ham tavsiya qilamiz.",
+      capacity: "30 tonna",
+      price: "1,600,000 UZS",
+      minHours: null,
+      advanceNotice: null,
+      image: shalandaKont,
+      logo: logoHunday,
+    },
+    {
+      id: 7,
+      category: t("ekskavatorCategory1"),
+      name: t("ekskavatorName1"),
+      description: t("ekskavatorDescription1"),
+      capacity: t("ekskavatorCapacity1"),
+      price: t("ekskavatorPrice1"),
+      minHours: 5,
+      advanceNotice: t("ekskavatorAdvanceNotice1"),
+      image: eksW140,
+      logo: logoHunday,
+    },
+    {
+      id: 8,
+      category: t("ekskavatorCategory3"),
+      name: t("ekskavatorName3"),
+      description: t("ekskavatorDescription3"),
+      capacity: t("ekskavatorCapacity3"),
+      price: t("ekskavatorPrice3"),
+      minHours: 5,
+      advanceNotice: t("ekskavatorAdvanceNotice3"),
+      image: eks145W,
+      logo: volvoLogo,
+    },
+    {
+      id: 10,
+      category: t("kranCategory2"),
+      name: t("kranName2"),
+      description: t("kranDescription2"),
+      capacity: t("kranCapacity2"),
+      price: t("kranPrice2"),
+      minHours: null,
+      advanceNotice: null,
+      image: hundayManipull,
+      logo: logoHunday,
+    },
+    {
+      id: 11,
+      category: t("kranCategory3"),
+      name: t("kranName3"),
+      description: t("kranDescription3"),
+      capacity: t("kranCapacity3"),
+      price: t("kranPrice3"),
+      minHours: null,
+      advanceNotice: null,
+      image: isuzuManipul,
+      logo: isuzuLogo,
+    },
+
+    {
+      id: 12,
+      category: t("karaCategory2"),
+      name: t("karaName2"),
+      description: t("karaDescription2"),
+      capacity: t("karaCapacity2"),
+      price: t("karaPrice2"),
+      minHours: 4,
+      advanceNotice: null,
+      image: karaAvto,
+      logo: logoHunday,
+    },
+    {
+      id: 13,
+      category: t("karaCategory3"),
+      name: t("karaName3"),
+      description: t("karaDescription3"),
+      capacity: t("karaCapacity3"),
+      price: t("karaPrice3"),
+      minHours: 6,
+      advanceNotice: null,
+      image: karaAvto,
+      logo: logoHunday,
+    },
+    {
+      id: 14,
+      category: t("avtoKranCategory1"),
+      name: t("avtoKranName1"),
+      description: t("avtoKranDescription1"),
+      capacity: t("avtoKranCapacity1"),
+      price: t("avtoKranPrice1"),
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg30,
+      logo: xcmgLogo,
+    },
+    {
+      id: 15,
+      category: t("avtoKranCategory2"),
+      name: t("avtoKranName2"),
+      description: t("avtoKranDescription2"),
+      capacity: t("avtoKranCapacity2"),
+      price: t("avtoKranPrice2"),
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg50,
+      logo: xcmgLogo,
+    },
+    {
+      id: 16,
+      category: t("avtoKranCategory3"),
+      name: t("avtoKranName3"),
+      description: t("avtoKranDescription3"),
+      capacity: t("avtoKranCapacity3"),
+      price: t("avtoKranPrice3"),
+      minHours: 5,
+      advanceNotice: null,
+      image: xcmg75,
+      logo: xcmgLogo,
+    },
+  ];
+
+  const filteredVehicles = vehicleServices.filter(
+    (v) => v.image && v.name && v.description
+  );
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState(""); // Yangi state qo'shildi
-
-  const { t } = useTranslation();
 
   const handleSubmit = async () => {
     if (!name || !number) {
@@ -245,10 +445,11 @@ const home = () => {
           {message && (
             <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
               <div
-                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${message === "Xabar yuborildi!"
-                  ? "bg-[#28a745]"
-                  : "bg-[#FF4C4C]"
-                  }`}
+                className={`text-center text-white rounded-lg p-6 max-w-[90%] md:max-w-[500px] ${
+                  message === "Xabar yuborildi!"
+                    ? "bg-[#28a745]"
+                    : "bg-[#FF4C4C]"
+                }`}
               >
                 {message}
               </div>
@@ -257,7 +458,10 @@ const home = () => {
         </div>
       </section>
 
-      <section id="count" className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around">
+      <section
+        id="count"
+        className="bg-[#191919] py-16 text-center overflow-hidden flex items-center justify-around"
+      >
         <div className="overflow-hidden w-full">
           <div className="space-x-8 animate-marquee flex items-center justify-around">
             <img src={artel} alt="" />
@@ -274,70 +478,64 @@ const home = () => {
 
       <section className="mt-40">
         <div className="container mx-auto">
-
           <div className="flex flex-wrap xl:flex-row justify-center">
-
             <div>
-
               <div className="flex gap-8  md:border-r-2 pr-10 pb-10  border-b-2">
                 <IoCallOutline color="yellow" fontSize={90} />
                 <div>
-                  <h1 className="text-white text-3xl font-bold mb-2">{t("leave_call")}</h1>
+                  <h1 className="text-white text-3xl font-bold mb-2">
+                    {t("leave_call")}
+                  </h1>
 
                   <p
                     className="text-white text-xl font-semibold"
                     dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
                   ></p>
-
                 </div>
-
               </div>
 
               <div className="flex gap-8 xl:border-r-2 pr-10 pt-10 ">
                 <PiTruckLight color="yellow" fontSize={90} />
                 <div>
-                  <h1 className="text-white text-3xl font-bold mb-2">{t("getting_technique")}</h1>
+                  <h1 className="text-white text-3xl font-bold mb-2">
+                    {t("getting_technique")}
+                  </h1>
                   <p
                     className="text-white text-xl font-semibold"
                     dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
                   ></p>
                 </div>
-
               </div>
-
             </div>
 
-
             <div>
-
               <div className="flex gap-8 border-b-2 border-t-2 md:border-t-0 pl-10 pb-10">
                 <PiPencilSimpleLineLight color="yellow" fontSize={90} />
                 <div>
-                  <h1 className="text-white text-3xl font-bold mb-2">{t("place_an_order")}</h1>
+                  <h1 className="text-white text-3xl font-bold mb-2">
+                    {t("place_an_order")}
+                  </h1>
                   <p
                     className="text-white text-xl font-semibold"
                     dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
                   ></p>
                 </div>
-
               </div>
 
               <div className=" flex gap-8 pl-10 pt-10 ">
                 <BsCashCoin color="yellow" fontSize={90} />
                 <div>
-                  <h1 className="text-white text-3xl font-bold mb-2">{t("payment")}</h1>
+                  <h1 className="text-white text-3xl font-bold mb-2">
+                    {t("payment")}
+                  </h1>
                   <p
                     className="text-white text-xl font-semibold"
                     dangerouslySetInnerHTML={{ __html: t("select_techniques") }}
                   ></p>
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
       </section>
 
