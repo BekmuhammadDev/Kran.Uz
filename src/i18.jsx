@@ -147,6 +147,7 @@ i18n
           justHeavy: "Ogirligi",
           justPrice: "Narxi",
           heavyAfford: "Yuk sig'imi",
+          spets: "Spec Texnikalar",
         },
       },
       ru: {
@@ -283,6 +284,7 @@ i18n
           justHeavy: "Вес",
           justPrice: "Цена",
           heavyAfford: "Грузоподъемность",
+          spets: "Спецтехники",
         },
       },
     },

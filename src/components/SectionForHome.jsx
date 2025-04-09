@@ -5,34 +5,23 @@ import { NavLink } from "react-router-dom";
 
 import eks145W from "../assets/images/Volvo_145W.svg";
 import mercedesManipul from "../assets/images/mercedesManipul.svg";
-import hundayEks from "../assets/images/hundayEks.svg"
-import isuzu_manipul from "../assets/images/isuzu_manipul.svg"
-import isuzu_manipul_140W from "../assets/images/Hyundai_140W.svg"
-
-
-const cards = [
-  { title: "Avto Kran", image: mercedesManipul },
-  { title: "hundayEks", image: hundayEks },
-  { title: "Isuzu", image: isuzu_manipul },
-  { title: "Hyundai_140W ", image: isuzu_manipul_140W },
-
-];
-
-
-const vehicles = [
-  {
-    name: "Avtovishka Daewoo Novus",
-    image: eks145W,
-    capacity: ["300 KG", "25 METR", "40 METR"],
-  },
-  {
-    name: "Avtovishka Hyundai",
-    image: eks145W,
-    capacity: ["350 KG", "28 METR", "45 METR"],
-  },
-];
+import hundayEks from "../assets/images/hundayEks.svg";
+import isuzu_manipul from "../assets/images/isuzu_manipul.svg";
+import isuzu_manipul_140W from "../assets/images/Hyundai_140W.svg";
+import { useTranslation } from "react-i18next";
+import xcmg30 from "../assets/images/xcmg30.svg";
+import karaAvto from "../assets/images/avto_kara.svg";
 
 export default function Avtovishkalar() {
+  const { t } = useTranslation();
+
+  const cards = [
+    { title: t("kranCategory1"), image: mercedesManipul },
+    { title: t("ekskavatorCategory1"), image: hundayEks },
+    { title: t("avtoKranCategory1"), image: xcmg30 },
+    { title: t("karaCategory2"), image: karaAvto },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextSlide = () => {
@@ -48,12 +37,11 @@ export default function Avtovishkalar() {
   return (
     <section className="container mx-auto w-full py-20 bg-[#191919]">
       <h1 className="krone text-center mb-10 font-normal text-[22px] md:text-[28px] lg:text-[40px] text-[#fedf51]">
-        Spec Texnikalar
+        {t("spets")}
       </h1>
 
       <div className="flex justify-center">
         <div className="grid grid-cols-1  md:grid-cols-2 justify-center gap-20">
-
           {cards.map((card, index) => (
             <div
               key={index}
@@ -74,14 +62,7 @@ export default function Avtovishkalar() {
             </div>
           ))}
         </div>
-
-
-
       </div>
-
-
-
-
     </section>
   );
 }

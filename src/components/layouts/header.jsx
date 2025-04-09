@@ -1,19 +1,22 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoEarthOutline, IoClose, IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import OrderForm from "../forContact/Contact";
-import { useTranslation } from 'react-i18next';
-import "../../i18"
-import Logo from "../../assets/public/Spectex_LOGO svg.svg"
+import { useTranslation } from "react-i18next";
+import "../../i18";
+import Logo from "../../assets/public/Spectex_LOGO svg.svg";
+
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const { t, i18n } = useTranslation();
 
-  const [selectedLanguage, setSelectedLanguage] = useState('UZ');
+  const [selectedLanguage, setSelectedLanguage] = useState("UZ");
 
   const handleLanguageChange = (lang) => {
     setSelectedLanguage(lang);
@@ -21,7 +24,13 @@ const Header = () => {
     i18n.changeLanguage(lang.toLowerCase()); // i18next uchun tilni almashtiramiz
   };
 
+  const handleCardClick = () => {
+    navigate("/", { state: { scrollTo: "partners" } });
+  };
 
+  const handleCountClick = () => {
+    navigate("/", { state: { scrollTo: "count" } });
+  };
 
   return (
     <>
@@ -29,9 +38,7 @@ const Header = () => {
       <header className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
         <nav className="container mx-auto h-20 py-5 px-10 sm:px-6 lg:px-20 flex items-center justify-between">
           {/* Logo */}
-          <NavLink
-            to={"/"}
-          >
+          <NavLink to={"/"}>
             <img src={Logo} alt="" width={150} className="ml-5" />
           </NavLink>
 
@@ -43,8 +50,9 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 className="text-white cursor-pointer text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+                onClick={handleCardClick}
               >
-                {t('partners')}
+                {t("partners")}
               </Link>
             </li>
             <li>
@@ -52,7 +60,7 @@ const Header = () => {
                 to={"/about"}
                 className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
               >
-                {t('about')}
+                {t("about")}
               </NavLink>
             </li>
             <li>
@@ -65,12 +73,12 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="count"
+                onClick={handleCountClick}
                 smooth={true}
                 duration={500}
                 className="text-white text-xl cursor-pointer font-semibold hover:text-[#FEDF51] transition-colors"
               >
-                {t('aksiya')}
+                {t("aksiya")}
               </Link>
             </li>
           </ul>
@@ -84,7 +92,8 @@ const Header = () => {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 <IoEarthOutline color="white" fontSize={24} />
-                <h2 className="text-white">{selectedLanguage}</h2> {/* <-- fix qilingan */}
+                <h2 className="text-white">{selectedLanguage}</h2>{" "}
+                {/* <-- fix qilingan */}
               </button>
 
               {isDropdownOpen && (
@@ -92,7 +101,7 @@ const Header = () => {
                   <ul className="bg-black rounded-md">
                     <li>
                       <button
-                        onClick={() => handleLanguageChange('UZ')}
+                        onClick={() => handleLanguageChange("UZ")}
                         className="w-full text-center px-4 py-2 text-white"
                       >
                         UZ
@@ -100,7 +109,7 @@ const Header = () => {
                     </li>
                     <li>
                       <button
-                        onClick={() => handleLanguageChange('RU')}
+                        onClick={() => handleLanguageChange("RU")}
                         className="w-full text-center px-4 py-2 text-white"
                       >
                         RU
@@ -110,7 +119,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
 
             {/* Contact Button */}
             <button
@@ -136,20 +144,23 @@ const Header = () => {
 
       {/* Mobile Menu (Sidebar) */}
       <div
-        className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-[#191919] bg-opacity-90 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-[#191919] bg-opacity-90 transition-opacity ${
+            isMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
           onClick={() => setIsMenuOpen(false)}
         ></div>
 
         {/* Menu Content */}
         <div
-          className={`absolute top-0 right-0 h-full w-80 bg-[#191919] shadow-lg transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+          className={`absolute top-0 right-0 h-full w-80 bg-[#191919] shadow-lg transform transition-transform duration-300 ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <div className="p-4 flex justify-end">
             <button
@@ -163,12 +174,22 @@ const Header = () => {
           <nav className="mt-8 px-6">
             <ul className="flex flex-col space-y-6">
               <li>
+                <Link
+                  to="partners"
+                  smooth={true}
+                  duration={500}
+                  className="text-white cursor-pointer text-xl font-semibold hover:text-[#FEDF51] transition-colors"
+                >
+                  {t("partners")}
+                </Link>
+              </li>
+              <li>
                 <NavLink
                   to={"/about"}
                   className="text-white text-xl font-semibold hover:text-[#FEDF51] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t('about')}
+                  {t("about")}
                 </NavLink>
               </li>
               <li>
@@ -179,6 +200,16 @@ const Header = () => {
                 >
                   {t("techniques")}
                 </NavLink>
+              </li>
+              <li>
+                <Link
+                  to="count"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-xl cursor-pointer font-semibold hover:text-[#FEDF51] transition-colors"
+                >
+                  {t("aksiya")}
+                </Link>
               </li>
             </ul>
 
@@ -202,7 +233,6 @@ const Header = () => {
                 {t("contact")}
               </button>
             </div>
-
           </nav>
         </div>
       </div>

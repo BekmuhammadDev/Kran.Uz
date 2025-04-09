@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FaUser, FaPhone } from "react-icons/fa";
 import Footer from "../components/layouts/footer";
 import { IoCall } from "react-icons/io5";
@@ -42,6 +43,8 @@ import logoHunday from "../assets/images/logoHunday.svg";
 
 const home = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+
   const vehicleServices = [
     {
       id: 1,
@@ -267,6 +270,24 @@ const home = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (location.state?.scrollTo === "partners") {
+      const section = document.getElementById("partners");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "count") {
+      const section = document.getElementById("count");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -290,7 +311,7 @@ const home = () => {
         <div className=" flex items-center justify-between">
           <div className=" relative w-full md:w-[50%] lg:w-[50%] h-auto md:min-h-[800px] flex flex-col items-center justify-center md:pt-16 z-10">
             <motion.h1
-              className="text zen font-thin text-[48px] mb-10 md:hidden"
+              className="text zen font-thin text-[24px] mb-10 md:hidden"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -315,7 +336,7 @@ const home = () => {
             className="w-full lg:h-[550px] md:w-[50%] lg:w-[50%] flex-col relative hidden md:block z-10"
           >
             <motion.h1
-              className="text zen  text-[20px]  md:text-[24px] lg:text-[42px] text-right mb-10"
+              className="text zen  text-[20px]  md:text-[24px] lg:text-[48px] text-right mb-10"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -476,10 +497,14 @@ const home = () => {
 
       <Countdown />
 
-      <section className="mt-40 mb-40">
+      <section
+        style={{
+          background: `radial-gradient(circle 300px at center left, rgba(254, 223, 81, 0.3), transparent 80%)`,
+        }}
+        className="mt-40 mb-20 md:h-[450px]"
+      >
         <div className="container mx-auto">
           <div className="flex flex-wrap xl:flex-row justify-center">
-
             <div className="px-5 xl:px-0">
               <div className="flex gap-8  xl:border-r-2 pr-10 pb-10  border-b-2">
                 <IoCallOutline color="yellow" fontSize={90} />
