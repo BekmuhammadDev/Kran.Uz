@@ -36,14 +36,14 @@ const Header = () => {
     <>
       {/* ✅ Fixed va shisha effektli header */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
-        <nav className="container mx-auto h-20 py-5 px-10 sm:px-6 lg:px-20 flex items-center justify-between">
+        <nav className="container mx-auto h-20 py-5 px-5 flex items-center justify-between">
           {/* Logo */}
           <NavLink to={"/"}>
             <img src={Logo} alt="" width={150} className="ml-5" />
           </NavLink>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex mont font-semibold text-[20px] gap-[72px] ml-40">
+          <ul className="hidden lg:flex mont font-semibold text-[20px] gap-[72px]">
             <li>
               <Link
                 to="partners"
